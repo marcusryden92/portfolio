@@ -4,7 +4,7 @@ import "./index.css";
 function App() {
   return (
     <div>
-      <div className="text-500-blue">Marcus</div>
+      <h1 className="text-xl font-bold">Marcus</h1>
     </div>
   );
 }
