@@ -1,3 +1,61 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Montserrat";
+}
+
+.cover-container {
+  height: 100%;
+  width: 100%;
+}
+
+.cover-viewport {
+  height: 100vh;
+  width: 100vw;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front-page {
+  opacity: 1;
+  transition: opacity 2s ease;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-stroke {
+  -webkit-text-stroke: #292524 1px;
+  text-stroke: 1px black;
+}
