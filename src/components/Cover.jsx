@@ -18,9 +18,12 @@ export default function Cover() {
       <div className="" onClick={handleFade}>
         <div className="josefin-sans text-8xl  font-bold text-stone-600	hover:text-slate-400 ease-in-out duration-500">
           Marcus Rydén
+          <p className="text-5xl mt-5 text-500-slate font-extralight">
+            Portfolio
+          </p>
         </div>
-        <p className="text-5xl mt-10 text-500-slate font-extralight">
-          Portfolio
+        <p className="text-xs mt-5 text-500-slate font-extralight">
+          CLICK TO ENTER
         </p>
       </div>
     </div>
