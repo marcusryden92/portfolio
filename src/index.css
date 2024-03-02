@@ -16,6 +16,7 @@
 
 :root {
   font-family: "Montserrat";
+  overflow: hidden;
 }
 
 .cover-container {
@@ -55,6 +56,18 @@
   position: absolute;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
+.z-5 {
+  z-index: 5;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .text-stroke {
   -webkit-text-stroke: #292524 1px;
   text-stroke: 1px black;
@@ -64,4 +77,8 @@
   width: auto;
   height: auto;
   flex: 1;
+}
+
+.bg-white-opaque {
+  background-color: rgba(255, 255, 255, 0.8);
 }

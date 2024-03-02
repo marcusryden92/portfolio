@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import Cover from "../components/Cover";
+import InteractiveCircles from "../components/InteractiveCircles";
+
 import Menu from "../components/Menu";
 import About from "./About";
 import WebD from "./WebD";
@@ -40,17 +42,24 @@ export default function MainPage() {
 
   return (
     <div className="flex flex-col sm:flex-row">
-      <div className="absolute">
+      <div className="absolute z-10">
         <Cover />
       </div>
-      <Menu
-        handleClickAbout={handleClickAbout}
-        handleClickWebD={handleClickWebD}
-        handleClickIndD={handleClickIndD}
-      />
-      {isClickedAbout ? <About /> : ""}
-      {isClickedWebD ? <WebD /> : ""}
-      {isClickedIndD ? <IndD /> : ""}
+
+      <div className="z-5">
+        <Menu
+          handleClickAbout={handleClickAbout}
+          handleClickWebD={handleClickWebD}
+          handleClickIndD={handleClickIndD}
+        />
+        {isClickedAbout ? <About /> : ""}
+        {isClickedWebD ? <WebD /> : ""}
+        {isClickedIndD ? <IndD /> : ""}
+      </div>
+
+      <div className="z-0 absolute">
+        <InteractiveCircles className="behind" />
+      </div>
     </div>
   );
 }
