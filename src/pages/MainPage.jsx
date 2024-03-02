@@ -8,10 +8,17 @@ import About from "./About";
 import WebD from "./WebD";
 import IndD from "./IndD";
 
+import { customContext } from "../context/Context";
+
 export default function MainPage() {
-  const [isClickedAbout, setIsClickedAbout] = useState(false);
-  const [isClickedWebD, setIsClickedWebD] = useState(false);
-  const [isClickedIndD, setIsClickedIndD] = useState(false);
+  const {
+    isClickedAbout,
+    setIsClickedAbout,
+    isClickedWebD,
+    setIsClickedWebD,
+    isClickedIndD,
+    setIsClickedIndD,
+  } = customContext();
 
   function handleClickAbout() {
     setIsClickedAbout(true);
@@ -36,15 +43,6 @@ export default function MainPage() {
     setIsClickedWebD(false);
     setIsClickedIndD(false);
   }
-
-  const value = {
-    isClickedAbout,
-    setIsClickedAbout,
-    isClickedWebD,
-    setIsClickedWebD,
-    isClickedIndD,
-    setIsClickedIndD,
-  };
 
   return (
     <div className="flex flex-col sm:flex-row">

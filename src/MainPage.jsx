@@ -59,7 +59,11 @@ export default function MainPage() {
           handleClickIndD={handleClickIndD}
         />
         {isClickedAbout ? <About handleClickClear={handleClickClear} /> : ""}
-        {isClickedWebD ? <WebD handleClickClear={handleClickClear} /> : ""}
+        {isClickedWebD ? (
+          <WebD handleClickClear={(handleClickClear, isClickedWebD)} />
+        ) : (
+          ""
+        )}
         {isClickedIndD ? <IndD handleClickClear={handleClickClear} /> : ""}
       </div>
 

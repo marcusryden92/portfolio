@@ -1,10 +1,17 @@
-export default function WebD({ handleClickClear }) {
+import GalleryContainer from "../components/GalleryContainer";
+import { useState, useEffect } from "react";
+
+export default function WebD({ handleClickClear, isClickedWebD }) {
   return (
-    <div
-      className="box bg-orange-400 m-40 p-10 text-left"
-      onClick={handleClickClear}
-    >
-      Click to kill
-    </div>
+    <>
+      <div
+        className="box  my-5 mx-20 p-10 text-left"
+        onClick={handleClickClear}
+      >
+        <div className="my-4">Webdesign</div>
+
+        <GalleryContainer isClickedWebD={isClickedWebD} />
+      </div>
+    </>
   );
 }
