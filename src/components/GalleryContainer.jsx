@@ -9,6 +9,8 @@ export default function GalleryContainer() {
       <ProjectBlock />
       <ProjectBlock />
       <ProjectBlock />
+      <ProjectBlock />
+      <ProjectBlock />
     </div>
   );
 }

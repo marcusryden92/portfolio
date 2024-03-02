@@ -115,11 +115,25 @@
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
-.project-block--faded {
+.project-block--faded--100 {
   height: 200px;
   width: 200px;
   opacity: 0;
   transform: translateY(-100%);
+}
+
+.project-block--faded--200 {
+  height: 200px;
+  width: 200px;
+  opacity: 0;
+  transform: translateY(-200%);
+}
+
+.project-block--faded--300 {
+  height: 200px;
+  width: 200px;
+  opacity: 0;
+  transform: translateY(-300%);
 }
 
 .gallery-container {
