@@ -18,6 +18,7 @@
   box-sizing: border-box;
   font-family: "Montserrat";
   overflow: hidden;
+  cursor: none;
 }
 
 .cover-container {
@@ -40,7 +41,6 @@
   opacity: 1;
   transition: opacity 2s ease;
   position: absolute;
-  cursor: pointer;
   z-index: 10;
 }
 
@@ -88,4 +88,18 @@
 
 .bg-white-opaque {
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* CustomCursor.css */
+
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999; /* Ensure the cursor appears above other elements */
+  transform: rotate(180deg);
+}
+
+.custom-cursor img {
+  width: 20px; /* Adjust the width and height as needed */
+  height: 20px;
 }
