@@ -18,7 +18,7 @@ export default function Menu({
         <br />
         <li
           className="pl-2 pr-2 font-medium hover:translate-x-2 ease-in-out duration-500 
-        hover:bg-green-500 ease-in-out duration-500 hover:text-white ease-in-out duration-250"
+        hover:bg-orange-400 ease-in-out duration-500 hover:text-white ease-in-out duration-250"
           onClick={handleClickWebD}
         >
           WEBDESIGN
@@ -26,7 +26,7 @@ export default function Menu({
         <br />
         <li
           className="pl-2 pr-2 font-medium font-medium hover:translate-x-2 ease-in-out duration-500 
-        hover:bg-blue-500 ease-in-out duration-500 hover:text-white ease-in-out duration-250"
+        hover:bg-amber-400 ease-in-out duration-500 hover:text-white ease-in-out duration-250"
           onClick={handleClickIndD}
         >
           INDUSTRIAL DESIGN

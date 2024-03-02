@@ -22,7 +22,7 @@ export default function Cover() {
         <p className="text-5xl mt-5 text-500-slate font-extralight">
           Portfolio
         </p>
-        <p className="text-xs mt-5 text-500-slate font-extralight">
+        <p className="text-s mt-5 text-500-slate font-extralight">
           CLICK TO ENTER
         </p>
       </div>
