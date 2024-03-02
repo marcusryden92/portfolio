@@ -31,6 +31,12 @@ export default function MainPage() {
     setIsClickedIndD(true);
   }
 
+  function handleClickClear() {
+    setIsClickedAbout(false);
+    setIsClickedWebD(false);
+    setIsClickedIndD(false);
+  }
+
   const value = {
     isClickedAbout,
     setIsClickedAbout,
@@ -46,15 +52,15 @@ export default function MainPage() {
         <Cover />
       </div>
 
-      <div className="z-5">
+      <div className="flex main-container z-5">
         <Menu
           handleClickAbout={handleClickAbout}
           handleClickWebD={handleClickWebD}
           handleClickIndD={handleClickIndD}
         />
-        {isClickedAbout ? <About /> : ""}
-        {isClickedWebD ? <WebD /> : ""}
-        {isClickedIndD ? <IndD /> : ""}
+        {isClickedAbout ? <About handleClickClear={handleClickClear} /> : ""}
+        {isClickedWebD ? <WebD handleClickClear={handleClickClear} /> : ""}
+        {isClickedIndD ? <IndD handleClickClear={handleClickClear} /> : ""}
       </div>
 
       <div className="z-0 absolute">

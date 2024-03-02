@@ -6,7 +6,7 @@ export default function Menu({
   handleClickIndD,
 }) {
   return (
-    <div className=" flex flex-col justify-center menu p-16 text-xl h-80 sm:h-screen sm:text-base text-left bg-white-opaque  ">
+    <div className=" flex flex-col justify-center menu p-16 text-xl h-80 sm:h-screen sm:text-base text-left  ">
       <ul>
         <li
           className="pl-2 pr-2  font-bold hover:translate-x-2 ease-in-out duration-500 
