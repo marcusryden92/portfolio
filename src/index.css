@@ -119,21 +119,21 @@
   height: 200px;
   width: 200px;
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateY(-100px);
 }
 
 .project-block--faded--200 {
   height: 200px;
   width: 200px;
   opacity: 0;
-  transform: translateY(-200%);
+  transform: translateY(-200px);
 }
 
 .project-block--faded--300 {
   height: 200px;
   width: 200px;
   opacity: 0;
-  transform: translateY(-300%);
+  transform: translateY(-300px);
 }
 
 .gallery-container {
@@ -142,4 +142,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.gallery-title {
+  opacity: 1;
+  transition: transform 1.2s ease-in-out, opacity 1s ease-in-out;
+}
+
+.gallery-title--faded {
+  opacity: 0;
+  transform: translateY(-300px);
 }
