@@ -9,6 +9,7 @@ import WebD from "./WebD";
 import IndD from "./IndD";
 
 import { customContext } from "../context/Context";
+import { ContextWebD } from "../context/ContextWebD";
 
 export default function MainPage() {
   const {
@@ -45,25 +46,27 @@ export default function MainPage() {
   }
 
   return (
-    <div className="flex flex-col sm:flex-row">
-      <div className="absolute z-10">
-        <Cover />
-      </div>
+    <ContextWebD>
+      <div className="flex flex-col sm:flex-row">
+        <div className="absolute z-10">
+          <Cover />
+        </div>
 
-      <div className="flex main-container z-5">
-        <Menu
-          handleClickAbout={handleClickAbout}
-          handleClickWebD={handleClickWebD}
-          handleClickIndD={handleClickIndD}
-        />
-        {isClickedAbout ? <About handleClickClear={handleClickClear} /> : ""}
-        {isClickedWebD ? <WebD handleClickClear={handleClickClear} /> : ""}
-        {isClickedIndD ? <IndD handleClickClear={handleClickClear} /> : ""}
-      </div>
+        <div className="flex main-container z-5">
+          <Menu
+            handleClickAbout={handleClickAbout}
+            handleClickWebD={handleClickWebD}
+            handleClickIndD={handleClickIndD}
+          />
+          {isClickedAbout ? <About handleClickClear={handleClickClear} /> : ""}
+          {isClickedWebD ? <WebD handleClickClear={handleClickClear} /> : ""}
+          {isClickedIndD ? <IndD handleClickClear={handleClickClear} /> : ""}
+        </div>
 
-      <div className="z-0 absolute">
-        <InteractiveCircles className="behind" />
+        <div className="z-0 absolute">
+          <InteractiveCircles className="behind" />
+        </div>
       </div>
-    </div>
+    </ContextWebD>
   );
 }

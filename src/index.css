@@ -138,6 +138,15 @@
   gap: 1rem;
 }
 
+.gallery-element {
+  margin: 1rem 0;
+  background-color: black;
+  color: white;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
 .gallery-title {
   opacity: 1;
   transition: transform 1.2s ease-in-out, opacity 1s ease-in-out;
@@ -155,5 +164,5 @@
 
 .gallery-x--faded {
   opacity: 0;
-  transform: translateY(-250px);
+  transform: translateY(-300px);
 }

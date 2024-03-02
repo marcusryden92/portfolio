@@ -1,15 +1,22 @@
 import GalleryContainer from "../components/GalleryContainer";
 import { useState, useEffect } from "react";
 import { customContext } from "../context/Context";
+import { CustomContextWebD } from "../context/ContextWebD";
 
 export default function WebD({ handleClickClear }) {
-  const { isClickedWebD } = customContext();
-  const [isVisible, setIsVisible] = useState(false);
+  const { isClickedWebD, setIsClickedWebD } = customContext();
+
+  const { isUnfadedWebD, setIsUnfadedWebD } = CustomContextWebD();
 
   useEffect(() => {
-    setIsVisible(isClickedWebD);
+    setIsUnfadedWebD(isClickedWebD);
     console.log(isClickedWebD);
   }, [isClickedWebD]);
+
+  function handleClickExit(e) {
+    setIsUnfadedWebD(false);
+    setTimeout(() => handleClickClear(), 1500);
+  }
 
   return (
     <>
@@ -17,22 +24,22 @@ export default function WebD({ handleClickClear }) {
         <div className="flex justify-between">
           <div
             className={`${
-              isVisible ? "gallery-title" : "gallery-title--faded"
-            } my-4 bg-black text-white w-32 p-1 rounded-xl text-center 
+              isUnfadedWebD ? "gallery-title" : "gallery-title--faded"
+            } gallery-element w-32
         font-medium hover:scale-110 ease-in-out duration-1000`}
           >
             Webdesign
           </div>
           <div
-            className={`${isVisible ? "gallery-x" : "gallery-x--faded"} 
-            my-4 bg-black text-white w-10 p-1 rounded-xl text-center 
+            className={`${isUnfadedWebD ? "gallery-x" : "gallery-x--faded"} 
+           gallery-element w-10
             font-bold hover:scale-110 ease-in-out duration-1000`}
-            onClick={handleClickClear}
+            onClick={handleClickExit}
           >
             X
           </div>
         </div>
-        <GalleryContainer isClickedWebD={isClickedWebD} />
+        <GalleryContainer />
       </div>
     </>
   );

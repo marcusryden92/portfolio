@@ -1,13 +1,14 @@
 import "../index.css";
 import { useState, useEffect } from "react";
 import { customContext } from "../context/Context";
+import { CustomContextWebD } from "../context/ContextWebD";
 
 export default function ProjectBlock({}) {
   const { isClickedWebD } = customContext();
-  const [isVisible, setIsVisible] = useState(false);
+  const { isUnfadedWebD, setIsUnfadedWebD } = CustomContextWebD();
 
   useEffect(() => {
-    setIsVisible(isClickedWebD);
+    setIsUnfadedWebD(true);
     console.log(isClickedWebD);
   }, [isClickedWebD]);
 
@@ -26,7 +27,7 @@ export default function ProjectBlock({}) {
   return (
     <div
       className={`${
-        isVisible ? "project-block" : currentClass
+        isUnfadedWebD ? "project-block" : currentClass
       } ${currentColor} hover:scale-110 ease-in-out duration-1000`}
     ></div>
   );

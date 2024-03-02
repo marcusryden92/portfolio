@@ -2,10 +2,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 export const ContextProvider = createContext(null);
 
 export const ContextWebD = ({ children }) => {
-  const [isVisibleWebD, setIsVisibleWebD] = useState(false);
+  const [isUnfadedWebD, setIsUnfadedWebD] = useState(false);
   const value = {
-    isVisibleWebD,
-    setIsVisibleWebD,
+    isUnfadedWebD,
+    setIsUnfadedWebD,
   };
 
   return (
