@@ -10,12 +10,8 @@ export default function GalleryContainer() {
         <ProjectBlock position={position[0]} />
         <ProjectBlock position={position[0]} />
         <ProjectBlock position={position[0]} />
-        <ProjectBlock position={position[0]} />
       </div>
       <div className="flex gallery-container">
-        <ProjectBlock position={position[1]} />
-        <ProjectBlock position={position[1]} />
-        <ProjectBlock position={position[1]} />
         <ProjectBlock position={position[1]} />
       </div>
     </div>

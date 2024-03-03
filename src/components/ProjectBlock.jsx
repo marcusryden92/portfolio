@@ -5,10 +5,17 @@ import { CustomContextWebD } from "../context/ContextWebD";
 
 export default function ProjectBlock({ position }) {
   const { isClickedWebD } = customContext();
-  const { isUnfadedWebD, setIsUnfadedWebD } = CustomContextWebD();
+  const { isUnfadedWebD, setIsUnfadedWebD, hoverIsActive, setHoverIsActive } =
+    CustomContextWebD();
 
   useEffect(() => {
     setIsUnfadedWebD(true);
+
+    if (isClickedWebD) {
+      setTimeout(() => setHoverIsActive(true), 1500);
+    } else {
+      setHoverIsActive(false);
+    }
   }, [isClickedWebD]);
 
   //let classArray = [];
@@ -37,7 +44,11 @@ export default function ProjectBlock({ position }) {
 
   const colorArray = ["bg-rose-400", "bg-amber-400", "bg-slate-400"];
 
-  const currentColor = colorArray[Math.floor(Math.random() * 3)];
+  const [currentColor, setCurrentColor] = useState("");
+
+  useEffect(() => {
+    setCurrentColor(colorArray[Math.floor(Math.random() * 3)]);
+  }, []); // Run once when component mounts to set initial color
 
   //${classArray[currentClass]}
 
@@ -45,7 +56,7 @@ export default function ProjectBlock({ position }) {
     <div
       className={`project-block ${
         isUnfadedWebD ? "" : classArrayFaded[currentClass]
-      } ${currentColor} hover:scale-110 ease-in-out duration-1000`}
+      } ${currentColor} ${hoverIsActive ? "hover-scale" : ""}`}
     ></div>
   );
 }
