@@ -3,31 +3,48 @@ import { useState, useEffect } from "react";
 import { customContext } from "../context/Context";
 import { CustomContextWebD } from "../context/ContextWebD";
 
-export default function ProjectBlock({}) {
+export default function ProjectBlock({ position }) {
   const { isClickedWebD } = customContext();
   const { isUnfadedWebD, setIsUnfadedWebD } = CustomContextWebD();
 
   useEffect(() => {
     setIsUnfadedWebD(true);
-    console.log(isClickedWebD);
   }, [isClickedWebD]);
 
-  const classArray = [
-    "project-block--faded--100",
-    "project-block--faded--200",
-    "project-block--faded--300",
-  ];
+  //let classArray = [];
 
-  const currentClass = classArray[Math.floor(Math.random() * 2)];
+  let classArrayFaded = [];
+
+  if (position === "down") {
+    //classArray = ["project-block--1", "project-block--2", "project-block--3"];
+
+    classArrayFaded = [
+      "project-block--faded--1",
+      "project-block--faded--2",
+      "project-block--faded--3",
+    ];
+  } else {
+    //classArray = ["project-block--4", "project-block--5", "project-block--6"];
+
+    classArrayFaded = [
+      "project-block--faded--4",
+      "project-block--faded--5",
+      "project-block--faded--6",
+    ];
+  }
+
+  const currentClass = Math.floor(Math.random() * 3);
 
   const colorArray = ["bg-rose-400", "bg-amber-400", "bg-slate-400"];
 
   const currentColor = colorArray[Math.floor(Math.random() * 3)];
 
+  //${classArray[currentClass]}
+
   return (
     <div
-      className={`${
-        isUnfadedWebD ? "project-block" : currentClass
+      className={`project-block ${
+        isUnfadedWebD ? "" : classArrayFaded[currentClass]
       } ${currentColor} hover:scale-110 ease-in-out duration-1000`}
     ></div>
   );
