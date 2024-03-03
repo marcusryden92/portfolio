@@ -28,13 +28,13 @@ const CursorSVG = () => (
       <path
         d="M26.731,34.417L1.142,44.711c-1.682,0.677-1.459,3.168,0.362,4.041l85.612,41.043c1.71,0.82,3.499-0.969,2.679-2.679L48.752,1.504   c-0.873-1.821-3.364-2.044-4.041-0.362L34.417,26.731C33.009,30.233,30.233,33.009,26.731,34.417z"
         style={{
-          stroke: "#000000", // Set stroke color to black
+          stroke: "#E0E0E0", // Set stroke color to black
           strokeWidth: 1,
           strokeDasharray: "none",
           strokeLinecap: "butt",
           strokeLinejoin: "miter",
           strokeMiterlimit: 10,
-          fill: "#FFFFFF",
+          fill: "#000000",
           fillRule: "nonzero",
           opacity: 1,
         }}
