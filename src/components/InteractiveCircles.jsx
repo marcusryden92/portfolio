@@ -12,17 +12,17 @@ const InteractiveCircles = () => {
     };
 
     const VELOCITY = 2;
-    const MAXRADIUS = 50;
-    const MINRADIUS = 2;
-    const SIZEVARIATION = 3;
+    const MAXRADIUS = 3;
+    const MINRADIUS = 1;
+    const SIZEVARIATION = 1;
 
     const GROWTHRATE = 2;
     const SHRINKRATE = 2;
-    const DETECTIONDISTANCE = 100;
+    const DETECTIONDISTANCE = 150;
 
-    const CIRCLECOUNT = 1000;
+    const CIRCLECOUNT = 2000;
 
-    const BACKGROUNDCOLOR = "#999999";
+    const BACKGROUNDCOLOR = "#000B15";
 
     const COLORUPDATERATE = 0;
 
@@ -90,9 +90,10 @@ const InteractiveCircles = () => {
         draw: function () {
           c.beginPath();
           c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-          c.fillStyle = `hsl(${Math.floor(this.color[0])}, ${this.color[1]}%, ${
+          /* c.fillStyle = `hsl(${Math.floor(this.color[0])}, ${this.color[1]}%, ${
             this.color[2]
-          }%)`;
+          }%)`; */
+          c.fillStyle = "#FFFFFF";
           c.fill();
         },
         update: function () {
