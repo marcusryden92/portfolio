@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CursorSVG from "../assets/cursor.svg";
+import Cursor from "../assets/Cursor";
 import "../index.css"; // Optional: You can define styles for your cursor in a separate CSS file
 
 const CustomCursor = () => {
@@ -27,7 +27,7 @@ const CustomCursor = () => {
           position.y <= 10 || position.y >= innerHeight - 10 ? "none" : "block", // Hide cursor when y position is 0
       }}
     >
-      <img src={CursorSVG} alt="Custom Cursor" />
+      <Cursor />
     </div>
   );
 };

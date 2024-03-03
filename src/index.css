@@ -107,7 +107,7 @@
   transform: rotate(180deg);
 }
 
-.custom-cursor img {
+.custom-cursor svg {
   width: 20px; /* Adjust the width and height as needed */
   height: 20px;
 }
