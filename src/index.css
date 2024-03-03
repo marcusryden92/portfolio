@@ -77,7 +77,6 @@
 .box {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
   padding: 10px; /* Adjust padding as needed */
   align-items: flex-start; /* Shrink-wrap around flex items */
   flex-wrap: nowrap; /* Ensure items stay in a single row */
