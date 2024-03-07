@@ -1,20 +1,24 @@
 import GalleryContainer from "../components/GalleryContainer";
 import { useState, useEffect } from "react";
-import { CustomContextWebD } from "../context/ContextWebD";
+import { useContextWebD } from "../context/ContextWebD";
 import { usePageNav } from "../hooks/usePageNavigation";
 
 export default function WebD({}) {
-  const { isUnfadedWebD, setIsUnfadedWebD, hoverIsActive, setHoverIsActive } =
-    CustomContextWebD();
+  const {
+    isUnfadedWebD,
+    setIsUnfadedWebD,
+    hoverIsActiveWebD,
+    setHoverIsActiveWebD,
+  } = useContextWebD();
 
-  const { handleExitPage } = usePageNav();
+  const { handleExitPage, isClickedWebD } = usePageNav();
 
   useEffect(() => {
     setIsUnfadedWebD(true);
   }, []);
 
   function handleClickX() {
-    handleExitPage(setHoverIsActive, setIsUnfadedWebD);
+    handleExitPage(setHoverIsActiveWebD, setIsUnfadedWebD);
   }
 
   return (
@@ -32,7 +36,7 @@ export default function WebD({}) {
           <div
             className={`gallery-x ${
               isUnfadedWebD ? "gallery-x" : "gallery-x--faded"
-            } ${hoverIsActive ? "hover-scale" : ""} 
+            } ${hoverIsActiveWebD ? "hover-scale" : ""} 
            gallery-element w-10
             font-bold `}
             onClick={handleClickX}
@@ -40,7 +44,13 @@ export default function WebD({}) {
             X
           </div>
         </div>
-        <GalleryContainer />
+        <GalleryContainer
+          parentIsClicked={isClickedWebD}
+          parentIsUnfaded={isUnfadedWebD}
+          setParentIsUnfaded={setIsUnfadedWebD}
+          hoverIsActive={hoverIsActiveWebD}
+          setHoverIsActive={setHoverIsActiveWebD}
+        />
       </div>
     </>
   );

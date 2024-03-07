@@ -1,22 +1,25 @@
 import "../index.css";
 import { useState, useEffect } from "react";
-import { CustomContextWebD } from "../context/ContextWebD";
+import { useContextWebD } from "../context/ContextWebD";
 import { usePageNav } from "../hooks/usePageNavigation";
 
-export default function ProjectBlock({ position }) {
-  const { isClickedWebD } = usePageNav();
-  const { isUnfadedWebD, setIsUnfadedWebD, hoverIsActive, setHoverIsActive } =
-    CustomContextWebD();
-
+export default function ProjectBlock({
+  parentIsClicked,
+  parentIsUnfaded,
+  setParentIsUnfaded,
+  hoverIsActive,
+  setHoverIsActive,
+  position,
+}) {
   useEffect(() => {
-    setIsUnfadedWebD(true);
+    setParentIsUnfaded(true);
 
-    if (isClickedWebD) {
+    if (parentIsClicked) {
       setTimeout(() => setHoverIsActive(true), 1500);
     } else {
       setHoverIsActive(false);
     }
-  }, [isClickedWebD]);
+  }, [parentIsClicked]);
 
   //let classArray = [];
 
@@ -55,7 +58,7 @@ export default function ProjectBlock({ position }) {
   return (
     <div
       className={`project-block ${
-        isUnfadedWebD ? "" : classArrayFaded[currentClass]
+        parentIsUnfaded ? "" : classArrayFaded[currentClass]
       } ${currentColor} ${hoverIsActive ? "hover-scale" : ""}`}
     ></div>
   );

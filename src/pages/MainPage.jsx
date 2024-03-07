@@ -9,6 +9,7 @@ import WebD from "./WebD";
 import IndD from "./IndD";
 
 import { ContextWebD } from "../context/ContextWebD";
+import { ContextIndD } from "../context/ContextIndD";
 import { usePageNav } from "../hooks/usePageNavigation";
 
 export default function MainPage() {
@@ -30,7 +31,13 @@ export default function MainPage() {
         ) : (
           ""
         )}
-        {isClickedIndD ? <IndD /> : ""}
+        {isClickedIndD ? (
+          <ContextIndD>
+            <IndD />
+          </ContextIndD>
+        ) : (
+          ""
+        )}
       </div>
       <div className="z-0 absolute">
         <InteractiveCircles className="behind" />
