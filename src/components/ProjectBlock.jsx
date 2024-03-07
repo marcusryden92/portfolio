@@ -10,14 +10,8 @@ export default function ProjectBlock({
   position,
 }) {
   useEffect(() => {
-    setParentIsUnfaded(true);
-
-    if (parentIsClicked) {
-      setTimeout(() => setHoverIsActive(true), 1500);
-    } else {
-      setHoverIsActive(false);
-    }
-  }, [parentIsClicked]);
+    setTimeout(() => setHoverIsActive(true), 1500);
+  }, []);
 
   //let classArray = [];
 

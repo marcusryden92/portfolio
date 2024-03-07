@@ -14,7 +14,9 @@ export default function IndD({}) {
   const { handleExitPage, isClickedIndD } = usePageNav();
 
   useEffect(() => {
-    setIsUnfadedIndD(true);
+    setTimeout(() => {
+      setIsUnfadedIndD(true);
+    }, 50);
   }, []);
 
   function handleClickX() {

@@ -14,7 +14,9 @@ export default function WebD({}) {
   const { handleExitPage, isClickedWebD } = usePageNav();
 
   useEffect(() => {
-    setIsUnfadedWebD(true);
+    setTimeout(() => {
+      setIsUnfadedWebD(true);
+    }, 50);
   }, []);
 
   function handleClickX() {

@@ -47,6 +47,22 @@ export default function GalleryContainer({
           hoverIsActive={hoverIsActive}
           setHoverIsActive={setHoverIsActive}
         />
+        <ProjectBlock
+          position={position[1]}
+          parentIsClicked={parentIsClicked}
+          parentIsUnfaded={parentIsUnfaded}
+          setParentIsUnfaded={setParentIsUnfaded}
+          hoverIsActive={hoverIsActive}
+          setHoverIsActive={setHoverIsActive}
+        />
+        <ProjectBlock
+          position={position[1]}
+          parentIsClicked={parentIsClicked}
+          parentIsUnfaded={parentIsUnfaded}
+          setParentIsUnfaded={setParentIsUnfaded}
+          hoverIsActive={hoverIsActive}
+          setHoverIsActive={setHoverIsActive}
+        />
       </div>
     </div>
   );

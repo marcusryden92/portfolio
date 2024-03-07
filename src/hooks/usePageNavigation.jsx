@@ -13,6 +13,8 @@ export const PageNavProvider = ({ children }) => {
     setTimeout(() => resetClickedStates(), 1500);
   };
 
+  // Clicking ABOUT
+
   const handleClickAbout = (
     setHoverIsActiveWebD,
     setIsUnfadedWebD,
@@ -38,37 +40,41 @@ export const PageNavProvider = ({ children }) => {
     setIsClickedIndD(false);
   };
 
+  // Clicking WEBDESIGN
+
   const handleClickWebD = (setHoverIsActiveIndD, setIsUnfadedIndD) => {
     if (isClickedAbout || isClickedIndD) {
       setHoverIsActiveIndD(false);
       setIsUnfadedIndD(false);
-      setTimeout(setStatesWhenClickingWebD, 1500);
+      setTimeout(setStatesWhenClickingWebD, 1000);
     } else {
       setStatesWhenClickingWebD();
     }
   };
 
   const setStatesWhenClickingWebD = () => {
-    setIsClickedAbout(false);
-    setIsClickedIndD(false);
+    resetClickedStates();
     setIsClickedWebD(true);
   };
+
+  // Clicking INDUSTRIAL DESIGN
 
   const handleClickIndD = (setHoverIsActiveWebD, setIsUnfadedWebD) => {
     if (isClickedAbout || isClickedWebD) {
       setHoverIsActiveWebD(false);
       setIsUnfadedWebD(false);
-      setTimeout(setStatesWhenClickingIndD, 1500);
+      setTimeout(setStatesWhenClickingIndD, 1000);
     } else {
       setStatesWhenClickingIndD();
     }
   };
 
   const setStatesWhenClickingIndD = () => {
-    setIsClickedAbout(false);
-    setIsClickedWebD(false);
+    resetClickedStates();
     setIsClickedIndD(true);
   };
+
+  // RESET
 
   const resetClickedStates = () => {
     setIsClickedAbout(false);
