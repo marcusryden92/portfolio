@@ -17,31 +17,23 @@ export default function MainPage() {
 
   return (
     <div className="flex flex-col sm:flex-row">
-      {" "}
-      <div className="absolute z-10">
-        <Cover />
-      </div>
-      <div className="flex main-container z-5">
-        <Menu />
-        {isClickedAbout ? <About /> : ""}
-        {isClickedWebD ? (
-          <ContextWebD>
-            <WebD />
-          </ContextWebD>
-        ) : (
-          ""
-        )}
-        {isClickedIndD ? (
-          <ContextIndD>
-            <IndD />
-          </ContextIndD>
-        ) : (
-          ""
-        )}
-      </div>
-      <div className="z-0 absolute">
-        <InteractiveCircles className="behind" />
-      </div>
+      <ContextIndD>
+        <ContextWebD>
+          {" "}
+          <div className="absolute z-10">
+            <Cover />
+          </div>
+          <div className="flex main-container z-5">
+            <Menu />
+            {isClickedAbout ? <About /> : ""}
+            {isClickedWebD ? <WebD /> : ""}
+            {isClickedIndD ? <IndD /> : ""}
+          </div>
+          <div className="z-0 absolute">
+            <InteractiveCircles className="behind" />
+          </div>
+        </ContextWebD>
+      </ContextIndD>
     </div>
   );
 }

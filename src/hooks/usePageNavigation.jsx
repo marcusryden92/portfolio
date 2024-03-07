@@ -10,28 +10,67 @@ export const PageNavProvider = ({ children }) => {
   const handleExitPage = (setHoverIsActive, setIsUnfaded) => {
     setHoverIsActive(false);
     setIsUnfaded(false);
-    setTimeout(() => handleClearPages(), 1500);
+    setTimeout(() => resetClickedStates(), 1500);
   };
 
-  const handleClickAbout = () => {
+  const handleClickAbout = (
+    setHoverIsActiveWebD,
+    setIsUnfadedWebD,
+    setHoverIsActiveIndD,
+    setIsUnfadedIndD
+  ) => {
+    if (isClickedWebD || isClickedIndD) {
+      setHoverIsActiveWebD(false);
+      setIsUnfadedWebD(false);
+
+      setHoverIsActiveIndD(false);
+      setIsUnfadedIndD(false);
+
+      setTimeout(setStatesWhenClickingAbout, 1500);
+    } else {
+      setStatesWhenClickingAbout();
+    }
+  };
+
+  const setStatesWhenClickingAbout = () => {
     setIsClickedAbout(true);
     setIsClickedWebD(false);
     setIsClickedIndD(false);
   };
 
-  const handleClickWebD = () => {
-    setIsClickedAbout(false);
-    setIsClickedWebD(true);
-    setIsClickedIndD(false);
+  const handleClickWebD = (setHoverIsActiveIndD, setIsUnfadedIndD) => {
+    if (isClickedAbout || isClickedIndD) {
+      setHoverIsActiveIndD(false);
+      setIsUnfadedIndD(false);
+      setTimeout(setStatesWhenClickingWebD, 1500);
+    } else {
+      setStatesWhenClickingWebD();
+    }
   };
 
-  const handleClickIndD = () => {
+  const setStatesWhenClickingWebD = () => {
+    setIsClickedAbout(false);
+    setIsClickedIndD(false);
+    setIsClickedWebD(true);
+  };
+
+  const handleClickIndD = (setHoverIsActiveWebD, setIsUnfadedWebD) => {
+    if (isClickedAbout || isClickedWebD) {
+      setHoverIsActiveWebD(false);
+      setIsUnfadedWebD(false);
+      setTimeout(setStatesWhenClickingIndD, 1500);
+    } else {
+      setStatesWhenClickingIndD();
+    }
+  };
+
+  const setStatesWhenClickingIndD = () => {
     setIsClickedAbout(false);
     setIsClickedWebD(false);
     setIsClickedIndD(true);
   };
 
-  const handleClearPages = () => {
+  const resetClickedStates = () => {
     setIsClickedAbout(false);
     setIsClickedWebD(false);
     setIsClickedIndD(false);
@@ -42,7 +81,7 @@ export const PageNavProvider = ({ children }) => {
     handleClickAbout,
     handleClickWebD,
     handleClickIndD,
-    handleClearPages,
+    resetClickedStates,
     isClickedAbout,
     setIsClickedAbout,
     isClickedWebD,

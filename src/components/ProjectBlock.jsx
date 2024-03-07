@@ -1,7 +1,5 @@
 import "../index.css";
 import { useState, useEffect } from "react";
-import { useContextWebD } from "../context/ContextWebD";
-import { usePageNav } from "../hooks/usePageNavigation";
 
 export default function ProjectBlock({
   parentIsClicked,

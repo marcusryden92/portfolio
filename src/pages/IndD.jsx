@@ -28,10 +28,10 @@ export default function IndD({}) {
           <div
             className={`${
               isUnfadedIndD ? "gallery-title" : "gallery-title--faded"
-            } gallery-element w-32
+            } gallery-element w-40
         font-medium hover:scale-110 ease-in-out duration-1000`}
           >
-            Webdesign
+            Industrial Design
           </div>
           <div
             className={`gallery-x ${
