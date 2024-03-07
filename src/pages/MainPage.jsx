@@ -8,46 +8,15 @@ import About from "./About";
 import WebD from "./WebD";
 import IndD from "./IndD";
 
-import { customContext } from "../context/Context";
+import { useNavContext } from "../context/NavigationContextProvider";
 import { ContextWebD } from "../context/ContextWebD";
+import { PageNavigationProvider } from "../hooks/usePageNavigation";
 
 export default function MainPage() {
-  const {
-    isClickedAbout,
-    setIsClickedAbout,
-    isClickedWebD,
-    setIsClickedWebD,
-    isClickedIndD,
-    setIsClickedIndD,
-  } = customContext();
-
-  function handleClickAbout() {
-    setIsClickedAbout(true);
-    setIsClickedWebD(false);
-    setIsClickedIndD(false);
-  }
-
-  function handleClickWebD() {
-    setIsClickedAbout(false);
-    setIsClickedWebD(true);
-    setIsClickedIndD(false);
-  }
-
-  function handleClickIndD() {
-    setIsClickedAbout(false);
-    setIsClickedWebD(false);
-    setIsClickedIndD(true);
-  }
-
-  function handleClickClear() {
-    setIsClickedAbout(false);
-    setIsClickedWebD(false);
-    setIsClickedIndD(false);
-  }
-
   return (
-    <ContextWebD>
-      <div className="flex flex-col sm:flex-row">
+    <div className="flex flex-col sm:flex-row">
+      {" "}
+      <PageNavigationProvider>
         <div className="absolute z-10">
           <Cover />
         </div>
@@ -59,14 +28,20 @@ export default function MainPage() {
             handleClickIndD={handleClickIndD}
           />
           {isClickedAbout ? <About handleClickClear={handleClickClear} /> : ""}
-          {isClickedWebD ? <WebD handleClickClear={handleClickClear} /> : ""}
+          {isClickedWebD ? (
+            <ContextWebD>
+              <WebD handleClickClear={handleClickClear} />
+            </ContextWebD>
+          ) : (
+            ""
+          )}
           {isClickedIndD ? <IndD handleClickClear={handleClickClear} /> : ""}
         </div>
 
         <div className="z-0 absolute">
           <InteractiveCircles className="behind" />
         </div>
-      </div>
-    </ContextWebD>
+      </PageNavigationProvider>
+    </div>
   );
 }

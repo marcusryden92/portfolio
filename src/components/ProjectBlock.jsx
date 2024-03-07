@@ -1,6 +1,6 @@
 import "../index.css";
 import { useState, useEffect } from "react";
-import { customContext } from "../context/Context";
+import { customContext } from "../context/NavigationContextProvider";
 import { CustomContextWebD } from "../context/ContextWebD";
 
 export default function ProjectBlock({ position }) {

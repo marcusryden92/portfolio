@@ -5,18 +5,11 @@ export const ContextWebD = ({ children }) => {
   const [isUnfadedWebD, setIsUnfadedWebD] = useState(false);
   const [hoverIsActive, setHoverIsActive] = useState(false);
 
-  function handleClickExitWebD() {
-    setHoverIsActive(false);
-    setIsUnfadedWebD(false);
-    setTimeout(() => handleClickClear(), 1500);
-  }
-
   const value = {
     isUnfadedWebD,
     setIsUnfadedWebD,
     hoverIsActive,
     setHoverIsActive,
-    handleClickExitWebD,
   };
 
   return (
