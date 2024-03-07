@@ -1,10 +1,10 @@
 import "../index.css";
 import { useState, useEffect } from "react";
-import { customContext } from "../context/NavigationContextProvider";
 import { CustomContextWebD } from "../context/ContextWebD";
+import { usePageNav } from "../hooks/usePageNavigation";
 
 export default function ProjectBlock({ position }) {
-  const { isClickedWebD } = customContext();
+  const { isClickedWebD } = usePageNav();
   const { isUnfadedWebD, setIsUnfadedWebD, hoverIsActive, setHoverIsActive } =
     CustomContextWebD();
 

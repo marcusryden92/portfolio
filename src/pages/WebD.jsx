@@ -2,9 +2,8 @@ import GalleryContainer from "../components/GalleryContainer";
 import { useState, useEffect } from "react";
 import { CustomContextWebD } from "../context/ContextWebD";
 import { usePageNav } from "../hooks/usePageNavigation";
-import { useNavContext } from "../context/NavigationContextProvider";
 
-export default function WebD({ handleClickClear }) {
+export default function WebD({}) {
   const { isUnfadedWebD, setIsUnfadedWebD, hoverIsActive, setHoverIsActive } =
     CustomContextWebD();
 
@@ -14,7 +13,9 @@ export default function WebD({ handleClickClear }) {
     setIsUnfadedWebD(true);
   }, []);
 
-  handleExitPage(setHoverIsActive, setIsUnfadedWebD, useNavContext);
+  function handleClickX() {
+    handleExitPage(setHoverIsActive, setIsUnfadedWebD);
+  }
 
   return (
     <>
@@ -34,7 +35,7 @@ export default function WebD({ handleClickClear }) {
             } ${hoverIsActive ? "hover-scale" : ""} 
            gallery-element w-10
             font-bold `}
-            onClick={handleExitPage}
+            onClick={handleClickX}
           >
             X
           </div>

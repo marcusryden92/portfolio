@@ -2,40 +2,36 @@ import React, { createContext, useContext, useState } from "react";
 
 const PageNavigationContext = createContext(null);
 
-export const PageNavigationProvider = ({ children }) => {
-  const handleExitPage = (setHoverIsActive, setIsUnfaded, useNavContext) => {
+export const PageNavProvider = ({ children }) => {
+  const [isClickedAbout, setIsClickedAbout] = useState(false);
+  const [isClickedWebD, setIsClickedWebD] = useState(false);
+  const [isClickedIndD, setIsClickedIndD] = useState(false);
+
+  const handleExitPage = (setHoverIsActive, setIsUnfaded) => {
     setHoverIsActive(false);
     setIsUnfaded(false);
-    setTimeout(() => handleClearPages(useNavContext), 1500);
+    setTimeout(() => handleClearPages(), 1500);
   };
 
-  const handleClickAbout = (useNavContext) => {
-    const { setIsClickedAbout, setIsClickedIndD, setIsClickedWebD } =
-      useNavContext();
+  const handleClickAbout = () => {
     setIsClickedAbout(true);
     setIsClickedWebD(false);
     setIsClickedIndD(false);
   };
 
-  const handleClickWebD = (useNavContext) => {
-    const { setIsClickedAbout, setIsClickedIndD, setIsClickedWebD } =
-      useNavContext();
+  const handleClickWebD = () => {
     setIsClickedAbout(false);
     setIsClickedWebD(true);
     setIsClickedIndD(false);
   };
 
-  const handleClickIndD = (useNavContext) => {
-    const { setIsClickedAbout, setIsClickedIndD, setIsClickedWebD } =
-      useNavContext();
+  const handleClickIndD = () => {
     setIsClickedAbout(false);
     setIsClickedWebD(false);
     setIsClickedIndD(true);
   };
 
-  const handleClearPages = (useNavContext) => {
-    const { setIsClickedAbout, setIsClickedIndD, setIsClickedWebD } =
-      useNavContext();
+  const handleClearPages = () => {
     setIsClickedAbout(false);
     setIsClickedWebD(false);
     setIsClickedIndD(false);
@@ -47,6 +43,12 @@ export const PageNavigationProvider = ({ children }) => {
     handleClickWebD,
     handleClickIndD,
     handleClearPages,
+    isClickedAbout,
+    setIsClickedAbout,
+    isClickedWebD,
+    setIsClickedWebD,
+    isClickedIndD,
+    setIsClickedIndD,
   };
 
   return (

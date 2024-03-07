@@ -8,40 +8,33 @@ import About from "./About";
 import WebD from "./WebD";
 import IndD from "./IndD";
 
-import { useNavContext } from "../context/NavigationContextProvider";
 import { ContextWebD } from "../context/ContextWebD";
-import { PageNavigationProvider } from "../hooks/usePageNavigation";
+import { usePageNav } from "../hooks/usePageNavigation";
 
 export default function MainPage() {
+  const { isClickedAbout, isClickedIndD, isClickedWebD } = usePageNav();
+
   return (
     <div className="flex flex-col sm:flex-row">
       {" "}
-      <PageNavigationProvider>
-        <div className="absolute z-10">
-          <Cover />
-        </div>
-
-        <div className="flex main-container z-5">
-          <Menu
-            handleClickAbout={handleClickAbout}
-            handleClickWebD={handleClickWebD}
-            handleClickIndD={handleClickIndD}
-          />
-          {isClickedAbout ? <About handleClickClear={handleClickClear} /> : ""}
-          {isClickedWebD ? (
-            <ContextWebD>
-              <WebD handleClickClear={handleClickClear} />
-            </ContextWebD>
-          ) : (
-            ""
-          )}
-          {isClickedIndD ? <IndD handleClickClear={handleClickClear} /> : ""}
-        </div>
-
-        <div className="z-0 absolute">
-          <InteractiveCircles className="behind" />
-        </div>
-      </PageNavigationProvider>
+      <div className="absolute z-10">
+        <Cover />
+      </div>
+      <div className="flex main-container z-5">
+        <Menu />
+        {isClickedAbout ? <About /> : ""}
+        {isClickedWebD ? (
+          <ContextWebD>
+            <WebD />
+          </ContextWebD>
+        ) : (
+          ""
+        )}
+        {isClickedIndD ? <IndD /> : ""}
+      </div>
+      <div className="z-0 absolute">
+        <InteractiveCircles className="behind" />
+      </div>
     </div>
   );
 }

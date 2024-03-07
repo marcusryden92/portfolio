@@ -1,10 +1,8 @@
 import "../index.css";
+import { usePageNav } from "../hooks/usePageNavigation";
 
-export default function Menu({
-  handleClickAbout,
-  handleClickWebD,
-  handleClickIndD,
-}) {
+export default function Menu({}) {
+  const { handleClickAbout, handleClickIndD, handleClickWebD } = usePageNav();
   return (
     <div className=" flex flex-col justify-center menu p-16 text-xl h-80 sm:h-screen sm:text-base text-left  ">
       <ul>
