@@ -1,17 +1,17 @@
 import "./App.css";
 import "./index.css";
 import CustomCursor from "./components/CustomCursor";
-import { Context } from "./context/Context";
+import { PageNavProvider } from "./hooks/usePageNavigation";
 
 import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <>
-      <Context>
+      <PageNavProvider>
         <MainPage />
         <CustomCursor />
-      </Context>
+      </PageNavProvider>
     </>
   );
 }

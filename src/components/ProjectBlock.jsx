@@ -1,22 +1,17 @@
 import "../index.css";
 import { useState, useEffect } from "react";
-import { customContext } from "../context/Context";
-import { CustomContextWebD } from "../context/ContextWebD";
 
-export default function ProjectBlock({ position }) {
-  const { isClickedWebD } = customContext();
-  const { isUnfadedWebD, setIsUnfadedWebD, hoverIsActive, setHoverIsActive } =
-    CustomContextWebD();
-
+export default function ProjectBlock({
+  parentIsClicked,
+  parentIsUnfaded,
+  setParentIsUnfaded,
+  hoverIsActive,
+  setHoverIsActive,
+  position,
+}) {
   useEffect(() => {
-    setIsUnfadedWebD(true);
-
-    if (isClickedWebD) {
-      setTimeout(() => setHoverIsActive(true), 1500);
-    } else {
-      setHoverIsActive(false);
-    }
-  }, [isClickedWebD]);
+    setTimeout(() => setHoverIsActive(true), 1500);
+  }, []);
 
   //let classArray = [];
 
@@ -55,7 +50,7 @@ export default function ProjectBlock({ position }) {
   return (
     <div
       className={`project-block ${
-        isUnfadedWebD ? "" : classArrayFaded[currentClass]
+        parentIsUnfaded ? "" : classArrayFaded[currentClass]
       } ${currentColor} ${hoverIsActive ? "hover-scale" : ""}`}
     ></div>
   );

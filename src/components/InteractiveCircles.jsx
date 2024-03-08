@@ -20,7 +20,7 @@ const InteractiveCircles = () => {
     const SHRINKRATE = 2;
     const DETECTIONDISTANCE = 100;
 
-    const CIRCLECOUNT = 1000;
+    const CIRCLECOUNT = 500;
 
     const BACKGROUNDCOLOR = "#999999";
 

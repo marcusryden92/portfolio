@@ -1,22 +1,26 @@
 import GalleryContainer from "../components/GalleryContainer";
 import { useState, useEffect } from "react";
-import { customContext } from "../context/Context";
-import { CustomContextWebD } from "../context/ContextWebD";
+import { useContextWebD } from "../context/ContextWebD";
+import { usePageNav } from "../hooks/usePageNavigation";
 
-export default function WebD({ handleClickClear }) {
-  const { isClickedWebD, setIsClickedWebD } = customContext();
+export default function WebD({}) {
+  const {
+    isUnfadedWebD,
+    setIsUnfadedWebD,
+    hoverIsActiveWebD,
+    setHoverIsActiveWebD,
+  } = useContextWebD();
 
-  const { isUnfadedWebD, setIsUnfadedWebD, hoverIsActive, setHoverIsActive } =
-    CustomContextWebD();
+  const { handleExitPage, isClickedWebD } = usePageNav();
 
   useEffect(() => {
-    setIsUnfadedWebD(isClickedWebD);
-  }, [isClickedWebD]);
+    setTimeout(() => {
+      setIsUnfadedWebD(true);
+    }, 50);
+  }, []);
 
-  function handleClickExit(e) {
-    setHoverIsActive(false);
-    setIsUnfadedWebD(false);
-    setTimeout(() => handleClickClear(), 1500);
+  function handleClickX() {
+    handleExitPage(setHoverIsActiveWebD, setIsUnfadedWebD);
   }
 
   return (
@@ -34,15 +38,21 @@ export default function WebD({ handleClickClear }) {
           <div
             className={`gallery-x ${
               isUnfadedWebD ? "gallery-x" : "gallery-x--faded"
-            } ${hoverIsActive ? "hover-scale" : ""} 
+            } ${hoverIsActiveWebD ? "hover-scale" : ""} 
            gallery-element w-10
             font-bold `}
-            onClick={handleClickExit}
+            onClick={handleClickX}
           >
             X
           </div>
         </div>
-        <GalleryContainer />
+        <GalleryContainer
+          parentIsClicked={isClickedWebD}
+          parentIsUnfaded={isUnfadedWebD}
+          setParentIsUnfaded={setIsUnfadedWebD}
+          hoverIsActive={hoverIsActiveWebD}
+          setHoverIsActive={setHoverIsActiveWebD}
+        />
       </div>
     </>
   );

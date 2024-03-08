@@ -1,15 +1,15 @@
 import { createContext, useContext, useEffect, useState } from "react";
 export const ContextProvider = createContext(null);
 
-export const ContextWebD = ({ children }) => {
-  const [isUnfadedWebD, setIsUnfadedWebD] = useState(false);
-  const [hoverIsActiveWebD, setHoverIsActiveWebD] = useState(false);
+export const ContextIndD = ({ children }) => {
+  const [isUnfadedIndD, setIsUnfadedIndD] = useState(false);
+  const [hoverIsActiveIndD, setHoverIsActiveIndD] = useState(false);
 
   const value = {
-    isUnfadedWebD,
-    setIsUnfadedWebD,
-    hoverIsActiveWebD,
-    setHoverIsActiveWebD,
+    isUnfadedIndD,
+    setIsUnfadedIndD,
+    hoverIsActiveIndD,
+    setHoverIsActiveIndD,
   };
 
   return (
@@ -19,7 +19,7 @@ export const ContextWebD = ({ children }) => {
   );
 };
 
-export const useContextWebD = () => {
+export const useContextIndD = () => {
   const context = useContext(ContextProvider);
   if (!context) {
     throw new Error("customContextWebD undefined");
