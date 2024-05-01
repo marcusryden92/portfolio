@@ -20,18 +20,18 @@ export default function MainPage() {
       <ContextIndD>
         <ContextWebD>
           {" "}
-          <div className="absolute z-10">
-            <Cover />
-          </div>
+          <div className="absolute z-10">{/*<Cover */}</div>
           <div className="flex main-container z-5">
             <Menu />
             {isClickedAbout ? <About /> : ""}
             {isClickedWebD ? <WebD /> : ""}
             {isClickedIndD ? <IndD /> : ""}
           </div>
-          <div className="z-0 absolute">
-            <InteractiveCircles className="behind" />
-          </div>
+          {
+            <div className="z-0 absolute bg-slate-500 h-full w-full">
+              {/*<InteractiveCircles className="behind" />*/}
+            </div>
+          }
         </ContextWebD>
       </ContextIndD>
     </div>
