@@ -212,3 +212,13 @@
   opacity: 0;
   transform: translateY(-300px);
 }
+
+.about-container {
+  opacity: 1;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.about-container--faded {
+  opacity: 0;
+  transform: translateY(-1000px);
+}

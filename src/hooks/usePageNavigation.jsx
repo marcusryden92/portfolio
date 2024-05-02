@@ -19,33 +19,48 @@ export const PageNavProvider = ({ children }) => {
     setHoverIsActiveWebD,
     setIsUnfadedWebD,
     setHoverIsActiveIndD,
-    setIsUnfadedIndD
+    setIsUnfadedIndD,
+    setIsFadedAbout
   ) => {
-    if (isClickedWebD || isClickedIndD) {
+    if (isClickedWebD) {
       setHoverIsActiveWebD(false);
       setIsUnfadedWebD(false);
 
+      setTimeout(() => {
+        setStatesWhenClickingAbout(setIsFadedAbout);
+      }, 1500);
+    } else if (isClickedIndD) {
       setHoverIsActiveIndD(false);
       setIsUnfadedIndD(false);
 
-      setTimeout(setStatesWhenClickingAbout, 1500);
+      setTimeout(() => {
+        setStatesWhenClickingAbout(setIsFadedAbout);
+      }, 1500);
     } else {
-      setStatesWhenClickingAbout();
+      setStatesWhenClickingAbout(setIsFadedAbout);
     }
   };
 
-  const setStatesWhenClickingAbout = () => {
+  const setStatesWhenClickingAbout = (setIsFadedAbout) => {
+    resetClickedStates();
     setIsClickedAbout(true);
-    setIsClickedWebD(false);
-    setIsClickedIndD(false);
+    setIsFadedAbout(false);
   };
 
   // Clicking WEBDESIGN
 
-  const handleClickWebD = (setHoverIsActiveIndD, setIsUnfadedIndD) => {
-    if (isClickedAbout || isClickedIndD) {
+  const handleClickWebD = (
+    setHoverIsActiveIndD,
+    setIsUnfadedIndD,
+    setIsFadedAbout
+  ) => {
+    if (isClickedAbout) {
+      setIsFadedAbout(true);
+      setTimeout(setStatesWhenClickingWebD, 1000);
+    } else if (isClickedIndD) {
       setHoverIsActiveIndD(false);
       setIsUnfadedIndD(false);
+
       setTimeout(setStatesWhenClickingWebD, 1000);
     } else {
       setStatesWhenClickingWebD();

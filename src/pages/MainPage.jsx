@@ -10,6 +10,7 @@ import IndD from "./IndD";
 
 import { ContextWebD } from "../context/ContextWebD";
 import { ContextIndD } from "../context/ContextIndD";
+import { ContextAbout } from "../context/ContextAbout";
 import { usePageNav } from "../hooks/usePageNavigation";
 
 export default function MainPage() {
@@ -19,19 +20,21 @@ export default function MainPage() {
     <div className="flex flex-col sm:flex-row">
       <ContextIndD>
         <ContextWebD>
-          {" "}
-          <div className="absolute z-10">{/*<Cover */}</div>
-          <div className="flex main-container z-5">
-            <Menu />
-            {isClickedAbout ? <About /> : ""}
-            {isClickedWebD ? <WebD /> : ""}
-            {isClickedIndD ? <IndD /> : ""}
-          </div>
-          {
-            <div className="z-0 absolute bg-slate-500 h-full w-full">
-              {/*<InteractiveCircles className="behind" />*/}
+          <ContextAbout>
+            {" "}
+            <div className="absolute z-10">{/*<Cover */}</div>
+            <div className="flex main-container z-5">
+              <Menu />
+              {isClickedAbout ? <About /> : ""}
+              {isClickedWebD ? <WebD /> : ""}
+              {isClickedIndD ? <IndD /> : ""}
             </div>
-          }
+            {
+              <div className="z-0 absolute bg-slate-500 h-full w-full">
+                {/*<InteractiveCircles className="behind" />*/}
+              </div>
+            }
+          </ContextAbout>
         </ContextWebD>
       </ContextIndD>
     </div>
