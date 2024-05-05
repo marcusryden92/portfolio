@@ -31,7 +31,7 @@ export default function MainPage() {
             </div>
             {
               <div className="z-0 absolute bg-slate-500 h-full w-full">
-                {/*<InteractiveCircles className="behind" />*/}
+                <InteractiveCircles className="behind" />
               </div>
             }
           </ContextAbout>

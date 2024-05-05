@@ -6,6 +6,7 @@ import marcus from "../assets/marcus.jpg";
 
 export default function About({ handleClickClear }) {
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
+  const [flipped, setFlipped] = useState(false);
   const [active, setActive] = useState(false);
 
   const { resetClickedStates } = usePageNav();
@@ -48,17 +49,27 @@ export default function About({ handleClickClear }) {
         </div>
 
         {/*Flip card below*/}
-
         <div
-          className={`flex justify-between bg-gray-transparent text-left h-[400px] w-[700px] ${
+          className={`flip-card h-[400px] w-[700px]  ${
             isFadedAbout ? "about-container--faded" : "about-container"
-          }`}
+          } ${flipped ? "flipped" : ""}`}
+          onClick={() => setFlipped(!flipped)}
         >
-          <div className="p-10">About - Click to kill</div>
-          <img
-            className="object-cover object-center max-h-[100%]"
-            src={marcus}
-          />
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <div className="flex justify-between">
+                <div className="p-10">About - Click to flip</div>
+                <img
+                  className="object-cover object-center h-[400px]"
+                  src={marcus}
+                  alt="Marcus"
+                />
+              </div>
+            </div>
+            <div className="flip-card-back">
+              <div className="p-10">Back Content</div>
+            </div>
+          </div>
         </div>
       </div>
     </>
