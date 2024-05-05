@@ -2,6 +2,7 @@ import "../index.css";
 import { useContextAbout } from "../context/ContextAbout";
 import { useEffect, useState } from "react";
 import { usePageNav } from "../hooks/usePageNavigation";
+import marcus from "../assets/marcus.jpg";
 
 export default function About({ handleClickClear }) {
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
@@ -46,11 +47,15 @@ export default function About({ handleClickClear }) {
           </div>
         </div>
         <div
-          className={` bg-gray-transparent m-20 p-10 text-left h-[300px] w-[500px] ${
+          className={`flex justify-between bg-gray-transparent text-left h-[400px] w-[700px] ${
             isFadedAbout ? "about-container--faded" : "about-container"
           }`}
         >
-          About - Click to kill
+          <div className="p-10">About - Click to kill</div>
+          <img
+            className="object-cover object-center max-h-[100%]"
+            src={marcus}
+          />
         </div>
       </div>
     </>
