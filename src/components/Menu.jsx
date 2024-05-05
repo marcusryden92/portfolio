@@ -22,6 +22,7 @@ export default function Menu({}) {
               setIsUnfadedWebD,
               setHoverIsActiveIndD,
               setIsUnfadedIndD,
+              isFadedAbout,
               setIsFadedAbout
             );
           }}
@@ -35,7 +36,7 @@ export default function Menu({}) {
             handleClickWebD(
               setHoverIsActiveIndD,
               setIsUnfadedIndD,
-              setIsFadedAbout,
+              isFadedAbout,
               setIsFadedAbout
             );
           }}

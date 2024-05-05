@@ -44,7 +44,6 @@ export const PageNavProvider = ({ children }) => {
   const setStatesWhenClickingAbout = (setIsFadedAbout) => {
     resetClickedStates();
     setIsClickedAbout(true);
-    setIsFadedAbout(false);
   };
 
   // Clicking WEBDESIGN
@@ -52,6 +51,7 @@ export const PageNavProvider = ({ children }) => {
   const handleClickWebD = (
     setHoverIsActiveIndD,
     setIsUnfadedIndD,
+    isFadedAbout,
     setIsFadedAbout
   ) => {
     if (isClickedAbout) {
