@@ -46,6 +46,9 @@ export default function About({ handleClickClear }) {
             X
           </div>
         </div>
+
+        {/*Flip card below*/}
+
         <div
           className={`flex justify-between bg-gray-transparent text-left h-[400px] w-[700px] ${
             isFadedAbout ? "about-container--faded" : "about-container"
