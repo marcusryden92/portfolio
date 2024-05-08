@@ -13,14 +13,14 @@ const InteractiveCircles = () => {
 
     const VELOCITY = 2;
     const MAXRADIUS = 50;
-    const MINRADIUS = 2;
+    const MINRADIUS = 1;
     const SIZEVARIATION = 3;
 
     const GROWTHRATE = 2;
     const SHRINKRATE = 2;
     const DETECTIONDISTANCE = 100;
 
-    const CIRCLECOUNT = 500;
+    const CIRCLECOUNT = 200;
 
     const BACKGROUNDCOLOR = "#999999";
 
@@ -126,6 +126,19 @@ const InteractiveCircles = () => {
           } else {
             this.radius = baseRadius;
           }
+
+          /* if (distanceToCenter <= DETECTIONDISTANCE) {
+            // Adjust blur effect based on proximity to mouse cursor
+            c.filter = `blur(${(MAXRADIUS * proximityFactor) / 2}px)`;
+          } else {
+            c.filter = "none";
+          }
+
+          if (distanceToCenter <= DETECTIONDISTANCE) {
+            c.globalAlpha = 0.4s;
+          } else {
+            c.globalAlpha = 1;
+          } */
 
           if (this.color[0] < 360) {
             this.color[0] += COLORUPDATERATE;
