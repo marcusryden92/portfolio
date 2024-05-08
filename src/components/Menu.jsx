@@ -3,12 +3,14 @@ import { usePageNav } from "../hooks/usePageNavigation";
 import { useContextWebD } from "../context/ContextWebD";
 import { useContextIndD } from "../context/ContextIndD";
 import { useContextAbout } from "../context/ContextAbout";
+import { useContextProjectPage } from "../context/ContextProjectPage";
 
 export default function Menu({}) {
   const { handleClickAbout, handleClickIndD, handleClickWebD } = usePageNav();
   const { setIsUnfadedWebD, setHoverIsActiveWebD } = useContextWebD();
   const { setIsUnfadedIndD, setHoverIsActiveIndD } = useContextIndD();
   const { setIsFadedAbout, isFadedAbout } = useContextAbout();
+  const { setIsFadedProjectPage, isFadedProjectPage } = useContextProjectPage();
 
   return (
     <div className=" flex flex-col justify-center menu p-16 text-xl h-80 min-w-[25vw] sm:h-screen sm:text-base text-left  ">
@@ -23,7 +25,9 @@ export default function Menu({}) {
               setHoverIsActiveIndD,
               setIsUnfadedIndD,
               isFadedAbout,
-              setIsFadedAbout
+              setIsFadedAbout,
+              isFadedProjectPage,
+              setIsFadedProjectPage
             );
           }}
         >
@@ -36,7 +40,8 @@ export default function Menu({}) {
             handleClickWebD(
               setHoverIsActiveIndD,
               setIsUnfadedIndD,
-              setIsFadedAbout
+              setIsFadedAbout,
+              setIsFadedProjectPage
             );
           }}
         >
@@ -49,7 +54,8 @@ export default function Menu({}) {
             handleClickIndD(
               setHoverIsActiveWebD,
               setIsUnfadedWebD,
-              setIsFadedAbout
+              setIsFadedAbout,
+              setIsFadedProjectPage
             );
           }}
         >

@@ -19,6 +19,43 @@ export const PageNavProvider = ({ children }) => {
     setTimeout(() => resetClickedStates(), 1500);
   };
 
+  // Clicking PROJECT PAGE
+
+  const handleClickProjectPage = (
+    setHoverIsActiveWebD,
+    setIsUnfadedWebD,
+    setHoverIsActiveIndD,
+    setIsUnfadedIndD,
+    setIsFadedAbout
+  ) => {
+    console.log("Project page called");
+    if (isClickedWebD) {
+      setHoverIsActiveWebD(false);
+      setIsUnfadedWebD(false);
+
+      setTimeout(() => {
+        setStatesWhenClickingProjectPage();
+      }, 1500);
+    } else if (isClickedIndD) {
+      setHoverIsActiveIndD(false);
+      setIsUnfadedIndD(false);
+
+      setTimeout(() => {
+        setStatesWhenClickingProjectPage();
+      }, 1500);
+    } else if (isClickedAbout) {
+      setIsFadedAbout(true);
+      setTimeout(setStatesWhenClickingProjectPage, 1000);
+    } else {
+      setStatesWhenClickingProjectPage();
+    }
+  };
+
+  const setStatesWhenClickingProjectPage = () => {
+    resetClickedStates();
+    setIsClickedProjectPage(true);
+  };
+
   // Clicking ABOUT
 
   const handleClickAbout = (
@@ -33,21 +70,21 @@ export const PageNavProvider = ({ children }) => {
       setIsUnfadedWebD(false);
 
       setTimeout(() => {
-        setStatesWhenClickingAbout(setIsFadedAbout);
+        setStatesWhenClickingAbout();
       }, 1500);
     } else if (isClickedIndD) {
       setHoverIsActiveIndD(false);
       setIsUnfadedIndD(false);
 
       setTimeout(() => {
-        setStatesWhenClickingAbout(setIsFadedAbout);
+        setStatesWhenClickingAbout();
       }, 1500);
     } else {
-      setStatesWhenClickingAbout(setIsFadedAbout);
+      setStatesWhenClickingAbout();
     }
   };
 
-  const setStatesWhenClickingAbout = (setIsFadedAbout) => {
+  const setStatesWhenClickingAbout = () => {
     resetClickedStates();
     setIsClickedAbout(true);
   };
@@ -57,10 +94,14 @@ export const PageNavProvider = ({ children }) => {
   const handleClickWebD = (
     setHoverIsActiveIndD,
     setIsUnfadedIndD,
-    setIsFadedAbout
+    setIsFadedAbout,
+    setIsFadedProjectPage
   ) => {
     if (isClickedAbout) {
       setIsFadedAbout(true);
+      setTimeout(setStatesWhenClickingWebD, 1000);
+    } else if (isClickedProjectPage) {
+      setIsFadedProjectPage(true);
       setTimeout(setStatesWhenClickingWebD, 1000);
     } else if (isClickedIndD) {
       setHoverIsActiveIndD(false);
@@ -82,11 +123,15 @@ export const PageNavProvider = ({ children }) => {
   const handleClickIndD = (
     setHoverIsActiveWebD,
     setIsUnfadedWebD,
-    setIsFadedAbout
+    setIsFadedAbout,
+    setIsFadedProjectPage
   ) => {
     if (isClickedAbout) {
       setIsFadedAbout(true);
       setTimeout(setStatesWhenClickingIndD, 1000);
+    } else if (isClickedProjectPage) {
+      setIsFadedProjectPage(true);
+      setTimeout(setStatesWhenClickingWebD, 1000);
     } else if (isClickedWebD) {
       setHoverIsActiveWebD(false);
       setIsUnfadedWebD(false);
@@ -116,6 +161,7 @@ export const PageNavProvider = ({ children }) => {
     handleClickAbout,
     handleClickWebD,
     handleClickIndD,
+    handleClickProjectPage,
     resetClickedStates,
     isClickedAbout,
     setIsClickedAbout,

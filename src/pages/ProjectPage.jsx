@@ -1,4 +1,28 @@
+import { useContextProjectPage } from "../context/ContextProjectPage";
+import { usePageNav } from "../hooks/usePageNavigation";
+import { useState, useEffect } from "react";
+
 export default function ProjectPage() {
+  const { isFadedProjectPage, setIsFadedProjectPage } = useContextProjectPage();
+
+  const [active, setActive] = useState(false);
+
+  const { resetClickedStates } = usePageNav();
+
+  function handleClickX() {
+    setIsFadedProjectPage(true);
+    setTimeout(resetClickedStates, 1000);
+  }
+
+  useEffect(() => {
+    if (!active) {
+      setActive(true);
+      setTimeout(() => {
+        setIsFadedProjectPage(false);
+      }, 50);
+    }
+  }, []);
+
   return (
     <>
       <div className="box my-5 mx-20 p-10 text-left">
@@ -24,10 +48,10 @@ export default function ProjectPage() {
 
         <div
           className={`h-[400px] w-[700px]  ${
-            isFadedAbout ? "about-container--faded" : "about-container"
+            isFadedProjectPage ? "about-container--faded" : "about-container"
           } `}
         >
-          <div className="bg-gray-200"></div>
+          <div className="bg-gray-200 w-[100%] h-[100%]"></div>
         </div>
       </div>
     </>
