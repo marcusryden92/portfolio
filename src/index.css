@@ -195,12 +195,11 @@
 }
 
 .gallery-element {
-  margin: 1rem 0;
   background-color: black;
   color: white;
-  padding: 0.25rem;
   border-radius: 0;
   text-align: center;
+  padding: 0.5vw;
 }
 
 .gallery-title {

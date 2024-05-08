@@ -36,8 +36,8 @@ export default function GalleryContainer({
 
   let position = ["up", "down"];
   return (
-    <div className="flex flex-col gallery-container ">
-      <div className="flex gallery-container">
+    <div className="flex  flex-col gallery-container">
+      <div className="flex flex-wrap gallery-container  w-1/2">
         {projectData
           ? projectData.map((project, index) => (
               <div
@@ -58,32 +58,6 @@ export default function GalleryContainer({
               </div>
             ))
           : ""}
-      </div>
-      <div className="flex gallery-container">
-        <ProjectBlock
-          position={position[1]}
-          parentIsClicked={parentIsClicked}
-          parentIsUnfaded={parentIsUnfaded}
-          setParentIsUnfaded={setParentIsUnfaded}
-          hoverIsActive={hoverIsActive}
-          setHoverIsActive={setHoverIsActive}
-        />
-        <ProjectBlock
-          position={position[1]}
-          parentIsClicked={parentIsClicked}
-          parentIsUnfaded={parentIsUnfaded}
-          setParentIsUnfaded={setParentIsUnfaded}
-          hoverIsActive={hoverIsActive}
-          setHoverIsActive={setHoverIsActive}
-        />
-        <ProjectBlock
-          position={position[1]}
-          parentIsClicked={parentIsClicked}
-          parentIsUnfaded={parentIsUnfaded}
-          setParentIsUnfaded={setParentIsUnfaded}
-          hoverIsActive={hoverIsActive}
-          setHoverIsActive={setHoverIsActive}
-        />
       </div>
     </div>
   );

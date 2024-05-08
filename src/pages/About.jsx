@@ -2,7 +2,7 @@ import "../index.css";
 import { useContextAbout } from "../context/ContextAbout";
 import { useEffect, useState } from "react";
 import { usePageNav } from "../hooks/usePageNavigation";
-import marcus from "../assets/marcus.jpg";
+import portrait from "../../public/images/portrait_mono.png";
 
 export default function About({ handleClickClear }) {
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
@@ -61,7 +61,7 @@ export default function About({ handleClickClear }) {
                 <div className="p-10">About - Click to flip</div>
                 <img
                   className="object-cover object-center h-[400px]"
-                  src={marcus}
+                  src={portrait}
                   alt="Marcus"
                 />
               </div>

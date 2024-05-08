@@ -37,9 +37,9 @@ export default function ProjectPage() {
           <div
             className={`${
               !isFadedProjectPage ? "gallery-title" : "gallery-title--faded"
-            } gallery-element w-40 font-medium hover:scale-110 ease-in-out duration-1000`}
+            } gallery-element font-medium hover:scale-110 ease-in-out duration-1000`}
           >
-            Project
+            {currentProject.title}
           </div>
           <div
             className={`gallery-x ${
