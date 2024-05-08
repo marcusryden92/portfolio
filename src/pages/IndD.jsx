@@ -31,20 +31,36 @@ export default function IndD({}) {
           <div
             className={`${
               isUnfadedIndD ? "gallery-title" : "gallery-title--faded"
-            } gallery-element w-40
-        font-medium hover:scale-110 ease-in-out duration-1000`}
+            }  w-40
+        font-medium `}
           >
-            Industrial Design
+            <div
+              className={`gallery-element ${
+                hoverIsActiveIndD
+                  ? "hover:scale-110 ease-in-out duration-200"
+                  : ""
+              }`}
+            >
+              Industrial Design
+            </div>
           </div>
           <div
             className={`gallery-x ${
               isUnfadedIndD ? "gallery-x" : "gallery-x--faded"
-            } ${hoverIsActiveIndD ? "hover-scale" : ""} 
-           gallery-element w-10
-            font-bold `}
+            } `}
             onClick={handleClickX}
           >
-            X
+            <div
+              className={`${
+                hoverIsActiveIndD
+                  ? "hover:scale-110 ease-in-out duration-200"
+                  : ""
+              } 
+           gallery-element w-10
+            font-bold `}
+            >
+              X
+            </div>
           </div>
         </div>
         <GalleryContainer
