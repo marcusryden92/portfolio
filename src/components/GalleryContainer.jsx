@@ -8,6 +8,7 @@ import { useContextIndD } from "../context/ContextIndD";
 import { useContextAbout } from "../context/ContextAbout";
 
 export default function GalleryContainer({
+  projectData,
   parentIsClicked,
   parentIsUnfaded,
   setParentIsUnfaded,

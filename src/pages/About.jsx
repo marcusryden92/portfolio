@@ -56,7 +56,7 @@ export default function About({ handleClickClear }) {
           onClick={() => setFlipped(!flipped)}
         >
           <div className="flip-card-inner">
-            <div className="flip-card-front rounded-lg overflow-hidden">
+            <div className="flip-card-front  overflow-hidden">
               <div className="flex justify-between ">
                 <div className="p-10">About - Click to flip</div>
                 <img
@@ -66,7 +66,7 @@ export default function About({ handleClickClear }) {
                 />
               </div>
             </div>
-            <div className="flip-card-back rounded-lg overflow-hidden">
+            <div className="flip-card-back overflow-hidden">
               <div className="p-10">Back Content</div>
             </div>
           </div>

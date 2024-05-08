@@ -32,7 +32,7 @@ export default function ProjectPage() {
               !isFadedProjectPage ? "gallery-title" : "gallery-title--faded"
             } gallery-element w-40 font-medium hover:scale-110 ease-in-out duration-1000`}
           >
-            About
+            Project
           </div>
           <div
             className={`gallery-x ${
@@ -47,7 +47,7 @@ export default function ProjectPage() {
         </div>
 
         <div
-          className={`h-[400px] w-[700px]  ${
+          className={`h-[500px] w-[700px]  ${
             isFadedProjectPage ? "about-container--faded" : "about-container"
           } `}
         >

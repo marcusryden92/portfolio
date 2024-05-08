@@ -2,6 +2,7 @@ import GalleryContainer from "../components/GalleryContainer";
 import { useState, useEffect } from "react";
 import { useContextIndD } from "../context/ContextIndD";
 import { usePageNav } from "../hooks/usePageNavigation";
+import projectDataInd from "../projectdata/projectDataInd";
 
 export default function IndD({}) {
   const {
@@ -47,6 +48,7 @@ export default function IndD({}) {
           </div>
         </div>
         <GalleryContainer
+          projectData={projectDataInd}
           parentIsClicked={isClickedIndD}
           parentIsUnfaded={isUnfadedIndD}
           setParentIsUnfaded={setIsUnfadedIndD}
