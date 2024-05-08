@@ -11,7 +11,6 @@ export default function ProjectBlock({
   thumbnail,
 }) {
   useEffect(() => {
-    console.log(thumbnail);
     setTimeout(() => setHoverIsActive(true), 1500);
   }, []);
 

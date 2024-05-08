@@ -30,20 +30,36 @@ export default function WebD({}) {
           <div
             className={`${
               isUnfadedWebD ? "gallery-title" : "gallery-title--faded"
-            } gallery-element w-32
-        font-medium hover:scale-110 ease-in-out duration-1000`}
+            }  w-40
+        font-medium `}
           >
-            Webdesign
+            <div
+              className={`gallery-element ${
+                hoverIsActiveWebD
+                  ? "hover:scale-110 ease-in-out duration-200"
+                  : ""
+              }`}
+            >
+              Webdesign
+            </div>
           </div>
           <div
             className={`gallery-x ${
               isUnfadedWebD ? "gallery-x" : "gallery-x--faded"
-            } ${hoverIsActiveWebD ? "hover-scale" : ""} 
-           gallery-element w-10
-            font-bold `}
+            } `}
             onClick={handleClickX}
           >
-            X
+            <div
+              className={`${
+                hoverIsActiveWebD
+                  ? "hover:scale-110 ease-in-out duration-200"
+                  : ""
+              } 
+           gallery-element w-10
+            font-bold `}
+            >
+              X
+            </div>
           </div>
         </div>
         <GalleryContainer

@@ -37,7 +37,7 @@ export default function IndD({}) {
             <div
               className={`gallery-element ${
                 hoverIsActiveIndD
-                  ? "hover:scale-110 ease-in-out duration-200"
+                  ? "hover:scale-110 ease-in-out duration-500 "
                   : ""
               }`}
             >
@@ -53,7 +53,7 @@ export default function IndD({}) {
             <div
               className={`${
                 hoverIsActiveIndD
-                  ? "hover:scale-110 ease-in-out duration-200"
+                  ? "hover:scale-110 ease-in-out duration-500"
                   : ""
               } 
            gallery-element w-10
