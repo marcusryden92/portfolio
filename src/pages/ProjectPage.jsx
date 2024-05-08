@@ -3,7 +3,8 @@ import { usePageNav } from "../hooks/usePageNavigation";
 import { useState, useEffect } from "react";
 
 export default function ProjectPage() {
-  const { isFadedProjectPage, setIsFadedProjectPage } = useContextProjectPage();
+  const { isFadedProjectPage, setIsFadedProjectPage, currentProject } =
+    useContextProjectPage();
 
   const [active, setActive] = useState(false);
 

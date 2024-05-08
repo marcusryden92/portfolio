@@ -3,10 +3,13 @@ export const ContextProvider = createContext(null);
 
 export const ContextProjectPage = ({ children }) => {
   const [isFadedProjectPage, setIsFadedProjectPage] = useState(true);
+  const [currentProject, setCurrentProject] = useState();
 
   const value = {
     isFadedProjectPage,
     setIsFadedProjectPage,
+    currentProject,
+    setCurrentProject,
   };
 
   return (
