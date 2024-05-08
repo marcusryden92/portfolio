@@ -36,7 +36,6 @@ export default function Menu({}) {
             handleClickWebD(
               setHoverIsActiveIndD,
               setIsUnfadedIndD,
-              isFadedAbout,
               setIsFadedAbout
             );
           }}
@@ -47,7 +46,11 @@ export default function Menu({}) {
         <li
           className="pl-2 pr-2 font-medium text-white hover:translate-x-2 hover:bg-amber-400 hover:text-white duration-500"
           onClick={() => {
-            handleClickIndD(setHoverIsActiveWebD, setIsUnfadedWebD);
+            handleClickIndD(
+              setHoverIsActiveWebD,
+              setIsUnfadedWebD,
+              setIsFadedAbout
+            );
           }}
         >
           INDUSTRIAL DESIGN

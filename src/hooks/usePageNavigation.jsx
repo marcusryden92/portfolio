@@ -79,10 +79,18 @@ export const PageNavProvider = ({ children }) => {
 
   // Clicking INDUSTRIAL DESIGN
 
-  const handleClickIndD = (setHoverIsActiveWebD, setIsUnfadedWebD) => {
-    if (isClickedAbout || isClickedWebD) {
+  const handleClickIndD = (
+    setHoverIsActiveWebD,
+    setIsUnfadedWebD,
+    setIsFadedAbout
+  ) => {
+    if (isClickedAbout) {
+      setIsFadedAbout(true);
+      setTimeout(setStatesWhenClickingIndD, 1000);
+    } else if (isClickedWebD) {
       setHoverIsActiveWebD(false);
       setIsUnfadedWebD(false);
+
       setTimeout(setStatesWhenClickingIndD, 1000);
     } else {
       setStatesWhenClickingIndD();
