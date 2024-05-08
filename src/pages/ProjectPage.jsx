@@ -7,12 +7,18 @@ export default function ProjectPage() {
     useContextProjectPage();
 
   const [active, setActive] = useState(false);
+  const [clickedImage, setClickedImage] = useState(currentProject.images[1]); // Track clicked image
 
   const { resetClickedStates } = usePageNav();
 
   function handleClickX() {
     setIsFadedProjectPage(true);
     setTimeout(resetClickedStates, 1000);
+  }
+
+  // Function to handle image click
+  function handleImageClick(image) {
+    setClickedImage(image);
   }
 
   useEffect(() => {
@@ -26,7 +32,7 @@ export default function ProjectPage() {
 
   return (
     <>
-      <div className="box my-5 mx-20 p-10 text-left">
+      <div className="box my-5 mx-20 p-10 text-left w-1/2">
         <div className="flex justify-between w-full">
           <div
             className={`${
@@ -48,11 +54,29 @@ export default function ProjectPage() {
         </div>
 
         <div
-          className={`h-[500px] w-[700px]  ${
+          className={`flex flex-col gap-5 overflow-scroll no-scroll   ${
             isFadedProjectPage ? "about-container--faded" : "about-container"
           } `}
         >
-          <div className="bg-gray-200 w-[100%] h-[100%]"></div>
+          {/* Render clicked image in large format */}
+          <img
+            className={"h-[70%] object-cover object-center"}
+            src={clickedImage}
+            alt="Clicked Image"
+          />
+
+          <div className="flex gap-5 no-scroll" style={{ flexShrink: 0 }}>
+            {currentProject.images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                className="object-cover object-center h-[10vw] w-[10vw]"
+                alt={`Image ${index}`}
+                onClick={() => handleImageClick(image)} // Handle image click
+              />
+            ))}{" "}
+          </div>
+          <div>{currentProject.body}</div>
         </div>
       </div>
     </>

@@ -38,22 +38,26 @@ export default function GalleryContainer({
   return (
     <div className="flex flex-col gallery-container ">
       <div className="flex gallery-container">
-        {projectData.map((project, index) => (
-          <ProjectBlock
-            key={index}
-            position={position[0]}
-            parentIsClicked={parentIsClicked}
-            parentIsUnfaded={parentIsUnfaded}
-            setParentIsUnfaded={setParentIsUnfaded}
-            hoverIsActive={hoverIsActive}
-            setHoverIsActive={setHoverIsActive}
-            thumbnail={project.thumbnail}
-            onClick={() => {
-              console.log("clicked");
-              clickProject(project);
-            }}
-          />
-        ))}
+        {projectData
+          ? projectData.map((project, index) => (
+              <div
+                onClick={() => {
+                  clickProject(project);
+                }}
+              >
+                <ProjectBlock
+                  key={index}
+                  position={position[0]}
+                  parentIsClicked={parentIsClicked}
+                  parentIsUnfaded={parentIsUnfaded}
+                  setParentIsUnfaded={setParentIsUnfaded}
+                  hoverIsActive={hoverIsActive}
+                  setHoverIsActive={setHoverIsActive}
+                  thumbnail={project.thumbnail}
+                />
+              </div>
+            ))
+          : ""}
       </div>
       <div className="flex gallery-container">
         <ProjectBlock

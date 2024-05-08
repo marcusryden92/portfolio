@@ -2,6 +2,20 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Hide scrollbar but allow scrolling */
+.no-scroll {
+  /* For Firefox */
+  scrollbar-width: none;
+  /* For other browsers */
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow: scroll; /* Fallback */
+}
+
+/* For Webkit browsers (e.g., Chrome, Safari) */
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .josefin-sans {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
