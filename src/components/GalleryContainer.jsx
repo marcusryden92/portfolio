@@ -30,15 +30,14 @@ export default function GalleryContainer({
       setIsUnfadedWebD,
       setHoverIsActiveIndD,
       setIsUnfadedIndD,
-      setIsFadedAbout,
-      project
+      setIsFadedAbout
     );
   }
 
   let position = ["up", "down"];
   return (
     <div className="flex flex-col gallery-container ">
-      <div className="flex gallery-container" onClick={clickProject}>
+      <div className="flex gallery-container">
         {projectData.map((project, index) => (
           <ProjectBlock
             key={index}
@@ -48,7 +47,9 @@ export default function GalleryContainer({
             setParentIsUnfaded={setParentIsUnfaded}
             hoverIsActive={hoverIsActive}
             setHoverIsActive={setHoverIsActive}
+            thumbnail={project.thumbnail}
             onClick={() => {
+              console.log("clicked");
               clickProject(project);
             }}
           />

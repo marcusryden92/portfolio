@@ -8,8 +8,10 @@ export default function ProjectBlock({
   hoverIsActive,
   setHoverIsActive,
   position,
+  thumbnail,
 }) {
   useEffect(() => {
+    console.log(thumbnail);
     setTimeout(() => setHoverIsActive(true), 1500);
   }, []);
 
@@ -51,7 +53,14 @@ export default function ProjectBlock({
     <div
       className={`project-block ${
         parentIsUnfaded ? "" : classArrayFaded[currentClass]
-      } ${currentColor} ${hoverIsActive ? "hover-scale" : ""}`}
-    ></div>
+      } ${currentColor} `}
+    >
+      <img
+        src={thumbnail}
+        className={`h-full w-full object-cover object-center ${
+          hoverIsActive ? "hover-scale" : ""
+        } transition-transform duration-500 ease-in-out`}
+      />
+    </div>
   );
 }
