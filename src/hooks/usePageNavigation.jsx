@@ -6,10 +6,16 @@ export const PageNavProvider = ({ children }) => {
   const [isClickedAbout, setIsClickedAbout] = useState(false);
   const [isClickedWebD, setIsClickedWebD] = useState(false);
   const [isClickedIndD, setIsClickedIndD] = useState(false);
+  const [isClickedProjectPage, setIsClickedProjectPage] = useState(false);
 
   const handleExitPage = (setHoverIsActive, setIsUnfaded) => {
-    setHoverIsActive(false);
-    setIsUnfaded(false);
+    if (setHoverIsActive) {
+      setHoverIsActive(false);
+    }
+    if (setIsUnfaded) {
+      setIsUnfaded(false);
+    }
+
     setTimeout(() => resetClickedStates(), 1500);
   };
 
@@ -51,7 +57,6 @@ export const PageNavProvider = ({ children }) => {
   const handleClickWebD = (
     setHoverIsActiveIndD,
     setIsUnfadedIndD,
-    isFadedAbout,
     setIsFadedAbout
   ) => {
     if (isClickedAbout) {
@@ -95,6 +100,7 @@ export const PageNavProvider = ({ children }) => {
     setIsClickedAbout(false);
     setIsClickedWebD(false);
     setIsClickedIndD(false);
+    setIsClickedProjectPage(false);
   };
 
   const value = {
@@ -109,6 +115,8 @@ export const PageNavProvider = ({ children }) => {
     setIsClickedWebD,
     isClickedIndD,
     setIsClickedIndD,
+    isClickedProjectPage,
+    setIsClickedProjectPage,
   };
 
   return (
