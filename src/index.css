@@ -239,8 +239,6 @@
 }
 
 .flip-card {
-  width: 700px;
-  height: 400px;
   perspective: 1000px;
 }
 
@@ -271,4 +269,53 @@
 .flip-card-back {
   transform: rotateY(180deg);
   background-color: #f0f0f0;
+}
+
+/* For screen sizes below md */
+@media (max-width: 768px) {
+  .project-block--faded--1 {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .project-block--faded--2 {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .project-block--faded--3 {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .project-block--faded--4 {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .project-block--faded--5 {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .project-block--faded--6 {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .gallery-title--faded {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .gallery-x--faded {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+  }
+
+  .about-container--faded {
+    opacity: 0;
+    transform: translateX(100vw); /* Slide in from the right */
+    transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
+  }
 }

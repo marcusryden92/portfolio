@@ -28,7 +28,6 @@ export const PageNavProvider = ({ children }) => {
     setIsUnfadedIndD,
     setIsFadedAbout
   ) => {
-    console.log("Project page called");
     if (isClickedWebD) {
       setHoverIsActiveWebD(false);
       setIsUnfadedWebD(false);
@@ -63,7 +62,7 @@ export const PageNavProvider = ({ children }) => {
     setIsUnfadedWebD,
     setHoverIsActiveIndD,
     setIsUnfadedIndD,
-    setIsFadedAbout
+    setIsFadedProjectPage
   ) => {
     if (isClickedWebD) {
       setHoverIsActiveWebD(false);
@@ -72,6 +71,9 @@ export const PageNavProvider = ({ children }) => {
       setTimeout(() => {
         setStatesWhenClickingAbout();
       }, 1500);
+    } else if (isClickedProjectPage) {
+      setIsFadedProjectPage(true);
+      setTimeout(setStatesWhenClickingAbout, 1000);
     } else if (isClickedIndD) {
       setHoverIsActiveIndD(false);
       setIsUnfadedIndD(false);

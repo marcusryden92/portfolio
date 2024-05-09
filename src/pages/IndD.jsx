@@ -26,7 +26,7 @@ export default function IndD({}) {
 
   return (
     <>
-      <div className="box  my-10 mx-20 p-10 text-left">
+      <div className="box  md:my-10 md:mx-20 p-10 text-left">
         <div className="flex justify-between w-full">
           <div
             className={`${

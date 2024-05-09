@@ -27,7 +27,7 @@ export default function About({ handleClickClear }) {
 
   return (
     <>
-      <div className="box my-5 mx-20 p-10 text-left">
+      <div className="box h-full w-full md:my-5 md:mx-20 p-10 text-left">
         <div className="flex justify-between w-full">
           <div
             className={`${
@@ -50,21 +50,19 @@ export default function About({ handleClickClear }) {
 
         {/*Flip card below*/}
         <div
-          className={`flip-card h-[400px] w-[700px]  ${
+          className={`flip-card h-full w-full md:h-[35vw] md:w-full]  ${
             isFadedAbout ? "about-container--faded" : "about-container"
           } ${flipped ? "flipped" : ""}`}
           onClick={() => setFlipped(!flipped)}
         >
           <div className="flip-card-inner">
-            <div className="flip-card-front  overflow-hidden">
-              <div className="flex justify-between ">
-                <div className="p-10">About - Click to flip</div>
-                <img
-                  className="object-cover object-center h-[400px]"
-                  src={portrait}
-                  alt="Marcus"
-                />
-              </div>
+            <div className="flip-card-front overflow-hidden flex flex-col">
+              <div className="p-10 flex-grow">About - Click to flip</div>
+              <img
+                className="md:h-[35vw] self-end"
+                src={portrait}
+                alt="Marcus"
+              />
             </div>
             <div className="flip-card-back overflow-hidden">
               <div className="p-10">Back Content</div>

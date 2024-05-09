@@ -32,7 +32,7 @@ export default function ProjectPage() {
 
   return (
     <>
-      <div className="box my-5 mx-20 p-10 text-left w-1/2">
+      <div className="box md:my-5 md:mx-20 p-10 text-left w-full md:w-1/2">
         <div className="flex justify-between w-full">
           <div
             className={`${
@@ -70,7 +70,7 @@ export default function ProjectPage() {
               <img
                 key={index}
                 src={image}
-                className="object-cover object-center h-[10vw] w-[10vw]"
+                className="object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
                 alt={`Image ${index}`}
                 onClick={() => handleImageClick(image)} // Handle image click
               />

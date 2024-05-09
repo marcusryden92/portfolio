@@ -28,7 +28,7 @@ export default function MainPage() {
             <ContextProjectPage>
               {" "}
               <div className="absolute z-10">{/*<Cover />*/}</div>
-              <div className="flex main-container z-5">
+              <div className="flex overflow-scroll md:overflow-hidden flex-col md:flex-row main-container z-5">
                 <Menu />
                 {isClickedAbout ? <About /> : ""}
                 {isClickedWebD ? <WebD /> : ""}
