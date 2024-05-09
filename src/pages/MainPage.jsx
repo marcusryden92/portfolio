@@ -27,7 +27,9 @@ export default function MainPage() {
           <ContextAbout>
             <ContextProjectPage>
               {" "}
-              <div className="absolute z-10">{/*<Cover />*/}</div>
+              <div className="absolute z-10">
+                <Cover />
+              </div>
               <div className="flex overflow-scroll md:overflow-hidden flex-col md:flex-row main-container z-5">
                 <Menu />
                 {isClickedAbout ? <About /> : ""}
@@ -37,7 +39,7 @@ export default function MainPage() {
               </div>
               {
                 <div className="z-0 absolute bg-slate-500 h-full w-full">
-                  {/*<InteractiveCircles className="behind" />*/}
+                  <InteractiveCircles className="behind" />
                 </div>
               }
             </ContextProjectPage>
