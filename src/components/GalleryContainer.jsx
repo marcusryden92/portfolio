@@ -37,7 +37,7 @@ export default function GalleryContainer({
   let position = ["up", "down"];
   return (
     <div className="flex  flex-col gallery-container">
-      <div className="flex flex-wrap gallery-container  w-1/2">
+      <div className="flex flex-wrap gallery-container">
         {projectData
           ? projectData.map((project, index) => (
               <div
