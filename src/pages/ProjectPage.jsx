@@ -32,7 +32,7 @@ export default function ProjectPage() {
 
   return (
     <>
-      <div className="box md:my-5 md:mx-20 p-10 text-left w-full md:w-1/2">
+      <div className="box md:my-5 md:mx-20 p-10 text-left w-full">
         <div className="flex justify-between w-full">
           <div
             className={`${
@@ -54,29 +54,31 @@ export default function ProjectPage() {
         </div>
 
         <div
-          className={`flex flex-col gap-5 overflow-scroll no-scroll   ${
+          className={`flex gap-5 overflow-scroll no-scroll   ${
             isFadedProjectPage ? "about-container--faded" : "about-container"
           } `}
         >
-          {/* Render clicked image in large format */}
-          <img
-            className={" object-cover object-center"}
-            src={clickedImage}
-            alt="Clicked Image"
-          />
+          <div className="flex flex-col gap-5 overflow-scroll no-scroll">
+            {/* Render clicked image in large format */}
+            <img
+              className={" object-cover object-center"}
+              src={clickedImage}
+              alt="Clicked Image"
+            />
 
-          <div className="flex gap-5 no-scroll" style={{ flexShrink: 0 }}>
-            {currentProject.images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                className="object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
-                alt={`Image ${index}`}
-                onClick={() => handleImageClick(image)} // Handle image click
-              />
-            ))}{" "}
+            <div className="flex gap-5 no-scroll" style={{ flexShrink: 0 }}>
+              {currentProject.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  className="object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
+                  alt={`Image ${index}`}
+                  onClick={() => handleImageClick(image)} // Handle image click
+                />
+              ))}{" "}
+            </div>
           </div>
-          <div>{currentProject.body}</div>
+          <div className="w-full">{currentProject.body}</div>
         </div>
       </div>
     </>

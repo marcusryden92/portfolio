@@ -133,7 +133,7 @@ export const PageNavProvider = ({ children }) => {
       setTimeout(setStatesWhenClickingIndD, 1000);
     } else if (isClickedProjectPage) {
       setIsFadedProjectPage(true);
-      setTimeout(setStatesWhenClickingWebD, 1000);
+      setTimeout(setStatesWhenClickingIndD, 1000);
     } else if (isClickedWebD) {
       setHoverIsActiveWebD(false);
       setIsUnfadedWebD(false);
