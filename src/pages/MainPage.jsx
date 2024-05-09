@@ -21,7 +21,7 @@ export default function MainPage() {
     usePageNav();
 
   return (
-    <div className="flex flex-col sm:flex-row">
+    <div className="flex md:flex-row">
       <ContextIndD>
         <ContextWebD>
           <ContextAbout>

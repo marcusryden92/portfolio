@@ -34,27 +34,21 @@ export default function GalleryContainer({
     );
   }
 
-  let position = ["up", "down"];
   return (
-    <div className="flex flex-wrap gallery-container">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
       {projectData
         ? projectData.map((project, index) => (
-            <div
-              onClick={() => {
-                clickProject(project);
-              }}
-            >
-              <ProjectBlock
-                key={index}
-                position={position[0]}
-                parentIsClicked={parentIsClicked}
-                parentIsUnfaded={parentIsUnfaded}
-                setParentIsUnfaded={setParentIsUnfaded}
-                hoverIsActive={hoverIsActive}
-                setHoverIsActive={setHoverIsActive}
-                thumbnail={project.thumbnail}
-              />
-            </div>
+            <ProjectBlock
+              key={index}
+              parentIsClicked={parentIsClicked}
+              parentIsUnfaded={parentIsUnfaded}
+              setParentIsUnfaded={setParentIsUnfaded}
+              hoverIsActive={hoverIsActive}
+              setHoverIsActive={setHoverIsActive}
+              thumbnail={project.thumbnail}
+              clickProject={clickProject}
+              project={project}
+            />
           ))
         : ""}
     </div>

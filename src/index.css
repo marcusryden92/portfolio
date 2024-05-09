@@ -127,7 +127,8 @@
 }
 
 .project-block {
-  width: 200px;
+  width: 100%;
+  height: auto;
   aspect-ratio: 1/1;
   opacity: 1;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;

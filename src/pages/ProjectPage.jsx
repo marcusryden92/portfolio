@@ -60,7 +60,7 @@ export default function ProjectPage() {
         >
           {/* Render clicked image in large format */}
           <img
-            className={"h-[70%] object-cover object-center"}
+            className={" object-cover object-center"}
             src={clickedImage}
             alt="Clicked Image"
           />

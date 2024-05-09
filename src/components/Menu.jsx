@@ -13,7 +13,7 @@ export default function Menu({}) {
   const { setIsFadedProjectPage, isFadedProjectPage } = useContextProjectPage();
 
   return (
-    <div className=" flex flex-col justify-center menu p-16 text-xl h-80 min-w-[25vw] sm:h-screen sm:text-base text-left  ">
+    <div className=" flex flex-col justify-center menu py-16 pl-16 text-xl h-80 min-w-[20vw] sm:h-screen sm:text-base text-left  ">
       <ul>
         <li
           className="pl-2 pr-2 font-medium hover:translate-x-2 text-white hover:bg-red-500 duration-500

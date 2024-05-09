@@ -9,6 +9,8 @@ export default function ProjectBlock({
   setHoverIsActive,
   position,
   thumbnail,
+  clickProject,
+  project,
 }) {
   useEffect(() => {
     setTimeout(() => setHoverIsActive(true), 1500);
@@ -56,6 +58,9 @@ export default function ProjectBlock({
     >
       <img
         src={thumbnail}
+        onClick={() => {
+          clickProject(project);
+        }}
         className={`h-full w-full object-cover object-center ${
           hoverIsActive ? "hover-scale" : ""
         } transition-transform duration-500 ease-in-out`}
