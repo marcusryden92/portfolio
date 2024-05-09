@@ -56,7 +56,7 @@ export default function ProjectBlock({
     >
       <img
         src={thumbnail}
-        className={`project-block-img h-full w-full object-cover object-center ${
+        className={`h-full w-full object-cover object-center ${
           hoverIsActive ? "hover-scale" : ""
         } transition-transform duration-500 ease-in-out`}
       />
