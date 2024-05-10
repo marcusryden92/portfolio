@@ -73,7 +73,7 @@ export default function ProjectPage() {
                 <img
                   key={index}
                   src={image}
-                  className="bg-gray-200 object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
+                  className="bg-gray-200 aspect-square object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
                   alt={`Image ${index}`}
                   onClick={() => handleImageClick(image)} // Handle image click
                 />
