@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Cover from "../components/Cover";
 import InteractiveCircles from "../components/InteractiveCircles";
