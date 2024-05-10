@@ -16,9 +16,25 @@ import { ContextProjectPage } from "../context/ContextProjectPage";
 
 import { usePageNav } from "../hooks/usePageNavigation";
 
+import projectDataInd from "../projectdata/projectDataInd";
+
 export default function MainPage() {
   const { isClickedAbout, isClickedIndD, isClickedWebD, isClickedProjectPage } =
     usePageNav();
+
+  useEffect(() => {
+    // Preload all images
+    projectDataInd.forEach((project) => {
+      const allImages = [
+        ...project.images.map((image) => image.full),
+        project.thumbnail,
+      ];
+      allImages.forEach((imageSrc) => {
+        const img = new Image();
+        img.src = imageSrc;
+      });
+    });
+  }, []);
 
   return (
     <div className="flex md:flex-row">
