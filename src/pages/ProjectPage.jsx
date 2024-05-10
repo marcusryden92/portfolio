@@ -60,9 +60,9 @@ export default function ProjectPage() {
         >
           <div className="flex flex-col gap-5 overflow-scroll no-scroll w-[100%] md:w-[60%]">
             {/* Render clicked image in large format */}
-            <div className="bg-gray-200 aspect-16-9 overflow-hidden">
+            <div className="aspect-16-9 overflow-hidden">
               <img
-                src={clickedImage}
+                src={clickedImage.full}
                 alt="Clicked Image"
                 className="object-contain w-full h-full"
               />
@@ -72,8 +72,8 @@ export default function ProjectPage() {
               {currentProject.images.map((image, index) => (
                 <img
                   key={index}
-                  src={image}
-                  className="bg-gray-200 aspect-square object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
+                  src={image.thumb}
+                  className=" aspect-square object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
                   alt={`Image ${index}`}
                   onClick={() => handleImageClick(image)} // Handle image click
                 />
