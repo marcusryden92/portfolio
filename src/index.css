@@ -45,6 +45,10 @@
   width: 100vw;
 }
 
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
 .flex-center {
   display: flex;
   align-items: center;

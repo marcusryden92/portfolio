@@ -54,31 +54,33 @@ export default function ProjectPage() {
         </div>
 
         <div
-          className={`flex gap-5 overflow-scroll no-scroll   ${
+          className={`flex flex-col md:flex-row gap-5 overflow-scroll no-scroll   ${
             isFadedProjectPage ? "about-container--faded" : "about-container"
           } `}
         >
-          <div className="flex flex-col gap-5 overflow-scroll no-scroll">
+          <div className="flex flex-col gap-5 overflow-scroll no-scroll w-[100%] md:w-[60%]">
             {/* Render clicked image in large format */}
-            <img
-              className={" object-cover object-center"}
-              src={clickedImage}
-              alt="Clicked Image"
-            />
+            <div className="bg-gray-200 aspect-16-9 overflow-hidden">
+              <img
+                src={clickedImage}
+                alt="Clicked Image"
+                className="object-contain w-full h-full"
+              />
+            </div>
 
             <div className="flex gap-5 no-scroll" style={{ flexShrink: 0 }}>
               {currentProject.images.map((image, index) => (
                 <img
                   key={index}
                   src={image}
-                  className="object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
+                  className="bg-gray-200 object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
                   alt={`Image ${index}`}
                   onClick={() => handleImageClick(image)} // Handle image click
                 />
               ))}{" "}
             </div>
           </div>
-          <div className="w-full">{currentProject.body}</div>
+          <div>{currentProject.body}</div>
         </div>
       </div>
     </>
