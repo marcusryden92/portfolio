@@ -96,7 +96,9 @@ export default function ProjectPage() {
               ))}{" "}
             </div>
           </div>
-          <div>{currentProject.body}</div>
+          <div className="p-10 bg-neutral-900 w-[40%] text-white">
+            {currentProject.body}
+          </div>
         </div>
       </div>
     </>

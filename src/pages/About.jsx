@@ -38,6 +38,14 @@ export default function About({ handleClickClear }) {
             About
           </div>
           <div
+            className={`mr-[10%] gallery-x ${
+              !isFadedAbout ? "gallery-x" : "gallery-x--faded"
+            } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
+            onClick={() => setFlipped(!flipped)}
+          >
+            &lt; Flip &gt;
+          </div>
+          <div
             className={`gallery-x ${
               !isFadedAbout ? "gallery-x" : "gallery-x--faded"
             } ${
@@ -54,20 +62,24 @@ export default function About({ handleClickClear }) {
           className={`flip-card h-full w-full md:h-[35vw] md:w-full]  ${
             isFadedAbout ? "about-container--faded" : "about-container"
           } ${flipped ? "flipped" : ""}`}
-          onClick={() => setFlipped(!flipped)}
         >
           <div className="flip-card-inner">
             <div className="flip-card-front overflow-hidden flex">
-              <div className="flex flex-col">
-                <div className="flex p-10 flex-grow">
-                  Hello! I'm Marcus. <br /> I've studied industrial design at
-                  LTH, and more recently front-end development at Hyper Island.
-                  In my spare time I try to exercise and read difficult books,
-                  with some assistance from my pet leopard gecko Scheherazade.
+              <div className="flex flex-col max-w-[50%]">
+                <div className="flex flex-col p-10 flex-grow font-medium text-[1.2vw] ">
+                  Hello!
+                  <br />
+                  <br />{" "}
+                  <div className="text-[0.9vw]">
+                    I'm Marcus. I've studied industrial design at LTH, and more
+                    recently front-end development at Hyper Island. In my spare
+                    time I try to exercise and read difficult books, with some
+                    assistance from my pet leopard gecko Scheherazade.
+                  </div>
                 </div>
                 <img
                   src={gecko}
-                  className="h-1/2 w-1/2 object-contain p-5 items-end"
+                  className="h-1/2 w-1/2 object-contain ml-10 p-5 items-end"
                 />
               </div>
               <img
