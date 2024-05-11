@@ -56,8 +56,8 @@ export default function About({ handleClickClear }) {
           onClick={() => setFlipped(!flipped)}
         >
           <div className="flip-card-inner">
-            <div className="flip-card-front overflow-hidden flex flex-col">
-              <div className="p-10 flex-grow">About - Click to flip</div>
+            <div className="flip-card-front overflow-hidden flex">
+              <div className="flex p-10 flex-grow">About - Click to flip</div>
               <img
                 className="md:h-[35vw] self-end"
                 src={portrait}

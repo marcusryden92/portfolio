@@ -243,7 +243,7 @@
 }
 
 .flip-card {
-  perspective: 1000px;
+  perspective: 2700px;
 }
 
 .flip-card-inner {
@@ -272,7 +272,7 @@
 
 .flip-card-back {
   transform: rotateY(180deg);
-  background-color: #f0f0f0;
+  background-color: black;
 }
 
 /* For screen sizes below md */
