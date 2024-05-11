@@ -218,6 +218,7 @@
 .gallery-title--faded {
   opacity: 0;
   transform: translateY(-300px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .gallery-x {
