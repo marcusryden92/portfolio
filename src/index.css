@@ -205,10 +205,13 @@
   border-radius: 0;
   text-align: center;
   padding: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .gallery-title {
   opacity: 1;
+  font-size: 1.2vw;
   transition: transform 1.2s ease-in-out, opacity 1s ease-in-out;
 }
 
@@ -219,6 +222,7 @@
 
 .gallery-x {
   opacity: 1;
+  font-size: 1.2vw;
   transition: transform 1s ease-in-out, opacity 1.2s ease-in-out;
 }
 
@@ -267,12 +271,10 @@
 
 .flip-card-front {
   z-index: 1;
-  background-color: #fff;
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
-  background-color: black;
 }
 
 /* For screen sizes below md */

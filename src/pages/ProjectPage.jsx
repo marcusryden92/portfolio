@@ -36,7 +36,7 @@ export default function ProjectPage() {
 
   return (
     <>
-      <div className="box md:my-5 md:mx-20 p-10 text-left w-full">
+      <div className="box md:my-10 md:mx-20 p-10 text-left w-full">
         <div className="flex justify-between w-full">
           <div
             className={`${
@@ -51,7 +51,7 @@ export default function ProjectPage() {
                 !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
               } ${
                 !isFadedProjectPage ? "hover-scale" : ""
-              } gallery-element w-10 font-bold `}
+              } gallery-element font-bold `}
               onClick={handleClickGoBack}
             >
               X
@@ -61,7 +61,7 @@ export default function ProjectPage() {
                 !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
               } ${
                 !isFadedProjectPage ? "hover-scale" : ""
-              } gallery-element w-10 font-bold `}
+              } gallery-element font-bold `}
               onClick={handleClickX}
             >
               X
@@ -70,7 +70,7 @@ export default function ProjectPage() {
         </div>
 
         <div
-          className={`flex flex-col md:flex-row gap-5 overflow-scroll no-scroll   ${
+          className={`flex mt-6 flex-col md:flex-row gap-5 overflow-scroll no-scroll   ${
             isFadedProjectPage ? "about-container--faded" : "about-container"
           } `}
         >

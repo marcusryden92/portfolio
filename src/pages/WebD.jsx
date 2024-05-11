@@ -26,12 +26,12 @@ export default function WebD({}) {
 
   return (
     <>
-      <div className="box my-5 mx-20 p-10 text-left">
+      <div className="box my-10 mx-20 p-10 text-left">
         <div className="flex justify-between w-full">
           <div
             className={`${
               isUnfadedWebD ? "gallery-title" : "gallery-title--faded"
-            }  w-40
+            } 
         font-medium `}
           >
             <div
@@ -56,7 +56,7 @@ export default function WebD({}) {
                   ? "hover:scale-110 ease-in-out duration-200"
                   : ""
               } 
-           gallery-element w-10
+           gallery-element
             font-bold `}
             >
               X

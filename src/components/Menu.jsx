@@ -57,9 +57,9 @@ export default function Menu({}) {
 
   return (
     <div className=" flex flex-col justify-center menu py-5 px-5 md:py-16 md:pl-16 text-xl min-w-[20vw] md:h-screen sm:text-base text-left  ">
-      <ul>
+      <ul className="flex flex-col justify-between h-[25%]">
         <li
-          className="pl-2 pr-2 font-medium hover:translate-x-2 text-white hover:bg-red-500 duration-500
+          className="pl-[6%] pr-2 py-[3%] font-medium hover:translate-x-2 text-white text-custom hover:bg-red-500 duration-500
           "
           onClick={onClickAbout}
         >
@@ -67,7 +67,7 @@ export default function Menu({}) {
         </li>
         <br />
         <li
-          className="pl-2 pr-2 font-medium text-white hover:translate-x-2 hover:bg-orange-400 hover:text-white duration-500"
+          className="pl-[6%] pr-2 py-[3%] font-medium text-white text-custom hover:translate-x-2 hover:bg-orange-400 hover:text-white duration-500"
           onClick={() => {
             setGoBackWebD();
             onClickWebD();
@@ -77,7 +77,7 @@ export default function Menu({}) {
         </li>
         <br />
         <li
-          className="pl-2 pr-2 font-medium text-white whitespace-nowrap hover:translate-x-2 hover:bg-amber-400 hover:text-white duration-500"
+          className="pl-[6%] pr-2 py-[3%] font-medium text-white text-custom whitespace-nowrap hover:translate-x-2 hover:bg-amber-400 hover:text-white duration-500"
           onClick={() => {
             setGoBackIndD();
             onClickIndD();

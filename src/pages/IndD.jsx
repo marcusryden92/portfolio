@@ -31,7 +31,7 @@ export default function IndD({}) {
           <div
             className={`${
               isUnfadedIndD ? "gallery-title" : "gallery-title--faded"
-            }  w-40
+            }  
         font-medium `}
           >
             <div
@@ -56,8 +56,8 @@ export default function IndD({}) {
                   ? "hover:scale-110 ease-in-out duration-500"
                   : ""
               } 
-           gallery-element w-10
-            font-bold `}
+           gallery-element
+            font-bold  `}
             >
               X
             </div>

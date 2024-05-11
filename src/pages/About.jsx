@@ -28,7 +28,7 @@ export default function About({ handleClickClear }) {
 
   return (
     <>
-      <div className="box h-full w-full md:my-5 md:mx-20 p-10 text-left">
+      <div className="box h-full w-full md:my-10 md:mx-20 p-10 text-left">
         <div className="flex justify-between w-full">
           <div
             className={`${
@@ -59,12 +59,12 @@ export default function About({ handleClickClear }) {
 
         {/*Flip card below*/}
         <div
-          className={`flip-card h-full w-full md:h-[35vw] md:w-full]  ${
+          className={`flip-card h-full w-full mt-6 md:h-[35vw] md:w-full]  ${
             isFadedAbout ? "about-container--faded" : "about-container"
           } ${flipped ? "flipped" : ""}`}
         >
           <div className="flip-card-inner">
-            <div className="flip-card-front overflow-hidden flex">
+            <div className="flip-card-front overflow-hidden flex bg-neutral-300  ">
               <div className="flex flex-col max-w-[50%]">
                 <div className="flex flex-col p-10 flex-grow font-medium text-[1.2vw] ">
                   Hello!
@@ -88,7 +88,7 @@ export default function About({ handleClickClear }) {
                 alt="Marcus"
               />
             </div>
-            <div className="flip-card-back overflow-hidden">
+            <div className="flip-card-back overflow-hidden bg-black">
               <div className="p-10">Back Content</div>
             </div>
           </div>
