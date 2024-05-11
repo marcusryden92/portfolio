@@ -54,7 +54,7 @@ export default function ProjectPage() {
               } gallery-element font-bold `}
               onClick={handleClickGoBack}
             >
-              X
+              &lt;
             </div>
             <div
               className={`gallery-x ${
