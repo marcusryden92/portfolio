@@ -9,8 +9,51 @@ export default function Menu({}) {
   const { handleClickAbout, handleClickIndD, handleClickWebD } = usePageNav();
   const { setIsUnfadedWebD, setHoverIsActiveWebD } = useContextWebD();
   const { setIsUnfadedIndD, setHoverIsActiveIndD } = useContextIndD();
-  const { setIsFadedAbout, isFadedAbout } = useContextAbout();
-  const { setIsFadedProjectPage, isFadedProjectPage } = useContextProjectPage();
+  const { setIsFadedAbout } = useContextAbout();
+  const { setIsFadedProjectPage, setGoBack, goBack } = useContextProjectPage();
+
+  function onClickAbout() {
+    handleClickAbout(
+      setHoverIsActiveWebD,
+      setIsUnfadedWebD,
+      setHoverIsActiveIndD,
+      setIsUnfadedIndD,
+      setIsFadedProjectPage
+    );
+  }
+
+  function onClickWebD() {
+    handleClickWebD(
+      setHoverIsActiveIndD,
+      setIsUnfadedIndD,
+      setIsFadedAbout,
+      setIsFadedProjectPage
+    );
+  }
+
+  function onClickIndD() {
+    handleClickIndD(
+      setHoverIsActiveWebD,
+      setIsUnfadedWebD,
+      setIsFadedAbout,
+      setIsFadedProjectPage
+    );
+  }
+
+  function setGoBackWebD() {
+    setGoBack(onClickWebD);
+  }
+
+  function hello() {
+    console.log("hello");
+  }
+
+  function setGoBackIndD() {
+    setGoBack(hello);
+    setTimeout(() => {
+      console.log(goBack);
+    }, 50);
+  }
 
   return (
     <div className=" flex flex-col justify-center menu py-5 px-5 md:py-16 md:pl-16 text-xl min-w-[20vw] md:h-screen sm:text-base text-left  ">
@@ -18,15 +61,7 @@ export default function Menu({}) {
         <li
           className="pl-2 pr-2 font-medium hover:translate-x-2 text-white hover:bg-red-500 duration-500
           "
-          onClick={() => {
-            handleClickAbout(
-              setHoverIsActiveWebD,
-              setIsUnfadedWebD,
-              setHoverIsActiveIndD,
-              setIsUnfadedIndD,
-              setIsFadedProjectPage
-            );
-          }}
+          onClick={onClickAbout}
         >
           ABOUT
         </li>
@@ -34,12 +69,8 @@ export default function Menu({}) {
         <li
           className="pl-2 pr-2 font-medium text-white hover:translate-x-2 hover:bg-orange-400 hover:text-white duration-500"
           onClick={() => {
-            handleClickWebD(
-              setHoverIsActiveIndD,
-              setIsUnfadedIndD,
-              setIsFadedAbout,
-              setIsFadedProjectPage
-            );
+            setGoBackWebD();
+            onClickWebD();
           }}
         >
           WEBDESIGN
@@ -48,12 +79,8 @@ export default function Menu({}) {
         <li
           className="pl-2 pr-2 font-medium text-white whitespace-nowrap hover:translate-x-2 hover:bg-amber-400 hover:text-white duration-500"
           onClick={() => {
-            handleClickIndD(
-              setHoverIsActiveWebD,
-              setIsUnfadedWebD,
-              setIsFadedAbout,
-              setIsFadedProjectPage
-            );
+            setGoBackIndD();
+            onClickIndD();
           }}
         >
           INDUSTRIAL DESIGN

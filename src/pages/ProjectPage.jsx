@@ -3,7 +3,7 @@ import { usePageNav } from "../hooks/usePageNavigation";
 import { useState, useEffect } from "react";
 
 export default function ProjectPage() {
-  const { isFadedProjectPage, setIsFadedProjectPage, currentProject } =
+  const { isFadedProjectPage, setIsFadedProjectPage, currentProject, goBack } =
     useContextProjectPage();
 
   const [active, setActive] = useState(false);
@@ -14,6 +14,10 @@ export default function ProjectPage() {
   function handleClickX() {
     setIsFadedProjectPage(true);
     setTimeout(resetClickedStates, 1000);
+  }
+
+  function handleClickGoBack() {
+    goBack();
   }
 
   // Function to handle image click
@@ -41,15 +45,27 @@ export default function ProjectPage() {
           >
             {currentProject.title}
           </div>
-          <div
-            className={`gallery-x ${
-              !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
-            } ${
-              !isFadedProjectPage ? "hover-scale" : ""
-            } gallery-element w-10 font-bold `}
-            onClick={handleClickX}
-          >
-            X
+          <div className="flex gap-5">
+            <div
+              className={`gallery-x ${
+                !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
+              } ${
+                !isFadedProjectPage ? "hover-scale" : ""
+              } gallery-element w-10 font-bold `}
+              onClick={handleClickGoBack}
+            >
+              X
+            </div>
+            <div
+              className={`gallery-x ${
+                !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
+              } ${
+                !isFadedProjectPage ? "hover-scale" : ""
+              } gallery-element w-10 font-bold `}
+              onClick={handleClickX}
+            >
+              X
+            </div>
           </div>
         </div>
 
