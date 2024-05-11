@@ -64,13 +64,13 @@ export default function About({ handleClickClear }) {
           } ${flipped ? "flipped" : ""}`}
         >
           <div className="flip-card-inner">
-            <div className="flip-card-front overflow-hidden flex bg-neutral-300  ">
-              <div className="flex flex-col max-w-[50%]">
-                <div className="flex flex-col p-10 flex-grow font-medium text-[1.2vw] ">
+            <div className="flip-card-front overflow-scroll flex flex-col md:flex-row bg-neutral-300  ">
+              <div className="flex flex-col md:max-w-[50%]">
+                <div className="flex flex-col p-10 flex-grow font-medium md:text-[1.2vw] ">
                   Hello!
                   <br />
                   <br />{" "}
-                  <div className="text-[0.9vw]">
+                  <div className="md:text-[0.9vw]">
                     I'm Marcus. I've studied industrial design at LTH, and more
                     recently front-end development at Hyper Island. In my spare
                     time I try to exercise and read difficult books, with some
@@ -79,7 +79,7 @@ export default function About({ handleClickClear }) {
                 </div>
                 <img
                   src={gecko}
-                  className="h-1/2 w-1/2 object-contain ml-10 p-5 items-end"
+                  className="md:h-1/2  md:w-1/2 object-contain mx-10 px-5 items-end"
                 />
               </div>
               <img
