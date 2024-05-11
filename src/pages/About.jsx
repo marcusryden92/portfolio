@@ -64,7 +64,7 @@ export default function About({ handleClickClear }) {
           } ${flipped ? "flipped" : ""}`}
         >
           <div className="flip-card-inner">
-            <div className="flip-card-front overflow-scroll flex flex-col md:flex-row bg-neutral-300  ">
+            <div className="flip-card-front overflow-scroll no-scroll flex flex-col md:flex-row bg-neutral-300  ">
               <div className="flex flex-col md:max-w-[50%]">
                 <div className="flex flex-col p-10 flex-grow font-medium md:text-[1.2vw] ">
                   Hello!
