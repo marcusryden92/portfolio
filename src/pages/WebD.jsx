@@ -2,6 +2,7 @@ import GalleryContainer from "../components/GalleryContainer";
 import { useState, useEffect } from "react";
 import { useContextWebD } from "../context/ContextWebD";
 import { usePageNav } from "../hooks/usePageNavigation";
+import projectDataWeb from "../projectdata/projectDataWeb";
 
 export default function WebD({}) {
   const {
@@ -63,6 +64,7 @@ export default function WebD({}) {
           </div>
         </div>
         <GalleryContainer
+          projectData={projectDataWeb}
           parentIsClicked={isClickedWebD}
           parentIsUnfaded={isUnfadedWebD}
           setParentIsUnfaded={setIsUnfadedWebD}
