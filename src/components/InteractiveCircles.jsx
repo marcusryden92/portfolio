@@ -20,7 +20,7 @@ const InteractiveCircles = () => {
     const SHRINKRATE = 2;
     const DETECTIONDISTANCE = 100;
 
-    const CIRCLECOUNT = 700;
+    const CIRCLECOUNT = 500;
 
     const BACKGROUNDCOLOR = "#999999";
 
@@ -97,13 +97,24 @@ const InteractiveCircles = () => {
         color: colorArray[Math.floor(Math.random() * colorArray.length)],
 
         draw: function () {
+          // Calculate the offset for the center of the gradient
+          const offsetX = this.x - this.radius / 2;
+          const offsetY = this.y - this.radius / 2;
+
+          const gradient = c.createRadialGradient(
+            offsetX,
+            offsetY,
+            0,
+            offsetX,
+            offsetY,
+            this.radius
+          );
+          gradient.addColorStop(0, "#1a1a1a");
+          gradient.addColorStop(1, "#000000"); // Adjust the white to a dimmer shade, e.g., light gray
+
           c.beginPath();
           c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-          /* c.fillStyle = `hsl(${Math.floor(this.color[0])}, ${this.color[1]}%, ${
-            this.color[2]
-          }%)`; */
-
-          c.fillStyle = "#000000";
+          c.fillStyle = gradient;
           c.fill();
         },
         update: function () {
