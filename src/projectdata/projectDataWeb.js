@@ -1,7 +1,7 @@
 const projectDataWeb = [
   {
     title: "Cards",
-    thumbnail: "/images/webdesign/thumbs/Cards0.png",
+    thumbnail: "/images/webdesign/thumbs/Cards1.png",
     body: "Body text",
     images: [
       {
@@ -39,18 +39,6 @@ const projectDataWeb = [
       {
         full: "/images/webdesign/Cards8.png",
         thumb: "/images/webdesign/thumbs/Cards8.png",
-      },
-      {
-        full: "/images/webdesign/Cards9.png",
-        thumb: "/images/webdesign/thumbs/Cards9.png",
-      },
-      {
-        full: "/images/webdesign/Cards10.png",
-        thumb: "/images/webdesign/thumbs/Cards10.png",
-      },
-      {
-        full: "/images/webdesign/Cards11.png",
-        thumb: "/images/webdesign/thumbs/Cards11.png",
       },
     ],
   },
@@ -151,10 +139,6 @@ const projectDataWeb = [
       {
         full: "/images/webdesign/Hinder5.png",
         thumb: "/images/webdesign/thumbs/Hinder5.png",
-      },
-      {
-        full: "/images/webdesign/Hinder6.png",
-        thumb: "/images/webdesign/thumbs/Hinder6.png",
       },
 
       // Repeat for Hinder1 - Hinder6
