@@ -35,7 +35,7 @@ export default function IndD({}) {
         font-medium `}
           >
             <div
-              className={`gallery-element ${
+              className={`text-xl md:text-custom gallery-element ${
                 hoverIsActiveIndD
                   ? "hover:scale-110 ease-in-out duration-500 "
                   : ""
@@ -57,7 +57,7 @@ export default function IndD({}) {
                   : ""
               } 
            gallery-element
-            font-bold  `}
+            font-bold text-xl md:text-custom  `}
             >
               X
             </div>

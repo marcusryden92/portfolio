@@ -57,7 +57,7 @@ export default function Menu({}) {
 
   return (
     <div className=" flex flex-col justify-center menu py-5 px-5 md:py-16 md:pl-16 text-xl min-w-[20vw] md:h-screen sm:text-base text-left  ">
-      <ul className="flex flex-col justify-between h-[25%]">
+      <ul className="flex flex-col justify-between md:h-[25%]">
         <li
           className="pl-[6%] pr-2 py-[3%] font-medium hover:translate-x-2 text-white md:text-custom hover:bg-red-500 duration-500
           "

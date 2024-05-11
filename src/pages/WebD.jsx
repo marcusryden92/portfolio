@@ -35,7 +35,7 @@ export default function WebD({}) {
         font-medium `}
           >
             <div
-              className={`gallery-element ${
+              className={`text-xl md:text-custom gallery-element ${
                 hoverIsActiveWebD
                   ? "hover:scale-110 ease-in-out duration-200"
                   : ""
@@ -57,7 +57,7 @@ export default function WebD({}) {
                   : ""
               } 
            gallery-element
-            font-bold `}
+            font-bold text-xl md:text-custom`}
             >
               X
             </div>
