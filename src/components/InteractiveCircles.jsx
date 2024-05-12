@@ -12,20 +12,20 @@ const InteractiveCircles = () => {
     };
 
     const VELOCITY = 2;
-    const MAXRADIUS = 100;
+    const MAXRADIUS = 70;
     const MINRADIUS = 1;
     const SIZEVARIATION = 3;
 
     const GROWTHRATE = 2;
     const SHRINKRATE = 2;
-    const DETECTIONDISTANCE = 150;
+    const DETECTIONDISTANCE = 100;
 
     const CIRCLECOUNT =
       window.innerWidth < 768
         ? Math.floor((window.innerWidth * window.innerHeight) / 10000)
-        : 200;
+        : 500;
 
-    const BACKGROUNDCOLOR = "#fb923c";
+    const BACKGROUNDCOLOR = "#f97316";
 
     const COLORUPDATERATE = 0;
 
