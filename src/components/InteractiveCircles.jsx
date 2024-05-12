@@ -7,14 +7,16 @@ const InteractiveCircles = () => {
     const canvas = canvasRef.current;
     const c = canvas.getContext("2d");
 
+    canvas.style.filter = "blur(7px) contrast(30)";
+
     let mouse = {
       x: undefined,
       y: undefined,
     };
 
     const VELOCITY = 2;
-    const MAXRADIUS = 100;
-    const MINRADIUS = 1;
+    const MAXRADIUS = 70;
+    const MINRADIUS = 7;
     const SIZEVARIATION = 3;
 
     const GROWTHRATE = 2;
@@ -24,7 +26,7 @@ const InteractiveCircles = () => {
     const CIRCLECOUNT =
       window.innerWidth < 768
         ? Math.floor((window.innerWidth * window.innerHeight) / 10000)
-        : 500;
+        : 300;
 
     const BACKGROUNDCOLOR = "#dc2626";
 
