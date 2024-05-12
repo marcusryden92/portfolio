@@ -25,7 +25,7 @@ const InteractiveCircles = () => {
         ? Math.floor((window.innerWidth * window.innerHeight) / 10000)
         : 700;
 
-    const BACKGROUNDCOLOR = "#ef4444";
+    const BACKGROUNDCOLOR = "#999999";
 
     const COLORUPDATERATE = 0;
 
