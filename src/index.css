@@ -32,7 +32,7 @@
   box-sizing: border-box;
   font-family: "Montserrat";
   overflow: hidden;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .cover-container {

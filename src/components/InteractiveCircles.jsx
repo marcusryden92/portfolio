@@ -6,26 +6,30 @@ const InteractiveCircles = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const c = canvas.getContext("2d");
+
     let mouse = {
       x: undefined,
       y: undefined,
     };
 
     const VELOCITY = 2;
-    const MAXRADIUS = 70;
+    const MAXRADIUS = 100;
     const MINRADIUS = 1;
     const SIZEVARIATION = 3;
 
     const GROWTHRATE = 2;
     const SHRINKRATE = 2;
-    const DETECTIONDISTANCE = 100;
+    const DETECTIONDISTANCE = 120;
 
     const CIRCLECOUNT =
       window.innerWidth < 768
         ? Math.floor((window.innerWidth * window.innerHeight) / 10000)
-        : 700;
+        : 500;
 
-    const BACKGROUNDCOLOR = "#ef4444";
+    const BACKGROUNDCOLOR = "#dc2626";
+
+    const CIRCLECOLOR = "#000000";
+    const CIRLESHINE = "#1a1a1a";
 
     const COLORUPDATERATE = 0;
 
@@ -112,8 +116,8 @@ const InteractiveCircles = () => {
             offsetY,
             this.radius
           );
-          gradient.addColorStop(0, "#1a1a1a");
-          gradient.addColorStop(1, "#000000"); // Adjust the white to a dimmer shade, e.g., light gray
+          gradient.addColorStop(0, CIRLESHINE);
+          gradient.addColorStop(1, CIRCLECOLOR); // Adjust the white to a dimmer shade, e.g., light gray
 
           c.beginPath();
           c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
