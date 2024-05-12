@@ -247,6 +247,10 @@
   transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
 }
 
+.about-container-gradient {
+  background: radial-gradient(circle at top left, white, #bdbdbd);
+}
+
 .flip-card {
   perspective: 2700px;
 }
