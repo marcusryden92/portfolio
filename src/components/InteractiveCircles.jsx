@@ -23,9 +23,9 @@ const InteractiveCircles = () => {
     const CIRCLECOUNT =
       window.innerWidth < 768
         ? Math.floor((window.innerWidth * window.innerHeight) / 10000)
-        : 500;
+        : 700;
 
-    const BACKGROUNDCOLOR = "#f97316";
+    const BACKGROUNDCOLOR = "#999999";
 
     const COLORUPDATERATE = 0;
 
@@ -112,8 +112,8 @@ const InteractiveCircles = () => {
             offsetY,
             this.radius
           );
-          gradient.addColorStop(0, "#404040");
-          gradient.addColorStop(1, "#262626"); // Adjust the white to a dimmer shade, e.g., light gray
+          gradient.addColorStop(0, "#1a1a1a");
+          gradient.addColorStop(1, "#000000"); // Adjust the white to a dimmer shade, e.g., light gray
 
           c.beginPath();
           c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
