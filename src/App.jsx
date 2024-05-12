@@ -10,7 +10,7 @@ function App() {
     <>
       <PageNavProvider>
         <MainPage />
-        <CustomCursor />
+        {/*<CustomCursor />*/}
       </PageNavProvider>
     </>
   );
