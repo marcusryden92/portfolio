@@ -28,7 +28,7 @@ export default function About({ handleClickClear }) {
 
   return (
     <>
-      <div className="box h-full w-full md:my-10 md:mx-20 p-10 text-left">
+      <div className="box center-viewport h-full w-full  p-10 text-left">
         <div className="flex justify-between w-full">
           <div
             className={`${

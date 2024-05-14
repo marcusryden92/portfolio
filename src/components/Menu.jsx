@@ -11,7 +11,7 @@ export default function Menu({}) {
     useContextWebD();
   const { isUnfadedIndD, setIsUnfadedIndD, setHoverIsActiveIndD } =
     useContextIndD();
-  const { isUnfadedAbout, setIsFadedAbout } = useContextAbout();
+  const { isFadedAbout, setIsFadedAbout } = useContextAbout();
   const { isFadedProjectPage, setIsFadedProjectPage, setGoBack, goBack } =
     useContextProjectPage();
 
@@ -63,7 +63,7 @@ export default function Menu({}) {
   return (
     <div
       className={`flex flex-col ${
-        isUnfadedAbout || isUnfadedWebD || isUnfadedIndD || !isFadedProjectPage
+        !isFadedAbout || isUnfadedWebD || isUnfadedIndD || !isFadedProjectPage
           ? "menu--faded"
           : "menu"
       } justify-center  menu py-5 px-5 md:py-16 md:px-16 text-xl in-w-[20vw] md:h-screen sm:text-base text-left`}

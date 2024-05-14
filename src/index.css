@@ -94,10 +94,17 @@
   text-stroke: 1px black;
 }
 
+.center-viewport {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .box {
   display: flex;
   flex-direction: column;
-  padding: 10px; /* Adjust padding as needed */
+  /* padding: 10px; Adjust padding as needed */
   align-items: flex-start; /* Shrink-wrap around flex items */
   flex-wrap: nowrap; /* Ensure items stay in a single row */
 
