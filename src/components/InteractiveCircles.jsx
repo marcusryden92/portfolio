@@ -1,13 +1,22 @@
 import React, { useEffect, useRef } from "react";
 
 const InteractiveCircles = () => {
-  const canvasRef = useRef(null);
+  const circleCanvasRef = useRef(null);
+  const gradientCanvasRef = useRef(null);
+  const backgroundCanvasRef = useRef(null);
+
+  // Constants for filters
+  const FILL_BLUR = 7;
+  const FILL_CONTRAST = 10;
+  const GRADIENT_BLUR = 1;
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const c = canvas.getContext("2d");
-
-    canvas.style.filter = "blur(7px) contrast(30)";
+    const circleCanvas = circleCanvasRef.current;
+    const gradientCanvas = gradientCanvasRef.current;
+    const backgroundCanvas = backgroundCanvasRef.current;
+    const circleCtx = circleCanvas.getContext("2d");
+    const gradientCtx = gradientCanvas.getContext("2d");
+    const backgroundCtx = backgroundCanvas.getContext("2d");
 
     let mouse = {
       x: undefined,
@@ -28,51 +37,12 @@ const InteractiveCircles = () => {
         ? Math.floor((window.innerWidth * window.innerHeight) / 10000)
         : 300;
 
-    // const BACKGROUNDCOLOR = "#dc2626";
     const BACKGROUNDCOLOR = "#FFFFFF";
-
-    const CIRCLECOLOR = "#000000";
-    const CIRLESHINE = "#555555";
+    const CIRCLE_FILL = "#000000";
+    const CIRCLE_GRADIENT_CENTER = "rgba(0,0,0,0)";
+    const CIRCLE_GRADIENT_EDGE = "rgba(0,0,0,0)";
 
     const COLORUPDATERATE = 0;
-
-    /* const colorArray = [
-      "#ED6F47",
-      "#EDA947",
-      "#ED8C47",
-      "#F56055",
-      "#EDBD47",
-      "#000000",
-    ];*/
-
-    /*const colorArray = [
-      "hsl(20, 100%, 60%)", // #ED6F47
-      "hsl(35, 100%, 60%)", // #EDA947
-      "hsl(30, 100%, 60%)", // #ED8C47
-      "hsl(5, 100%, 60%)",  // #F56055
-      "hsl(50, 100%, 60%)", // #EDBD47
-      "hsl(0, 0%, 0%)"     // #000000
-    ];*/
-
-    //Color Black and White:
-
-    /* const colorArray = [
-      [20, 0, 90], // #ED6F47
-      [35, 0, 85], // #EDA947
-      [30, 0, 80], // #ED8C47
-      [5, 0, 75], // #F56055
-      [50, 0, 70], // #EDBD47
-      [0, 0, 0], // #000000
-    ]; */
-
-    /* const colorArray = [
-      [15, 75, 60], // #ED6F47
-      [28, 80, 60], // #EDA947
-      [23, 75, 60], // #ED8C47
-      [4, 80, 60], // #F56055
-      [45, 75, 60], // #EDBD47
-      [0, 0, 0], // #000000
-    ]; */
 
     const colorArray = [
       [0, 0, 0], // #000000
@@ -84,8 +54,14 @@ const InteractiveCircles = () => {
     ];
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      circleCanvas.width =
+        gradientCanvas.width =
+        backgroundCanvas.width =
+          window.innerWidth;
+      circleCanvas.height =
+        gradientCanvas.height =
+        backgroundCanvas.height =
+          window.innerHeight;
     };
 
     const Circle = function () {
@@ -106,12 +82,18 @@ const InteractiveCircles = () => {
         radius,
         color: colorArray[Math.floor(Math.random() * colorArray.length)],
 
-        draw: function () {
-          // Calculate the offset for the center of the gradient
+        drawCircle: function () {
+          circleCtx.beginPath();
+          circleCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+          circleCtx.fillStyle = CIRCLE_FILL;
+          circleCtx.fill();
+        },
+
+        drawGradient: function () {
           const offsetX = this.x - this.radius / 2;
           const offsetY = this.y - this.radius / 2;
 
-          const gradient = c.createRadialGradient(
+          const gradient = gradientCtx.createRadialGradient(
             offsetX,
             offsetY,
             0,
@@ -119,14 +101,15 @@ const InteractiveCircles = () => {
             offsetY,
             this.radius
           );
-          gradient.addColorStop(0, CIRLESHINE);
-          gradient.addColorStop(1, CIRCLECOLOR); // Adjust the white to a dimmer shade, e.g., light gray
+          gradient.addColorStop(0, CIRCLE_GRADIENT_CENTER);
+          gradient.addColorStop(1, CIRCLE_GRADIENT_EDGE);
 
-          c.beginPath();
-          c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-          c.fillStyle = gradient;
-          c.fill();
+          gradientCtx.beginPath();
+          gradientCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+          gradientCtx.fillStyle = gradient;
+          gradientCtx.fill();
         },
+
         update: function () {
           if (
             this.x + this.radius > window.innerWidth ||
@@ -159,26 +142,14 @@ const InteractiveCircles = () => {
             this.radius = baseRadius;
           }
 
-          /* if (distanceToCenter <= DETECTIONDISTANCE) {
-            // Adjust blur effect based on proximity to mouse cursor
-            c.filter = `blur(${(MAXRADIUS * proximityFactor) / 2}px)`;
-          } else {
-            c.filter = "none";
-          }
-
-          if (distanceToCenter <= DETECTIONDISTANCE) {
-            c.globalAlpha = 0.4s;
-          } else {
-            c.globalAlpha = 1;
-          } */
-
           if (this.color[0] < 360) {
             this.color[0] += COLORUPDATERATE;
           } else {
             this.color[0] = 0;
           }
 
-          this.draw();
+          this.drawCircle();
+          this.drawGradient();
         },
       };
     };
@@ -194,12 +165,18 @@ const InteractiveCircles = () => {
 
     const animate = () => {
       requestAnimationFrame(animate);
-      c.fillStyle = BACKGROUNDCOLOR;
-      c.fillRect(0, 0, window.innerWidth, window.innerHeight);
+      circleCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      gradientCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      backgroundCtx.fillStyle = BACKGROUNDCOLOR;
+      backgroundCtx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       for (let i = 0; i < circleArray.length; i++) {
         circleArray[i].update();
       }
+
+      // Apply filters to the canvas elements directly
+      circleCanvas.style.filter = `blur(${FILL_BLUR}px) contrast(${FILL_CONTRAST})`;
+      gradientCanvas.style.filter = `blur(${GRADIENT_BLUR}px)`;
     };
 
     const handleMouseMove = (event) => {
@@ -220,7 +197,22 @@ const InteractiveCircles = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} />;
+  return (
+    <div style={{ position: "relative" }}>
+      <canvas
+        ref={backgroundCanvasRef}
+        style={{ position: "absolute", top: 0, left: 0 }}
+      />
+      <canvas
+        ref={circleCanvasRef}
+        style={{ position: "absolute", top: 0, left: 0 }}
+      />
+      <canvas
+        ref={gradientCanvasRef}
+        style={{ position: "absolute", top: 0, left: 0 }}
+      />
+    </div>
+  );
 };
 
 export default InteractiveCircles;
