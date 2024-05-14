@@ -28,17 +28,17 @@ export default function About({ handleClickClear }) {
 
   return (
     <>
-      <div className="box center-viewport h-full w-full  p-10 text-left md:max-w-[80%]">
-        <div className="flex justify-between w-full">
+      <div className="box center-viewport h-full w-full text-left md:max-w-[80%] max-h-[90%] my-10">
+        <div className="flex justify-between w-full max-w-[100%] ">
           <div
-            className={`${
+            className={`text-custom ${
               !isFadedAbout ? "gallery-title" : "gallery-title--faded"
-            } gallery-element w-40 font-medium hover:scale-110 ease-in-out duration-1000`}
+            } gallery-element font-medium hover:scale-110 ease-in-out duration-1000`}
           >
             About
           </div>
           <div
-            className={`mr-[10%] gallery-x ${
+            className={`md:mr-[10%] gallery-x ${
               !isFadedAbout ? "gallery-x" : "gallery-x--faded"
             } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
             onClick={() => setFlipped(!flipped)}
@@ -57,7 +57,7 @@ export default function About({ handleClickClear }) {
 
         {/*Flip card below*/}
         <div
-          className={`flip-card min-h-[90%] w-full my-6 md:w-full  ${
+          className={`flip-card h-full max-h-[90%] w-full my-6 md:w-full  ${
             isFadedAbout ? "about-container--faded" : "about-container"
           } ${flipped ? "flipped" : ""}`}
         >
