@@ -28,7 +28,7 @@ export default function About({ handleClickClear }) {
 
   return (
     <>
-      <div className="box center-viewport h-full w-full  p-10 text-left">
+      <div className="box center-viewport h-full w-full  p-10 text-left md:max-w-[80%]">
         <div className="flex justify-between w-full">
           <div
             className={`${
@@ -48,9 +48,7 @@ export default function About({ handleClickClear }) {
           <div
             className={`gallery-x ${
               !isFadedAbout ? "gallery-x" : "gallery-x--faded"
-            } ${
-              !isFadedAbout ? "hover-scale" : ""
-            } gallery-element w-10 font-bold `}
+            } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
             onClick={handleClickX}
           >
             X
@@ -59,7 +57,7 @@ export default function About({ handleClickClear }) {
 
         {/*Flip card below*/}
         <div
-          className={`flip-card h-full w-full mt-6 md:h-[35vw] md:w-full]  ${
+          className={`flip-card min-h-[90%] w-full my-6 md:w-full  ${
             isFadedAbout ? "about-container--faded" : "about-container"
           } ${flipped ? "flipped" : ""}`}
         >
