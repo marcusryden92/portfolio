@@ -4,19 +4,17 @@ const InteractiveCircles = () => {
   const circleCanvasRef = useRef(null);
   const gradientCanvasRef = useRef(null);
   const backgroundCanvasRef = useRef(null);
-
-  // Constants for filters
-  const FILL_BLUR = 0;
-  const FILL_CONTRAST = 1;
-  const GRADIENT_BLUR = 1;
+  const blurCanvasRef = useRef(null);
 
   useEffect(() => {
     const circleCanvas = circleCanvasRef.current;
     const gradientCanvas = gradientCanvasRef.current;
     const backgroundCanvas = backgroundCanvasRef.current;
-    const circleCtx = circleCanvas.getContext("2d");
+    const blurCanvas = blurCanvasRef.current;
+    const circleCtx = circleCanvas.getContext("2d", { alpha: true });
     const gradientCtx = gradientCanvas.getContext("2d");
     const backgroundCtx = backgroundCanvas.getContext("2d");
+    const blurCtx = blurCanvas.getContext("2d");
 
     let mouse = {
       x: undefined,
@@ -28,33 +26,24 @@ const InteractiveCircles = () => {
     const MINRADIUS = 7;
     const SIZEVARIATION = 3;
 
-    const GROWTHRATE = 2;
-    const SHRINKRATE = 2;
     const DETECTIONDISTANCE = 120;
 
     const CIRCLECOUNT =
       window.innerWidth < 768
         ? Math.floor((window.innerWidth * window.innerHeight) / 10000)
-        : 300;
+        : 100;
 
     const BACKGROUNDCOLOR = "#FFFFFF";
     const CIRCLE_FILL = "#000000";
-    const CIRCLE_GRADIENT_CENTER = "#FFFFFF";
+    const CIRCLE_GRADIENT_CENTER = "rgba(255, 255, 255,0)";
     const CIRCLE_GRADIENT_EDGE = "rgba(255, 255, 255,0)";
 
     const CIRCLE_BACKGROUND_GRADIENT_CENTER = "#000000";
-    const CIRCLE_BACKGROUND_GRADIENT_EDGE = "rgba(0,0,0,0)";
+    const CIRCLE_BACKGROUND_GRADIENT_EDGE = "#000000";
 
-    const COLORUPDATERATE = 0;
+    const ALPHA_THRESHOLD = 100;
 
-    const colorArray = [
-      [0, 0, 0], // #000000
-      [0, 0, 0], // #000000
-      [0, 0, 0], // #000000
-      [0, 0, 0], // #000000
-      [0, 0, 0], // #000000
-      [0, 0, 0], // #000000
-    ];
+    const BLUR = 20;
 
     const resizeCanvas = () => {
       circleCanvas.width =
@@ -83,7 +72,6 @@ const InteractiveCircles = () => {
         dx,
         dy,
         radius,
-        color: colorArray[Math.floor(Math.random() * colorArray.length)],
 
         drawCircle: function () {
           const circleGradient = circleCtx.createRadialGradient(
@@ -156,12 +144,6 @@ const InteractiveCircles = () => {
             this.radius = baseRadius;
           }
 
-          if (this.color[0] < 360) {
-            this.color[0] += COLORUPDATERATE;
-          } else {
-            this.color[0] = 0;
-          }
-
           this.drawCircle();
           this.drawGradient();
         },
@@ -182,17 +164,52 @@ const InteractiveCircles = () => {
       circleCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
       gradientCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-      // Draw background
-      circleCtx.fillStyle = BACKGROUNDCOLOR;
-      circleCtx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-
       for (let i = 0; i < circleArray.length; i++) {
         circleArray[i].update();
       }
 
-      // Apply filters to the canvas elements directly
-      circleCanvas.style.filter = `blur(${FILL_BLUR}px) contrast(${FILL_CONTRAST})`;
-      gradientCanvas.style.filter = `blur(${GRADIENT_BLUR}px)`;
+      blurCanvas.width = circleCanvas.width; // Set size of offscreen canvas
+      blurCanvas.height = circleCanvas.height;
+
+      blurCtx.clearRect(0, 0, blurCanvas.width, blurCanvas.height);
+      blurCtx.filter = `blur(${BLUR}px)`; // Apply blur filter to offscreen canvas
+      blurCtx.drawImage(circleCanvas, 0, 0); // Draw blurred circle canvas onto offscreen canvas
+      blurCtx.filter = "none"; // Reset filter
+
+      circleCtx.clearRect(0, 0, window.innerWidth, window.innerHeight); // Clear main canvas
+      circleCtx.drawImage(blurCanvas, 0, 0); // Draw blurred canvas onto main canvas
+
+      applyAlphaThreshold(); // Apply alpha threshold to blurred canvas
+
+      gradientCtx.drawImage(circleCanvas, 0, 0); // Draw gradient canvas on top
+
+      backgroundCtx.clearRect(0, 0, window.innerWidth, window.innerHeight); // Clear background canvas
+      backgroundCtx.fillStyle = BACKGROUNDCOLOR;
+      backgroundCtx.fillRect(0, 0, window.innerWidth, window.innerHeight); // Draw background
+    };
+
+    const applyAlphaThreshold = () => {
+      const imageData = blurCtx.getImageData(
+        0,
+        0,
+        window.innerWidth,
+        window.innerHeight
+      );
+
+      // Loop through each pixel and adjust alpha value
+      for (let i = 3; i < imageData.data.length; i += 4) {
+        // Check alpha channel against threshold
+        if (imageData.data[i] < ALPHA_THRESHOLD) {
+          // If below threshold, set alpha to 0
+          imageData.data[i] = 0;
+        } else {
+          // If above threshold, set alpha to maximum (255)
+          imageData.data[i] = 255;
+        }
+      }
+
+      // Put the modified image data back to the canvas
+      blurCtx.putImageData(imageData, 0, 0);
     };
 
     const handleMouseMove = (event) => {
@@ -227,6 +244,7 @@ const InteractiveCircles = () => {
         ref={gradientCanvasRef}
         style={{ position: "absolute", top: 0, left: 0 }}
       />
+      <canvas ref={blurCanvasRef} style={{ display: "none" }} />
     </div>
   );
 };
