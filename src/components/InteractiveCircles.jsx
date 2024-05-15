@@ -6,8 +6,8 @@ const InteractiveCircles = () => {
   const backgroundCanvasRef = useRef(null);
 
   // Constants for filters
-  const FILL_BLUR = 7;
-  const FILL_CONTRAST = 10;
+  const FILL_BLUR = 0;
+  const FILL_CONTRAST = 1;
   const GRADIENT_BLUR = 1;
 
   useEffect(() => {
@@ -39,8 +39,11 @@ const InteractiveCircles = () => {
 
     const BACKGROUNDCOLOR = "#FFFFFF";
     const CIRCLE_FILL = "#000000";
-    const CIRCLE_GRADIENT_CENTER = "rgba(0,0,0,0)";
-    const CIRCLE_GRADIENT_EDGE = "rgba(0,0,0,0)";
+    const CIRCLE_GRADIENT_CENTER = "#FFFFFF";
+    const CIRCLE_GRADIENT_EDGE = "rgba(255, 255, 255,0)";
+
+    const CIRCLE_BACKGROUND_GRADIENT_CENTER = "#000000";
+    const CIRCLE_BACKGROUND_GRADIENT_EDGE = "rgba(0,0,0,0)";
 
     const COLORUPDATERATE = 0;
 
@@ -83,9 +86,20 @@ const InteractiveCircles = () => {
         color: colorArray[Math.floor(Math.random() * colorArray.length)],
 
         drawCircle: function () {
+          const circleGradient = circleCtx.createRadialGradient(
+            this.x,
+            this.y,
+            0,
+            this.x,
+            this.y,
+            this.radius
+          );
+          circleGradient.addColorStop(0, CIRCLE_BACKGROUND_GRADIENT_CENTER);
+          circleGradient.addColorStop(1, CIRCLE_BACKGROUND_GRADIENT_EDGE);
+
           circleCtx.beginPath();
           circleCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-          circleCtx.fillStyle = CIRCLE_FILL;
+          circleCtx.fillStyle = circleGradient;
           circleCtx.fill();
         },
 
