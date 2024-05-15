@@ -167,8 +167,10 @@ const InteractiveCircles = () => {
       requestAnimationFrame(animate);
       circleCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
       gradientCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-      backgroundCtx.fillStyle = BACKGROUNDCOLOR;
-      backgroundCtx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+
+      // Draw background
+      circleCtx.fillStyle = BACKGROUNDCOLOR;
+      circleCtx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       for (let i = 0; i < circleArray.length; i++) {
         circleArray[i].update();
