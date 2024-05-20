@@ -17,7 +17,7 @@ const InteractiveCircles = () => {
     const VELOCITY = 2;
     const MAXRADIUS = 70;
     const MINRADIUS = 7;
-    const SIZEVARIATION = 3;
+    const SIZEVARIATION = 8;
 
     const GROWTHRATE = 2;
     const SHRINKRATE = 2;
