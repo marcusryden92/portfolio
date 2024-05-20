@@ -12,8 +12,13 @@ export default function Menu({}) {
   const { isUnfadedIndD, setIsUnfadedIndD, setHoverIsActiveIndD } =
     useContextIndD();
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
-  const { isFadedProjectPage, setIsFadedProjectPage, setGoBack, goBack } =
-    useContextProjectPage();
+  const {
+    isFadedProjectPage,
+    setIsFadedProjectPage,
+    setGoBack,
+    goBack,
+    menuVisible,
+  } = useContextProjectPage();
 
   function onClickAbout() {
     handleClickAbout(
@@ -62,7 +67,7 @@ export default function Menu({}) {
 
   return (
     <div
-      className={`flex flex-col ${
+      className={`flex flex-col ${menuVisible ? "" : "hidden"} ${
         !isFadedAbout || isUnfadedWebD || isUnfadedIndD || !isFadedProjectPage
           ? "menu--faded"
           : "menu"

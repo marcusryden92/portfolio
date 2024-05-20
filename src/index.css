@@ -199,7 +199,7 @@
 .gallery-element {
   background-color: black;
   color: white;
-  border-radius: 0;
+  border: 1px solid white;
   text-align: center;
   padding: 0.5vw;
   padding-left: 1vw;

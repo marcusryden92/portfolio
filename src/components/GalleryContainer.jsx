@@ -19,12 +19,13 @@ export default function GalleryContainer({
   const { setHoverIsActiveWebD, setIsUnfadedWebD } = useContextWebD();
   const { setHoverIsActiveIndD, setIsUnfadedIndD } = useContextIndD();
   const { setIsFadedAbout } = useContextAbout();
-  const { setCurrentProject } = useContextProjectPage();
+  const { setCurrentProject, setMenuVisible } = useContextProjectPage();
 
   const { handleClickProjectPage } = usePageNav();
 
   function clickProject(project) {
     setCurrentProject(project);
+    setMenuVisible(false);
     handleClickProjectPage(
       setHoverIsActiveWebD,
       setIsUnfadedWebD,
