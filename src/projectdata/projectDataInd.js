@@ -1,8 +1,8 @@
 const projectDataInd = [
   {
-    title: "Hammerhead",
+    title: "The Hammerhead Handheld Vacuum",
     thumbnail: "/images/industrialdesign/thumbs/Hammerhead0.png",
-    body: "Project made about a shark vacuum cleaner",
+    body: "This project was made during a course on design methodology. The brief was to create a handheld device. I opted to design a handheld vacuum cleaner. </br></br>I iterated on many designs, several being animals, and landed on a design that draws inspiration from the hammerhead shark. I also drew inspiration from designs such as Marc Newson's Lockheed Lounge and Philippe Starck's Juicy Salif.</br></br>The project was modeled in Fusion 360 and rendered in Maxwell Studio.",
     images: [
       {
         full: "/images/industrialdesign/Hammerhead1.png",
@@ -41,7 +41,7 @@ const projectDataInd = [
   {
     title: "Triton Scuba Helmet",
     thumbnail: "/images/industrialdesign/thumbs/Helmet1.png",
-    body: "Bachelor project",
+    body: "",
     images: [
       {
         full: "/images/industrialdesign/Helmet1.png",

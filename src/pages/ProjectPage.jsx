@@ -105,9 +105,10 @@ export default function ProjectPage() {
               ))}{" "}
             </div>
           </div>
-          <div className="p-10 bg-neutral-900 w-[40%] text-white">
-            {currentProject.body}
-          </div>
+          <div
+            className="p-10 text-[0.95vw] bg-neutral-950 w-[40%] border border-white text-white"
+            dangerouslySetInnerHTML={{ __html: currentProject.body }}
+          ></div>
         </div>
       </div>
     </>
