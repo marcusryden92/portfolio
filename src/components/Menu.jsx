@@ -7,10 +7,18 @@ import { useContextProjectPage } from "../context/ContextProjectPage";
 
 export default function Menu({}) {
   const { handleClickAbout, handleClickIndD, handleClickWebD } = usePageNav();
-  const { setIsUnfadedWebD, setHoverIsActiveWebD } = useContextWebD();
-  const { setIsUnfadedIndD, setHoverIsActiveIndD } = useContextIndD();
-  const { setIsFadedAbout } = useContextAbout();
-  const { setIsFadedProjectPage, setGoBack, goBack } = useContextProjectPage();
+  const { isUnfadedWebD, setIsUnfadedWebD, setHoverIsActiveWebD } =
+    useContextWebD();
+  const { isUnfadedIndD, setIsUnfadedIndD, setHoverIsActiveIndD } =
+    useContextIndD();
+  const { isFadedAbout, setIsFadedAbout } = useContextAbout();
+  const {
+    isFadedProjectPage,
+    setIsFadedProjectPage,
+    setGoBack,
+    goBack,
+    menuVisible,
+  } = useContextProjectPage();
 
   function onClickAbout() {
     handleClickAbout(
@@ -55,11 +63,19 @@ export default function Menu({}) {
     }, 50);
   }
 
+  /*  */
+
   return (
-    <div className=" flex flex-col justify-center menu py-5 px-5 md:py-16 md:pl-16 text-xl min-w-[20vw] md:h-screen sm:text-base text-left  ">
+    <div
+      className={`flex flex-col ${menuVisible ? "" : "hidden"} ${
+        !isFadedAbout || isUnfadedWebD || isUnfadedIndD || !isFadedProjectPage
+          ? "menu--faded"
+          : "menu"
+      } justify-center  menu py-5 px-5 md:py-16 md:px-16 text-xl in-w-[20vw] md:h-screen sm:text-base text-left`}
+    >
       <ul className="flex flex-col justify-between md:h-[25%]">
         <li
-          className="pl-[6%] pr-2 py-[3%] font-medium hover:translate-x-2 text-white md:text-custom hover:bg-white hover:text-red-600 duration-500
+          className="px-5 pr-2 py-[3%] font-medium hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500
           "
           onClick={onClickAbout}
         >
@@ -67,7 +83,7 @@ export default function Menu({}) {
         </li>
         <br />
         <li
-          className="pl-[6%] pr-2 py-[3%] font-medium text-white md:text-custom hover:translate-x-2 hover:bg-white hover:text-red-600 duration-500"
+          className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={() => {
             setGoBackWebD();
             onClickWebD();
@@ -77,7 +93,7 @@ export default function Menu({}) {
         </li>
         <br />
         <li
-          className="pl-[6%] pr-2 py-[3%] font-medium text-white md:text-custom whitespace-nowrap hover:translate-x-2 hover:bg-white hover:text-red-600 duration-500"
+          className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={() => {
             setGoBackIndD();
             onClickIndD();

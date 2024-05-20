@@ -19,12 +19,13 @@ export default function GalleryContainer({
   const { setHoverIsActiveWebD, setIsUnfadedWebD } = useContextWebD();
   const { setHoverIsActiveIndD, setIsUnfadedIndD } = useContextIndD();
   const { setIsFadedAbout } = useContextAbout();
-  const { setCurrentProject } = useContextProjectPage();
+  const { setCurrentProject, setMenuVisible } = useContextProjectPage();
 
   const { handleClickProjectPage } = usePageNav();
 
   function clickProject(project) {
     setCurrentProject(project);
+    setMenuVisible(false);
     handleClickProjectPage(
       setHoverIsActiveWebD,
       setIsUnfadedWebD,
@@ -35,7 +36,7 @@ export default function GalleryContainer({
   }
 
   return (
-    <div className="grid my-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    <div className="grid my-6 sm:grid-cols-2 md:grid-cols-3 gap-5">
       {projectData
         ? projectData.map((project, index) => (
             <ProjectBlock

@@ -3,8 +3,13 @@ import { usePageNav } from "../hooks/usePageNavigation";
 import { useState, useEffect } from "react";
 
 export default function ProjectPage() {
-  const { isFadedProjectPage, setIsFadedProjectPage, currentProject, goBack } =
-    useContextProjectPage();
+  const {
+    isFadedProjectPage,
+    setIsFadedProjectPage,
+    currentProject,
+    goBack,
+    setMenuVisible,
+  } = useContextProjectPage();
 
   const [active, setActive] = useState(false);
   const [clickedImage, setClickedImage] = useState(currentProject.images[1]); // Track clicked image
@@ -32,11 +37,15 @@ export default function ProjectPage() {
         setIsFadedProjectPage(false);
       }, 50);
     }
+
+    setTimeout(() => {
+      setMenuVisible(true);
+    }, 1000);
   }, []);
 
   return (
     <>
-      <div className="box md:my-10 md:mx-20 p-10 text-left w-full">
+      <div className="box center-viewport md:my-10 md:max-w-[80%] text-left w-full">
         <div className="flex justify-between w-full">
           <div
             className={`${
