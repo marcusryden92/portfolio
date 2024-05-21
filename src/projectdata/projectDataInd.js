@@ -41,7 +41,7 @@ const projectDataInd = [
   {
     title: "Triton Scuba Helmet",
     thumbnail: "/images/industrialdesign/thumbs/Helmet1.png",
-    body: "",
+    body: "<p>For my bachelor's project in Industrial Design, I developed an innovative diving helmet, showcasing my skills in modern design software and rendering techniques. The helmet was meticulously crafted in Fusion 360 and brought to life with detailed renders in Maxwell Studio.</p><h4>Key Features:</h4><ul><li><strong>Fold-Up Visor:</strong> The helmet includes a unique visor that folds up, providing flexibility and ease of use for divers in various underwater conditions.</li><br/><li><strong>Attachable Lamps:</strong> To enhance underwater visibility, the helmet is equipped with attachable lamps on both the left and right sides. These lamps can be easily mounted and removed, offering customizable lighting solutions for different diving scenarios.</li></ul><p>This project highlights my ability to integrate functional design with advanced technology, ensuring both practicality and aesthetic appeal in demanding environments.</p>",
     images: [
       {
         full: "/images/industrialdesign/Helmet1.png",
