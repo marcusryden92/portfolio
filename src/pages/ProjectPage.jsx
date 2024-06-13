@@ -22,7 +22,7 @@ export default function ProjectPage() {
   }
 
   function handleClickGoBack() {
-    goBack();
+    // goBack();
   }
 
   // Function to handle image click

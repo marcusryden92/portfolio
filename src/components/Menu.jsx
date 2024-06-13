@@ -63,7 +63,6 @@ export default function Menu({}) {
         <li
           className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={() => {
-            setGoBackWebD();
             onClickWebD();
           }}
         >
@@ -73,7 +72,6 @@ export default function Menu({}) {
         <li
           className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={() => {
-            setGoBackIndD();
             onClickIndD();
           }}
         >
