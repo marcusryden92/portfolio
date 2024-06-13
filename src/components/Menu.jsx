@@ -12,13 +12,8 @@ export default function Menu({}) {
   const { isUnfadedIndD, setIsUnfadedIndD, setHoverIsActiveIndD } =
     useContextIndD();
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
-  const {
-    isFadedProjectPage,
-    setIsFadedProjectPage,
-    setGoBack,
-    goBack,
-    menuVisible,
-  } = useContextProjectPage();
+  const { isFadedProjectPage, setIsFadedProjectPage, menuVisible } =
+    useContextProjectPage();
 
   function onClickAbout() {
     handleClickAbout(
@@ -47,23 +42,6 @@ export default function Menu({}) {
       setIsFadedProjectPage
     );
   }
-
-  function setGoBackWebD() {
-    setGoBack(onClickWebD);
-  }
-
-  function hello() {
-    console.log("hello");
-  }
-
-  function setGoBackIndD() {
-    setGoBack(hello);
-    setTimeout(() => {
-      console.log(goBack);
-    }, 50);
-  }
-
-  /*  */
 
   return (
     <div
