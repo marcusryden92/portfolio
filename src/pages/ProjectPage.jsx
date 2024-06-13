@@ -9,6 +9,9 @@ export default function ProjectPage() {
     currentProject,
     goBack,
     setMenuVisible,
+    currentProjectKind,
+    exitWebD,
+    exitIndD,
   } = useContextProjectPage();
 
   const [active, setActive] = useState(false);
@@ -22,7 +25,11 @@ export default function ProjectPage() {
   }
 
   function handleClickGoBack() {
-    // goBack();
+    if (currentProjectKind == "webD") {
+      exitWebD();
+    } else {
+      exitIndD();
+    }
   }
 
   // Function to handle image click

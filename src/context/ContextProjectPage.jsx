@@ -9,6 +9,9 @@ export const ContextProjectPage = ({ children }) => {
 
   const [currentProjectKind, setCurrentProjectKind] = useState("");
 
+  const [exitIndD, setExitIndD] = useState();
+  const [exitWebD, setExitWebD] = useState();
+
   const value = {
     isFadedProjectPage,
     setIsFadedProjectPage,
@@ -20,6 +23,10 @@ export const ContextProjectPage = ({ children }) => {
     setMenuVisible,
     currentProjectKind,
     setCurrentProjectKind,
+    exitIndD,
+    setExitIndD,
+    exitWebD,
+    setExitWebD,
   };
 
   return (

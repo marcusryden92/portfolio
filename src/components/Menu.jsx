@@ -4,6 +4,7 @@ import { useContextWebD } from "../context/ContextWebD";
 import { useContextIndD } from "../context/ContextIndD";
 import { useContextAbout } from "../context/ContextAbout";
 import { useContextProjectPage } from "../context/ContextProjectPage";
+import { useEffect } from "react";
 
 export default function Menu({}) {
   const { handleClickAbout, handleClickIndD, handleClickWebD } = usePageNav();
@@ -19,6 +20,8 @@ export default function Menu({}) {
     menuVisible,
     currentProjectKind,
     setCurrentProjectKind,
+    setExitWebD,
+    setExitIndD,
   } = useContextProjectPage();
 
   function onClickAbout() {
@@ -32,6 +35,7 @@ export default function Menu({}) {
   }
 
   function onClickWebD() {
+    setCurrentProjectKind("webD");
     handleClickWebD(
       setHoverIsActiveIndD,
       setIsUnfadedIndD,
@@ -41,6 +45,7 @@ export default function Menu({}) {
   }
 
   function onClickIndD() {
+    setCurrentProjectKind("indD");
     handleClickIndD(
       setHoverIsActiveWebD,
       setIsUnfadedWebD,
@@ -48,6 +53,11 @@ export default function Menu({}) {
       setIsFadedProjectPage
     );
   }
+
+  useEffect(() => {
+    setExitWebD(onClickWebD);
+    setExitIndD(onClickIndD);
+  }, []);
 
   return (
     <div
