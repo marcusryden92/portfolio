@@ -1,24 +1,20 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
+
 export const ContextProvider = createContext(null);
 
 export const ContextProjectPage = ({ children }) => {
   const [isFadedProjectPage, setIsFadedProjectPage] = useState(true);
-  const [currentProject, setCurrentProject] = useState();
-  const [goBack, setGoBack] = useState();
+  const [currentProject, setCurrentProject] = useState(null);
   const [menuVisible, setMenuVisible] = useState(true);
-
   const [currentProjectKind, setCurrentProjectKind] = useState("");
-
-  const [exitIndD, setExitIndD] = useState();
-  const [exitWebD, setExitWebD] = useState();
+  const [exitIndD, setExitIndD] = useState(null);
+  const [exitWebD, setExitWebD] = useState(null);
 
   const value = {
     isFadedProjectPage,
     setIsFadedProjectPage,
     currentProject,
     setCurrentProject,
-    goBack,
-    setGoBack,
     menuVisible,
     setMenuVisible,
     currentProjectKind,
@@ -39,7 +35,9 @@ export const ContextProjectPage = ({ children }) => {
 export const useContextProjectPage = () => {
   const context = useContext(ContextProvider);
   if (!context) {
-    throw new Error("customContextProjectPage undefined");
+    throw new Error(
+      "useContextProjectPage must be used within a ContextProvider"
+    );
   }
   return context;
 };

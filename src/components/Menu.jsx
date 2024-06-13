@@ -4,7 +4,7 @@ import { useContextWebD } from "../context/ContextWebD";
 import { useContextIndD } from "../context/ContextIndD";
 import { useContextAbout } from "../context/ContextAbout";
 import { useContextProjectPage } from "../context/ContextProjectPage";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 
 export default function Menu({}) {
   const { handleClickAbout, handleClickIndD, handleClickWebD } = usePageNav();
@@ -13,18 +13,16 @@ export default function Menu({}) {
   const { isUnfadedIndD, setIsUnfadedIndD, setHoverIsActiveIndD } =
     useContextIndD();
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
-
   const {
     isFadedProjectPage,
     setIsFadedProjectPage,
     menuVisible,
-    currentProjectKind,
     setCurrentProjectKind,
     setExitWebD,
     setExitIndD,
   } = useContextProjectPage();
 
-  function onClickAbout() {
+  const onClickAbout = () => {
     handleClickAbout(
       setHoverIsActiveWebD,
       setIsUnfadedWebD,
@@ -32,9 +30,9 @@ export default function Menu({}) {
       setIsUnfadedIndD,
       setIsFadedProjectPage
     );
-  }
+  };
 
-  function onClickWebD() {
+  const onClickWebD = useCallback(() => {
     setCurrentProjectKind("webD");
     handleClickWebD(
       setHoverIsActiveIndD,
@@ -42,9 +40,16 @@ export default function Menu({}) {
       setIsFadedAbout,
       setIsFadedProjectPage
     );
-  }
+  }, [
+    setCurrentProjectKind,
+    handleClickWebD,
+    setHoverIsActiveIndD,
+    setIsUnfadedIndD,
+    setIsFadedAbout,
+    setIsFadedProjectPage,
+  ]);
 
-  function onClickIndD() {
+  const onClickIndD = useCallback(() => {
     setCurrentProjectKind("indD");
     handleClickIndD(
       setHoverIsActiveWebD,
@@ -52,12 +57,19 @@ export default function Menu({}) {
       setIsFadedAbout,
       setIsFadedProjectPage
     );
-  }
+  }, [
+    setCurrentProjectKind,
+    handleClickIndD,
+    setHoverIsActiveWebD,
+    setIsUnfadedWebD,
+    setIsFadedAbout,
+    setIsFadedProjectPage,
+  ]);
 
   useEffect(() => {
-    setExitWebD(onClickWebD);
-    setExitIndD(onClickIndD);
-  }, []);
+    setExitWebD(() => onClickWebD);
+    setExitIndD(() => onClickIndD);
+  }, [onClickWebD, onClickIndD, setExitWebD, setExitIndD]);
 
   return (
     <div
@@ -65,12 +77,11 @@ export default function Menu({}) {
         !isFadedAbout || isUnfadedWebD || isUnfadedIndD || !isFadedProjectPage
           ? "menu--faded"
           : "menu"
-      } justify-center  menu py-5 px-5 md:py-16 md:px-16 text-xl in-w-[20vw] md:h-screen sm:text-base text-left`}
+      } justify-center menu py-5 px-5 md:py-16 md:px-16 text-xl in-w-[20vw] md:h-screen sm:text-base text-left`}
     >
       <ul className="flex flex-col justify-between md:h-[25%]">
         <li
-          className="px-5 pr-2 py-[3%] font-medium hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500
-          "
+          className="px-5 pr-2 py-[3%] font-medium hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500"
           onClick={onClickAbout}
         >
           ABOUT
@@ -78,18 +89,14 @@ export default function Menu({}) {
         <br />
         <li
           className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
-          onClick={() => {
-            onClickWebD();
-          }}
+          onClick={onClickWebD}
         >
           WEBDESIGN
         </li>
         <br />
         <li
           className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
-          onClick={() => {
-            onClickIndD();
-          }}
+          onClick={onClickIndD}
         >
           INDUSTRIAL DESIGN
         </li>
