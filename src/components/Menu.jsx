@@ -12,8 +12,14 @@ export default function Menu({}) {
   const { isUnfadedIndD, setIsUnfadedIndD, setHoverIsActiveIndD } =
     useContextIndD();
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
-  const { isFadedProjectPage, setIsFadedProjectPage, menuVisible } =
-    useContextProjectPage();
+
+  const {
+    isFadedProjectPage,
+    setIsFadedProjectPage,
+    menuVisible,
+    currentProjectKind,
+    setCurrentProjectKind,
+  } = useContextProjectPage();
 
   function onClickAbout() {
     handleClickAbout(

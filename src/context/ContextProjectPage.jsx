@@ -7,6 +7,8 @@ export const ContextProjectPage = ({ children }) => {
   const [goBack, setGoBack] = useState();
   const [menuVisible, setMenuVisible] = useState(true);
 
+  const [currentProjectKind, setCurrentProjectKind] = useState("");
+
   const value = {
     isFadedProjectPage,
     setIsFadedProjectPage,
@@ -16,6 +18,8 @@ export const ContextProjectPage = ({ children }) => {
     setGoBack,
     menuVisible,
     setMenuVisible,
+    currentProjectKind,
+    setCurrentProjectKind,
   };
 
   return (
