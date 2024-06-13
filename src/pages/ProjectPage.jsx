@@ -25,6 +25,10 @@ export default function ProjectPage() {
   }
 
   function handleClickGoBack() {
+    setMenuVisible(false);
+    setTimeout(() => {
+      setMenuVisible(true);
+    }, 2000);
     if (currentProjectKind === "webD") {
       if (exitWebD) exitWebD();
     } else {
