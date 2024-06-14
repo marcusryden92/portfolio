@@ -87,11 +87,11 @@ export default function ProjectPage() {
         </div>
       </div>
       <div
-        className={`flex mt-6 flex-col md:flex-row gap-5 overflow-scroll no-scroll ${
+        className={`flex mt-6 md:h-[78vh] flex-col md:flex-row gap-5 overflow-scroll no-scroll ${
           isFadedProjectPage ? "about-container--faded" : "about-container"
         }`}
       >
-        <div className="flex flex-col gap-5 overflow-scroll no-scroll w-[100%] md:w-[60%]">
+        <div className="flex flex-col gap-4 overflow-scroll no-scroll justify-between w-[100%] md:w-[60%]">
           <div className="aspect-16-9 overflow-hidden">
             <img
               src={clickedImage.full}
@@ -112,7 +112,7 @@ export default function ProjectPage() {
           </div>
         </div>
         <div
-          className="p-10 text-[0.95vw] bg-neutral-950 w-[40%] border border-white text-white"
+          className="p-10 text-[0.95vw] bg-neutral-950 w-[40%] overflow-y-auto border border-white text-white"
           dangerouslySetInnerHTML={{ __html: currentProject.body }}
         ></div>
       </div>

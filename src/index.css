@@ -11,6 +11,11 @@
   overflow: scroll; /* Fallback */
 }
 
+a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* For Webkit browsers (e.g., Chrome, Safari) */
 .no-scroll::-webkit-scrollbar {
   display: none;

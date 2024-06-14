@@ -1,8 +1,26 @@
 const projectDataWeb = [
   {
-    title: "Cards",
+    title: "Sun Cards",
     thumbnail: "/images/webdesign/thumbs/Cards1.png",
-    body: "Body text",
+    body: `<div>
+        This is one of the first JavaScript projects I helped develop. It's a simple card-game where the purpose is to guess the correct card (the card with a sun on its face). The player enters their name and selects the difficulty level.
+    </div><br/>
+    <div>
+        When starting the game, the cards are turned face down and are randomly shuffled. But each card will keep its face during the shuffling process, so that the player can correctly track the card with their eyes and try to pick the correct card.
+    </div><br/>
+    <div>
+        The difficulty level determines the speed with which the cards are shuffled. The player has ten tries, and their score is then displayed on the high score table.
+    </div><br/>
+    <div>
+        When the player is done, the current angle of the sun is displayed using an API call. This feature was added to fulfill the course criteria.
+    </div><br/>
+
+    
+    <div style="margin-top: 20px; font-style: italic;">
+        Collaborators: 
+        <span>Carmela Pippa</span> and <span>Maryana Reznychenko</span>
+    </div><br/>     <a href="https://suncards.netlify.app/" target="_blank">Project Link</a>
+`,
     images: [
       {
         full: "/images/webdesign/Cards0.png",
