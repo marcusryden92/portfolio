@@ -81,21 +81,21 @@ export default function Menu({}) {
     >
       <ul className="flex flex-col justify-between md:h-[25%]">
         <li
-          className="px-5 pr-2 py-[3%] font-medium hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500"
+          className="px-5 pr-2 py-[5%] font-light hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500"
           onClick={onClickAbout}
         >
           ABOUT
         </li>
         <br />
         <li
-          className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
+          className="px-5 pr-2 py-[5%] font-light text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={onClickWebD}
         >
           WEBDESIGN
         </li>
         <br />
         <li
-          className="px-5 pr-2 py-[3%] font-medium text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
+          className="px-5 pr-2 py-[5%] font-light text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={onClickIndD}
         >
           INDUSTRIAL DESIGN
