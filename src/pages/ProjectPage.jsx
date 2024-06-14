@@ -96,7 +96,7 @@ export default function ProjectPage() {
             <img
               src={clickedImage.full}
               alt="Clicked Image"
-              className="object-contain w-full h-full"
+              className="object-contain w-full h-full rounded-lg"
             />
           </div>
           <div className="flex gap-5 no-scroll" style={{ flexShrink: 0 }}>
@@ -104,17 +104,17 @@ export default function ProjectPage() {
               <img
                 key={index}
                 src={image.thumb}
-                className="aspect-square object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
+                className="aspect-square rounded-lg object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
                 alt={`Image ${index}`}
                 onClick={() => handleImageClick(image)}
               />
             ))}
           </div>
         </div>
-        <div
-          className="p-10 text-[0.95vw] bg-neutral-950 w-[40%] overflow-y-auto border border-white text-white"
-          dangerouslySetInnerHTML={{ __html: currentProject.body }}
-        ></div>
+        <div className="p-10 text-[0.95vw] no-scroll rounded-lg bg-neutral-950 w-[40%] overflow-y-auto text-white relative">
+          {/* Render the inner HTML content */}
+          <div dangerouslySetInnerHTML={{ __html: currentProject.body }}></div>
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,23 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  overflow: hidden;
+  user-select: none;
+
+  /* cursor: none; */
+}
+
+div {
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 10px;
+}
+
 /* Hide scrollbar but allow scrolling */
 .no-scroll {
   /* For Firefox */
@@ -9,6 +26,31 @@
   /* For other browsers */
   -ms-overflow-style: none; /* IE and Edge */
   overflow: scroll; /* Fallback */
+}
+
+/* For WebKit-based browsers (like Chrome, Safari) */
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Adjust as needed */
+  height: 6px; /* Adjust as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Handle color */
+  border-radius: 3px;
+}
+
+/* For Firefox */
+/* Thin scrollbar */
+html {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #888 #f1f1f1; /* Handle color, Track color */
 }
 
 a {
@@ -31,15 +73,6 @@ a {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-}
-
-:root {
-  box-sizing: border-box;
-  font-family: "Montserrat";
-  overflow: hidden;
-  user-select: none;
-
-  /* cursor: none; */
 }
 
 .cover-container {
@@ -204,7 +237,6 @@ a {
 .gallery-element {
   background-color: black;
   color: white;
-  border: 1px solid white;
   text-align: center;
   padding: 0.5vw;
   padding-left: 1vw;

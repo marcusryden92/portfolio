@@ -77,25 +77,25 @@ export default function Menu({}) {
         !isFadedAbout || isUnfadedWebD || isUnfadedIndD || !isFadedProjectPage
           ? "menu--faded"
           : "menu"
-      } justify-center menu py-5 px-5 md:py-16 md:px-16 text-xl in-w-[20vw] md:h-screen sm:text-base text-left`}
+      } justify-center menu py-5 px-5 md:py-16 md:px-16 text-xl md:w-[40vw] md:h-screen sm:text-base text-left`}
     >
       <ul className="flex flex-col justify-between md:h-[25%]">
         <li
-          className="px-5 pr-2 py-[5%] font-light bg-white border  hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500"
+          className="px-[7%] pr-2 py-[7%] font-light bg-white bg-opacity-75 border rounded-[2vw] border-opacity-25 border-slate-800 hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500"
           onClick={onClickAbout}
         >
           ABOUT
         </li>
         <br />
         <li
-          className="px-5 pr-2 py-[5%] font-light bg-white border  text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
+          className="px-[7%] pr-2 py-[7%] font-light bg-white bg-opacity-75 border rounded-[2vw] border-opacity-25 border-slate-800 text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={onClickWebD}
         >
           WEBDESIGN
         </li>
         <br />
         <li
-          className="px-5 pr-2 py-[5%] font-light bg-white border  text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
+          className="px-[7%] pr-2 py-[7%] font-light bg-white bg-opacity-75 border rounded-[2vw] border-opacity-25 border-slate-800 text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
           onClick={onClickIndD}
         >
           INDUSTRIAL DESIGN

@@ -31,14 +31,14 @@ export default function About({ handleClickClear }) {
       <div className="box center-viewport h-full w-full text-left md:max-w-[80%] max-h-[90%] my-10">
         <div className="flex justify-between w-full max-w-[100%] ">
           <div
-            className={`border border-white text-custom ${
+            className={` text-custom ${
               !isFadedAbout ? "gallery-title" : "gallery-title--faded"
             } gallery-element font-medium hover:scale-110 ease-in-out duration-1000`}
           >
             About
           </div>
           <div
-            className={`border border-white md:mr-[10%] gallery-x ${
+            className={` md:mr-[10%] gallery-x ${
               !isFadedAbout ? "gallery-x" : "gallery-x--faded"
             } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
             onClick={() => setFlipped(!flipped)}
@@ -46,7 +46,7 @@ export default function About({ handleClickClear }) {
             &lt; Flip &gt;
           </div>
           <div
-            className={`border border-white gallery-x ${
+            className={` gallery-x ${
               !isFadedAbout ? "gallery-x" : "gallery-x--faded"
             } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
             onClick={handleClickX}
