@@ -33,7 +33,7 @@ const InteractiveCircles = () => {
 
     const CIRCLECOLOR = "#000000";
     // const CIRLESHINE = "#555555";
-    const CIRLESHINE = "#000000";
+    const CIRLESHINE = "#ffffff";
 
     const COLORUPDATERATE = 0;
 
