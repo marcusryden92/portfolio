@@ -54,8 +54,8 @@ export default function MainPage() {
                 {isClickedProjectPage ? <ProjectPage /> : ""}
               </div>
               {
-                <div className="z-0 absolute bg-slate-500 h-full w-full">
-                  <InteractiveCircles className="behind" />
+                <div className="z-0 absolute bg-gray-100 h-full w-full">
+                  {/* <InteractiveCircles className="behind" /> */}
                 </div>
               }
             </ContextProjectPage>

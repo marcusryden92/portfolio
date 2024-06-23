@@ -79,26 +79,28 @@ export default function Menu({}) {
           : "menu"
       } justify-center menu py-5 px-5 md:py-16 md:px-16 text-xl md:w-[40vw] md:h-screen sm:text-base text-left`}
     >
-      <ul className="flex flex-col justify-between md:h-[25%]">
+      <ul className="flex flex-col gap-y-[5%] justify-between md:h-[25%]">
         <li
-          className="px-[7%] pr-2 py-[7%] font-light bg-white bg-opacity-75 border rounded-[2vw] border-opacity-25 border-slate-800 hover:translate-x-2 text-black md:text-subtitle hover:bg-black hover:text-white duration-500"
-          onClick={onClickAbout}
-        >
-          ABOUT
-        </li>
-        <br />
-        <li
-          className="px-[7%] pr-2 py-[7%] font-light bg-white bg-opacity-75 border rounded-[2vw] border-opacity-25 border-slate-800 text-black md:text-subtitle hover:translate-x-2 hover:bg-black hover:text-white duration-500"
+          className="px-[7%] pr-2 py-[5%]  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 text-black md:text-subtitle   hover:text-gray-400 duration-500"
           onClick={onClickWebD}
         >
           WEBDESIGN
         </li>
-        <br />
         <li
-          className="px-[7%] pr-2 py-[7%] font-light bg-white bg-opacity-75 border rounded-[2vw] border-opacity-25 border-slate-800 text-black md:text-subtitle whitespace-nowrap hover:translate-x-2 hover:bg-black hover:text-white duration-500"
+          className="px-[7%] pr-2 py-[5%]  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 text-black md:text-subtitle whitespace-nowrap   hover:text-gray-400 duration-500"
           onClick={onClickIndD}
         >
           INDUSTRIAL DESIGN
+        </li>{" "}
+        <li className="px-[7%] pr-2 py-[5%] md:text-[1vw] font-bold text-gray-400">
+          / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+          / / / /{" "}
+        </li>
+        <li
+          className="px-[7%] pr-2 py-[5%]  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800  text-black md:text-subtitle  hover:text-gray-400 duration-500"
+          onClick={onClickAbout}
+        >
+          CV/CONTACT
         </li>
       </ul>
     </div>

@@ -5,10 +5,13 @@
 :root {
   box-sizing: border-box;
   font-family: "Montserrat";
-  overflow: hidden;
   user-select: none;
 
   /* cursor: none; */
+}
+
+.selectable {
+  user-select: text;
 }
 
 div {
@@ -97,14 +100,14 @@ a {
 
 .front-page {
   opacity: 1;
-  transition: opacity 2s ease;
+  transition: opacity 1s ease;
   position: absolute;
   z-index: 10;
 }
 
 .fade-out {
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 1s ease;
 }
 
 .hidden {

@@ -2,6 +2,9 @@ import { useContextProjectPage } from "../context/ContextProjectPage";
 import { usePageNav } from "../hooks/usePageNavigation";
 import { useState, useEffect } from "react";
 
+import { RiArrowLeftWideFill } from "react-icons/ri";
+import { RiArrowRightWideFill } from "react-icons/ri";
+
 export default function ProjectPage() {
   const {
     isFadedProjectPage,
@@ -91,24 +94,35 @@ export default function ProjectPage() {
           isFadedProjectPage ? "about-container--faded" : "about-container"
         }`}
       >
-        <div className="flex flex-col gap-4 overflow-scroll no-scroll justify-between w-[100%] md:w-[60%]">
-          <div className="aspect-16-9 overflow-hidden">
+        <div className="flex flex-col gap-4 overflow-scroll no-scroll justify-between w-full md:w-[60%]">
+          <div className="aspect-16-9 md:overflow-hidden min-w-full">
             <img
               src={clickedImage.full}
               alt="Clicked Image"
-              className="object-contain w-full h-full rounded-lg"
+              className="object-contain min-w-full h-full rounded-lg"
             />
           </div>
-          <div className="flex gap-5 no-scroll" style={{ flexShrink: 0 }}>
-            {currentProject.images.map((image, index) => (
-              <img
-                key={index}
-                src={image.thumb}
-                className="aspect-square rounded-lg object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
-                alt={`Image ${index}`}
-                onClick={() => handleImageClick(image)}
-              />
-            ))}
+          <div className="flex justify-between bg-gray-white py-2">
+            <div className="flex pr-2 w-[5%] items-center">
+              <RiArrowLeftWideFill className="size-[3vw]" />
+            </div>
+            <div
+              className="flex gap-5 no-scroll overflow-scroll"
+              style={{ flexGrow: 1, flexShrink: 1 }}
+            >
+              {currentProject.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.thumb}
+                  className="aspect-square rounded-lg object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
+                  alt={`Image ${index}`}
+                  onClick={() => handleImageClick(image)}
+                />
+              ))}
+            </div>
+            <div className="flex pl-2 w-[5%] items-center">
+              <RiArrowRightWideFill className="size-[3vw]" />
+            </div>
           </div>
         </div>
         <div className="p-10 text-[0.95vw] no-scroll rounded-lg bg-neutral-950 w-[40%] overflow-y-auto text-white relative">
