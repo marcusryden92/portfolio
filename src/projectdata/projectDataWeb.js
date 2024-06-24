@@ -1,5 +1,46 @@
 const projectDataWeb = [
   {
+    title: "Rubberduck Debugging",
+    thumbnail: "/images/webdesign/thumbs/Duck7.png",
+    body: `<a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a>`,
+    images: [
+      {
+        full: "/images/webdesign/Duck0.png",
+        thumb: "/images/webdesign/thumbs/Duck0.png",
+      },
+      {
+        full: "/images/webdesign/Duck1.png",
+        thumb: "/images/webdesign/thumbs/Duck1.png",
+      },
+      {
+        full: "/images/webdesign/Duck2.png",
+        thumb: "/images/webdesign/thumbs/Duck2.png",
+      },
+      {
+        full: "/images/webdesign/Duck3.png",
+        thumb: "/images/webdesign/thumbs/Duck3.png",
+      },
+      {
+        full: "/images/webdesign/Duck4.png",
+        thumb: "/images/webdesign/thumbs/Duck4.png",
+      },
+      {
+        full: "/images/webdesign/Duck5.png",
+        thumb: "/images/webdesign/thumbs/Duck5.png",
+      },
+      {
+        full: "/images/webdesign/Duck6.png",
+        thumb: "/images/webdesign/thumbs/Duck6.png",
+      },
+      {
+        full: "/images/webdesign/Duck7.png",
+        thumb: "/images/webdesign/thumbs/Duck7.png",
+      },
+
+      // Repeat for Hinder1 - Hinder6
+    ],
+  },
+  {
     title: "Pondeo",
     thumbnail: "/images/webdesign/thumbs/Pondeo0.png",
     body: `<a href="https://pondeo.netlify.app/" target="_blank">Project Link</a>`,
