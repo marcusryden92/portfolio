@@ -167,7 +167,6 @@ a {
 }
 
 /* CustomCursor.css */
-
 .custom-cursor {
   position: fixed;
   pointer-events: none;
@@ -238,12 +237,9 @@ a {
 }
 
 .gallery-element {
-  background-color: black;
-  color: white;
+  background-color: none;
+  color: black;
   text-align: center;
-  padding: 0.5vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
 }
 
 .gallery-title {
@@ -319,6 +315,20 @@ a {
 
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+/* Add transition effect for opacity (inteactive circles) */
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out; /* Adjust timing as needed */
+}
+
+/* Define your opacity classes */
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 /* For screen sizes below md */

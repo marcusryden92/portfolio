@@ -9,18 +9,22 @@ import WebD from "./WebD";
 import IndD from "./IndD";
 import ProjectPage from "./ProjectPage";
 
-import { ContextWebD } from "../context/ContextWebD";
-import { ContextIndD } from "../context/ContextIndD";
-import { ContextAbout } from "../context/ContextAbout";
-import { ContextProjectPage } from "../context/ContextProjectPage";
-
 import { usePageNav } from "../hooks/usePageNavigation";
+import { useContextAbout } from "../context/ContextAbout";
+import { useContextWebD } from "../context/ContextWebD";
+import { useContextIndD } from "../context/ContextIndD";
+import { useContextProjectPage } from "../context/ContextProjectPage";
 
 import projectDataInd from "../projectdata/projectDataInd";
 
 export default function MainPage() {
   const { isClickedAbout, isClickedIndD, isClickedWebD, isClickedProjectPage } =
     usePageNav();
+
+  const { isFadedAbout } = useContextAbout();
+  const { isUnfadedWebD } = useContextWebD();
+  const { isUnfadedIndD } = useContextIndD();
+  const { isFadedProjectPage, menuVisible } = useContextProjectPage();
 
   useEffect(() => {
     // Preload all images
@@ -38,30 +42,33 @@ export default function MainPage() {
 
   return (
     <div className="flex md:flex-row">
-      <ContextIndD>
-        <ContextWebD>
-          <ContextAbout>
-            <ContextProjectPage>
-              {" "}
-              <div className="absolute z-10">
-                <Cover />
-              </div>
-              <div className="flex overflow-scroll md:overflow-hidden flex-col md:flex-row main-container z-5">
-                <Menu />
-                {isClickedAbout ? <About /> : ""}
-                {isClickedWebD ? <WebD /> : ""}
-                {isClickedIndD ? <IndD /> : ""}
-                {isClickedProjectPage ? <ProjectPage /> : ""}
-              </div>
-              {
-                <div className="z-0 absolute bg-gray-100 h-full w-full">
-                  {/* <InteractiveCircles className="behind" /> */}
-                </div>
-              }
-            </ContextProjectPage>
-          </ContextAbout>
-        </ContextWebD>
-      </ContextIndD>
+      {" "}
+      <div className="absolute z-10">
+        <Cover />
+      </div>
+      <div className="flex overflow-scroll md:overflow-hidden flex-col md:flex-row main-container z-5">
+        <Menu />
+        {isClickedAbout ? <About /> : ""}
+        {isClickedWebD ? <WebD /> : ""}
+        {isClickedIndD ? <IndD /> : ""}
+        {isClickedProjectPage ? <ProjectPage /> : ""}
+      </div>
+      {
+        <div className="z-0 absolute bg-neutral-400 h-full w-full rounded-none">
+          <div
+            className={`${menuVisible ? " " : "hidden"} ${
+              !isFadedAbout ||
+              isUnfadedWebD ||
+              isUnfadedIndD ||
+              !isFadedProjectPage
+                ? "opacity-0"
+                : "opacity-25"
+            } transition-opacity rounded-none`}
+          >
+            <InteractiveCircles className="behind rounded-none" />
+          </div>
+        </div>
+      }
     </div>
   );
 }

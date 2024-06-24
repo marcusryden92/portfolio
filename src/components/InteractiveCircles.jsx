@@ -32,8 +32,8 @@ const InteractiveCircles = () => {
     const BACKGROUNDCOLOR = "hsl(25, 0%, 57%)";
 
     const CIRCLECOLOR = "#000000";
-    // const CIRLESHINE = "#555555";
-    const CIRLESHINE = "#ffffff";
+    const CIRLESHINE = "#555555";
+    // const CIRLESHINE = "#ffffff";
 
     const COLORUPDATERATE = 0;
 
@@ -221,7 +221,7 @@ const InteractiveCircles = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} />;
+  return <canvas className=" rounded-none" ref={canvasRef} />;
 };
 
 export default InteractiveCircles;
