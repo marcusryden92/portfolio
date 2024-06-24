@@ -111,6 +111,7 @@ export default function About({ handleClickClear }) {
                     <p className="text-sm mb-1">Node.js</p>
                     <p className="text-sm mb-1">PostgreSQL</p>
                     <p className="text-sm mb-1">GSAP</p>
+                    <p className="text-sm mb-1">Express.js</p>
 
                     <br></br>
 
