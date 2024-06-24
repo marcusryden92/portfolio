@@ -20,7 +20,7 @@ export default function Cover() {
       <div className="flex flex-col md:flex-row h-full">
         <div className="flex  m-[10vw] justify-center items-center">
           <div className="flex flex-col hover:text-neutral-500">
-            <div className="josefin-sans text-8xl  font-bold 	 ease-in-out duration-500">
+            <div className=" text-8xl  font-bold 	 ease-in-out duration-500">
               Marcus Rydén
             </div>
             <p className="text-5xl mt-5 text-500-slate font-extralight ">

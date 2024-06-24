@@ -96,11 +96,13 @@ export default function ProjectPage() {
       >
         <div className="flex flex-col gap-4 overflow-scroll no-scroll justify-between w-full md:w-[60%]">
           <div className="aspect-16-9 md:overflow-hidden min-w-full">
-            <img
-              src={clickedImage.full}
-              alt="Clicked Image"
-              className="object-contain min-w-full h-full rounded-lg"
-            />
+            <div className="rounded-lg">
+              <img
+                src={clickedImage.full}
+                alt="Clicked Image"
+                className="object-contain min-w-full h-full"
+              />
+            </div>
           </div>
           <div className="flex justify-between bg-gray-white py-2">
             <div className="flex pr-2 w-[5%] items-center">
