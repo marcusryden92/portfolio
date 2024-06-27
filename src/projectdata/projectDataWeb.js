@@ -125,21 +125,15 @@ const projectDataWeb = [
   {
     title: "Hinder",
     thumbnail: "/images/webdesign/thumbs/Hinder0.png",
-    body: `<div>This project was made for our "Exploring Code" course, where the goal was to develop skills 
-    in storytelling and interactive and graphical webdesign. The basis for the idea was the programming technique known as
-    "rubber ducking", where one essentially describes ones' code to an inanimate object (usually a rubber duck). When explaining the code
-    to the duck, you will walk through the problems in your head, which will help you solve them.
+    body: `<div>This was the first React project we made! We decided to try our hand at making a dating app. Hyper Island + Tinder = Hinder.
+    As we had not yet had any experience working with back-end, we spoofed a back-end using the local storage of the computer.
+    The website allows you to take a picture, sign up, and match with other "members".
     </div><br/>
-
-    <div>The application uses the React framework, GSAP for interactive elements, Three.js for 3d rendering and Cannon.js for physics simulation.</div></br>
-
-    <div>At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!</div>
-
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
         <span>Oskar Sollenberg, Maria Jareno and Nesrine Hadboun.</span></br></br>
-        <a href="https://hinderapp.netlify.app/" target="_blank">Project Link</a>`,
+        <a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a>`,
     images: [
       {
         full: "/images/webdesign/Hinder0.png",
