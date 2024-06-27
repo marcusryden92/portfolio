@@ -8,13 +8,13 @@ export default function Cover() {
 
   function handleFade() {
     setIsFade(true);
-    setTimeout(() => setIsHidden(true), 2000);
+    setTimeout(() => setIsHidden(true), 1000);
   }
   return (
     <div
       onClick={handleFade}
       className={`flex flex-col cover-viewport cover-container flex-center bg-[#1a233d] rounded-none text-white
-    ${isFade ? "fade-out" : "front-page"} 
+    ${isFade ? "fade-out pointer-events-none" : "front-page"} 
     ${isHidden ? "hidden" : ""}`}
     >
       <div className="flex flex-col md:flex-row h-full ">
