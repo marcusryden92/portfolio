@@ -54,7 +54,7 @@ export default function MainPage() {
         {isClickedProjectPage ? <ProjectPage /> : ""}
       </div>
       {
-        <div className="z-0 absolute  h-full w-full rounded-none bg-neutral-100">
+        <div className="z-0 absolute  h-full w-full rounded-none bg-neutral-500">
           <div
             className={`${menuVisible ? " " : "hidden"} ${
               !isFadedAbout ||

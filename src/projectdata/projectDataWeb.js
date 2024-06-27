@@ -2,7 +2,22 @@ const projectDataWeb = [
   {
     title: "Rubberduck Debugging",
     thumbnail: "/images/webdesign/thumbs/Duck7.png",
-    body: `<a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a>`,
+    body: `<div>This project was made for our "Exploring Code" course, where the goal was to develop skills 
+    in storytelling and interactive and graphical webdesign. The basis for the idea was the programming technique known as
+    "rubber ducking", where one essentially describes ones' code to an inanimate object (usually a rubber duck). When explaining the code
+    to the duck, you will walk through the problems in your head, which will help you solve them.
+    </div><br/>
+
+    <div>The application uses the React framework, GSAP for interactive elements, Three.js for 3d rendering and Cannon.js for physics simulation.</div></br>
+
+    <div>At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!</div>
+
+    
+    <div style="margin-top: 20px; font-style: italic;">
+        Collaborators: 
+        <span>Oskar Sollenberg, Maya Jerndahl Bonk, Alexander Heras and Jaemin Shim.</span></br></br>
+        <a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a></br>
+        <a href="https://github.com/exploing-code/rubberduck-debugging" target="_blank">Github Link</a>`,
     images: [
       {
         full: "/images/webdesign/Duck0.png",
@@ -43,7 +58,23 @@ const projectDataWeb = [
   {
     title: "Pondeo",
     thumbnail: "/images/webdesign/thumbs/Pondeo0.png",
-    body: `<a href="https://pondeo.netlify.app/" target="_blank">Project Link</a>`,
+    body: `<div>This project was part of a class in collaboration. We worked together with a Hyper Island UX team from Karlskrona,
+    for a real-life client called Pondeo. Pondeo is a start-up AI company, which we helped during a rebranding phase. The UX team
+    in Karlskrona did market research, user-testing and visual design in Figma, which was subsequently implemented by the Front-end team in Stockholm, 
+    of which I was part. </div><br/>
+
+    <div>The application uses the React framework.</div></br>
+
+
+    
+    <div style="margin-top: 20px; font-style: italic;">
+        Collaborators: 
+        <span>UX Team: Dayanne Vasques, Sarah Cambra, Niklas Lantz and Yunus Celebi.</span></br></br>
+        <span>Front-End Team: Milla Lindén, Petra Cuturdic, Angela Naseri and Marcus Rydén.</span></br></br>
+
+        <a href="https://pondeo.netlify.app/" target="_blank">Project Link</a></br>
+        <a href="https://github.com/marcusryden92/pondeo" target="_blank">Github Link</a>`,
+
     images: [
       {
         full: "/images/webdesign/Pondeo0.png",
@@ -89,78 +120,26 @@ const projectDataWeb = [
         full: "/images/webdesign/Pondeo10.png",
         thumb: "/images/webdesign/thumbs/Pondeo10.png",
       },
-      {
-        full: "/images/webdesign/Pondeo11.png",
-        thumb: "/images/webdesign/thumbs/Pondeo11.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo12.png",
-        thumb: "/images/webdesign/thumbs/Pondeo12.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo13.png",
-        thumb: "/images/webdesign/thumbs/Pondeo13.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo14.png",
-        thumb: "/images/webdesign/thumbs/Pondeo14.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo15.png",
-        thumb: "/images/webdesign/thumbs/Pondeo15.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo16.png",
-        thumb: "/images/webdesign/thumbs/Pondeo16.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo17.png",
-        thumb: "/images/webdesign/thumbs/Pondeo17.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo18.png",
-        thumb: "/images/webdesign/thumbs/Pondeo18.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo19.png",
-        thumb: "/images/webdesign/thumbs/Pondeo19.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo20.png",
-        thumb: "/images/webdesign/thumbs/Pondeo20.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo21.png",
-        thumb: "/images/webdesign/thumbs/Pondeo21.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo22.png",
-        thumb: "/images/webdesign/thumbs/Pondeo22.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo23.png",
-        thumb: "/images/webdesign/thumbs/Pondeo23.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo24.png",
-        thumb: "/images/webdesign/thumbs/Pondeo24.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo25.png",
-        thumb: "/images/webdesign/thumbs/Pondeo25.png",
-      },
-      {
-        full: "/images/webdesign/Pondeo26.png",
-        thumb: "/images/webdesign/thumbs/Pondeo26.png",
-      },
-
-      // Repeat for Pondeo1 - Pondeo26
     ],
   },
   {
     title: "Hinder",
     thumbnail: "/images/webdesign/thumbs/Hinder0.png",
-    body: `<a href="https://hinderapp.netlify.app/" target="_blank">Project Link</a>`,
+    body: `<div>This project was made for our "Exploring Code" course, where the goal was to develop skills 
+    in storytelling and interactive and graphical webdesign. The basis for the idea was the programming technique known as
+    "rubber ducking", where one essentially describes ones' code to an inanimate object (usually a rubber duck). When explaining the code
+    to the duck, you will walk through the problems in your head, which will help you solve them.
+    </div><br/>
+
+    <div>The application uses the React framework, GSAP for interactive elements, Three.js for 3d rendering and Cannon.js for physics simulation.</div></br>
+
+    <div>At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!</div>
+
+    
+    <div style="margin-top: 20px; font-style: italic;">
+        Collaborators: 
+        <span>Oskar Sollenberg, Maria Jareno and Nesrine Hadboun.</span></br></br>
+        <a href="https://hinderapp.netlify.app/" target="_blank">Project Link</a>`,
     images: [
       {
         full: "/images/webdesign/Hinder0.png",

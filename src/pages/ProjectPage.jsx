@@ -127,7 +127,7 @@ export default function ProjectPage() {
             </div>
           </div>
         </div>
-        <div className="p-10 text-[0.95vw] no-scroll rounded-lg  w-[40%] overflow-y-auto text-neutral-950 relative">
+        <div className="px-10 text-[0.95vw] no-scroll rounded-lg  w-[40%] overflow-y-auto text-neutral-950 relative">
           {/* Render the inner HTML content */}
           <div dangerouslySetInnerHTML={{ __html: currentProject.body }}></div>
         </div>

@@ -13,25 +13,24 @@ export default function Cover() {
   return (
     <div
       onClick={handleFade}
-      className={`flex flex-col cover-viewport cover-container flex-center bg-white
+      className={`flex flex-col cover-viewport cover-container flex-center bg-black text-white
     ${isFade ? "fade-out" : "front-page"} 
     ${isHidden ? "hidden" : ""}`}
     >
       <div className="flex flex-col md:flex-row h-full">
         <div className="flex  m-[10vw] justify-center items-center">
-          <div className="flex flex-col hover:text-neutral-500">
+          <div className="flex flex-col font-sans hover:text-neutral-500">
             <div className=" text-8xl  font-bold 	 ease-in-out duration-500">
               Marcus Rydén
             </div>
-            <p className="text-5xl mt-5 text-500-slate font-extralight ">
+            <p className="text-5xl mt-5 font-extralight ease-in-out duration-500">
               Portfolio
             </p>
-            <p className="text-3xl mt-5 text-500-slate font-extralight">
+            <p className="text-3xl mt-5 font-extralight ease-in-out duration-500">
               CLICK TO ENTER
             </p>
           </div>
         </div>
-        <img className="md:h-[35vw] self-end" src={portrait} alt="Marcus" />
       </div>
     </div>
   );
