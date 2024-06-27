@@ -53,8 +53,17 @@ export default function MainPage() {
         {isClickedIndD ? <IndD /> : ""}
         {isClickedProjectPage ? <ProjectPage /> : ""}
       </div>
-      {
-        <div className="z-0 absolute  h-full w-full rounded-none bg-neutral-500">
+      <div className="z-0 absolute  h-full w-full rounded-none bg-neutral-500">
+        <div
+          className={`${menuVisible ? " " : "hidden"} ${
+            !isFadedAbout ||
+            isUnfadedWebD ||
+            isUnfadedIndD ||
+            !isFadedProjectPage
+              ? "opacity-0"
+              : "opacity-100  "
+          } transition-opacity bg-neutral-400 rounded-none`}
+        >
           <div
             className={`${menuVisible ? " " : "hidden"} ${
               !isFadedAbout ||
@@ -62,24 +71,13 @@ export default function MainPage() {
               isUnfadedIndD ||
               !isFadedProjectPage
                 ? "opacity-0"
-                : "opacity-100  "
-            } transition-opacity bg-neutral-200 rounded-none`}
+                : "opacity-25"
+            } transition-opacity`}
           >
-            <div
-              className={`${menuVisible ? " " : "hidden"} ${
-                !isFadedAbout ||
-                isUnfadedWebD ||
-                isUnfadedIndD ||
-                !isFadedProjectPage
-                  ? "opacity-0"
-                  : "opacity-25"
-              } transition-opacity`}
-            >
-              <InteractiveCircles className="behind rounded-none" />
-            </div>
+            <InteractiveCircles className="behind rounded-none" />
           </div>
         </div>
-      }
+      </div>
     </div>
   );
 }

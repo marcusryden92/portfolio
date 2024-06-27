@@ -13,14 +13,14 @@ export default function Cover() {
   return (
     <div
       onClick={handleFade}
-      className={`flex flex-col cover-viewport cover-container flex-center bg-black text-white
+      className={`flex flex-col cover-viewport cover-container flex-center bg-black rounded-none text-white
     ${isFade ? "fade-out" : "front-page"} 
     ${isHidden ? "hidden" : ""}`}
     >
-      <div className="flex flex-col md:flex-row h-full">
+      <div className="flex flex-col md:flex-row h-full ">
         <div className="flex  m-[10vw] justify-center items-center">
           <div className="flex flex-col hover:text-neutral-500">
-            <div className=" text-8xl  font-bold 	 ease-in-out duration-500">
+            <div className=" text-8xl josefin-sans font-bold 	 ease-in-out duration-500">
               Marcus Rydén
             </div>
             <p className="text-5xl mt-5 font-extralight ease-in-out duration-500">

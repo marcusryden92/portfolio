@@ -2,6 +2,26 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/public/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/public/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 :root {
   box-sizing: border-box;
   font-family: "Montserrat";

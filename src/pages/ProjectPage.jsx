@@ -18,7 +18,7 @@ export default function ProjectPage() {
   } = useContextProjectPage();
 
   const [active, setActive] = useState(false);
-  const [clickedImage, setClickedImage] = useState(currentProject.images[1]);
+  const [clickedImage, setClickedImage] = useState(currentProject.images[0]);
 
   const { resetClickedStates } = usePageNav();
 
