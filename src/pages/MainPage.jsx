@@ -53,7 +53,7 @@ export default function MainPage() {
         {isClickedIndD ? <IndD /> : ""}
         {isClickedProjectPage ? <ProjectPage /> : ""}
       </div>
-      <div className="z-0 absolute  h-full w-full rounded-none bg-neutral-500">
+      <div className="z-0 absolute  h-full w-full rounded-none bg-black">
         <div
           className={`${menuVisible ? " " : "hidden"} ${
             !isFadedAbout ||
@@ -62,7 +62,7 @@ export default function MainPage() {
             !isFadedProjectPage
               ? "opacity-0"
               : "opacity-100  "
-          } transition-opacity bg-neutral-400 rounded-none`}
+          } transition-opacity bg-black rounded-none`}
         >
           <div
             className={`${menuVisible ? " " : "hidden"} ${

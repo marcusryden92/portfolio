@@ -81,23 +81,27 @@ export default function Menu({}) {
     >
       <ul className="flex flex-col gap-y-[5%] justify-between md:h-[25%] ">
         <li
-          className=" px-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 text-white md:text-subtitle   hover:text-black duration-500 hover:tracking-wider"
+          className=" px-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 
+          text-white md:text-subtitle   hover:text-[#dd1c1a] duration-500 hover:tracking-wider"
           onClick={onClickWebD}
         >
           WEBDESIGN
         </li>
         <li
-          className=" px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 text-white md:text-subtitle whitespace-nowrap   hover:text-black duration-500 hover:tracking-wider"
+          className=" px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] 
+          border-opacity-25 border-slate-800 text-white md:text-subtitle whitespace-nowrap   
+          hover:text-[#dd1c1a] duration-500 hover:tracking-wider"
           onClick={onClickIndD}
         >
           INDUSTRIAL DESIGN
         </li>{" "}
-        <li className="px-[7%] pr-2 py-[5%] md:text-[1vw] font-bold text-[#415a77">
+        <li className="px-[7%] pr-2 py-[5%] md:text-[1vw] font-bold text-white duration-500 hover:tracking-wider">
           / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
           / / / /{" "}
         </li>
         <li
-          className=" px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800  text-white md:text-subtitle  hover:text-black duration-500 hover:tracking-wider"
+          className=" px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 
+          border-slate-800  text-white md:text-subtitle  hover:text-[#dd1c1a] duration-500 hover:tracking-wider"
           onClick={onClickAbout}
         >
           CV/CONTACT
