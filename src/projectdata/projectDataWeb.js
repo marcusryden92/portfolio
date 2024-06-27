@@ -15,7 +15,7 @@ const projectDataWeb = [
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
-        <span>Oskar Sollenberg, Maya Jerndahl Bonk, Alexander Heras and Jaemin Shim.</span></br></br>
+        <span>Oskar Sollenberg, Maya Jerndahl Bonk, Alexander Heras and Jaemin Shim.</span></br></br></div>
         <a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a></br>
         <a href="https://github.com/exploing-code/rubberduck-debugging" target="_blank">Github Link</a>`,
     images: [
@@ -59,7 +59,7 @@ const projectDataWeb = [
     title: "Pondeo",
     thumbnail: "/images/webdesign/thumbs/Pondeo0.png",
     body: `<div>This project was part of a class in collaboration. We worked together with a Hyper Island UX team from Karlskrona,
-    for a real-life client called Pondeo. Pondeo is a start-up AI company, which we helped during a rebranding phase. The UX team
+    for a real-life client called Pondeo. </br></br>Pondeo is a start-up AI company, which we helped during a rebranding phase. The UX team
     in Karlskrona did market research, user-testing and visual design in Figma, which was subsequently implemented by the Front-end team in Stockholm, 
     of which I was part. </div><br/>
 
@@ -70,7 +70,7 @@ const projectDataWeb = [
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: <br/>
         <span>UX Team: Dayanne Vasques, Sarah Cambra, Niklas Lantz and Yunus Celebi.</span></br></br>
-        <span>Front-End Team: Milla Lindén, Petra Cuturdic, Angela Naseri and Marcus Rydén.</span></br></br>
+        <span>Front-End Team: Milla Lindén, Petra Cuturdic, Angela Naseri and Marcus Rydén.</span></br></br></div>
 
         <a href="https://pondeo.netlify.app/" target="_blank">Project Link</a></br>
         <a href="https://github.com/marcusryden92/pondeo" target="_blank">Github Link</a>`,
@@ -132,7 +132,7 @@ const projectDataWeb = [
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
-        <span>Oskar Sollenberg, Maria Jareno and Nesrine Hadboun.</span></br></br>
+        <span>Oskar Sollenberg, Maria Jareno and Nesrine Hadboun.</span></br></br></div>
         <a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a></br>
         <a href="https://github.com/marcusryden92/Hinder" target="_blank">Github Link</a> `,
     images: [
@@ -184,7 +184,7 @@ const projectDataWeb = [
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
         <span>Carmela Pippa</span> and <span>Maryana Reznychenko</span>
-    </div><br/>     <a href="https://suncards.netlify.app/" target="_blank">Project Link</a>
+    </div><br/>     <a href="https://suncards.netlify.app/" target="_blank">Project Link</a><br/>
     <a href="https://github.com/marcusryden92/Sun-card" target="_blank">Github Link</a>`,
     images: [
       {
@@ -238,7 +238,7 @@ const projectDataWeb = [
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
-        <span>Oskar Sollenberg, Maya Jerndahl Bonk and Oliver Redondo.</span></br></br>        
+        <span>Oskar Sollenberg, Maya Jerndahl Bonk and Oliver Redondo.</span></br></br></div>        
         <a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a>`,
     images: [
       {
