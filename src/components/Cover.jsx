@@ -13,7 +13,7 @@ export default function Cover() {
   return (
     <div
       onClick={handleFade}
-      className={`flex flex-col cover-viewport cover-container flex-center bg-[#222e51] rounded-none text-white
+      className={`flex flex-col cover-viewport cover-container flex-center bg-[#1a233d] rounded-none text-white
     ${isFade ? "fade-out" : "front-page"} 
     ${isHidden ? "hidden" : ""}`}
     >

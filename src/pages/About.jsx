@@ -8,6 +8,7 @@ import gecko from "../../public/images/gecko.png";
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 export default function About({ handleClickClear }) {
   const { isFadedAbout, setIsFadedAbout } = useContextAbout();
@@ -50,7 +51,7 @@ export default function About({ handleClickClear }) {
             } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
             onClick={handleClickX}
           >
-            X
+            <IoClose className="size-[2.5vw]" />
           </div>
         </div>
 

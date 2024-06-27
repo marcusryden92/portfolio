@@ -71,8 +71,6 @@ export default function Menu({}) {
     setExitIndD(() => onClickIndD);
   }, [onClickWebD, onClickIndD, setExitWebD, setExitIndD]);
 
-  const hoverText = "fe5f55";
-
   return (
     <div
       className={`flex flex-col ${menuVisible ? "" : "hidden"} ${
@@ -84,14 +82,14 @@ export default function Menu({}) {
       <ul className="flex flex-col gap-y-[5%] justify-between md:h-[25%] ">
         <li
           className={` px-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800
-           text-white md:text-subtitle   hover:text-[#${hoverText}] duration-500 hover:tracking-wider`}
+           text-white md:text-subtitle   hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
           onClick={onClickWebD}
         >
           WEBDESIGN
         </li>
         <li
           className={`px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 
-          text-white md:text-subtitle whitespace-nowrap   hover:text-[#${hoverText}] duration-500 hover:tracking-wider`}
+          text-white md:text-subtitle whitespace-nowrap   hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
           onClick={onClickIndD}
         >
           INDUSTRIAL DESIGN
@@ -102,7 +100,7 @@ export default function Menu({}) {
         </li>
         <li
           className={`px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 
-           text-white md:text-subtitle  hover:text-[#${hoverText}] duration-500 hover:tracking-wider`}
+           text-white md:text-subtitle  hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
           onClick={onClickAbout}
         >
           CV/CONTACT

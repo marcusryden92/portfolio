@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 import { RiArrowLeftWideFill } from "react-icons/ri";
 import { RiArrowRightWideFill } from "react-icons/ri";
+import { FaChevronLeft } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 export default function ProjectPage() {
   const {
@@ -75,7 +77,7 @@ export default function ProjectPage() {
             } gallery-element font-bold`}
             onClick={handleClickGoBack}
           >
-            &lt;
+            <FaChevronLeft className="size-[1.5vw]" />
           </div>
           <div
             className={`gallery-x ${
@@ -85,7 +87,7 @@ export default function ProjectPage() {
             } gallery-element font-bold`}
             onClick={handleClickX}
           >
-            X
+            <IoClose className="size-[2.5vw] mt-[-0.5vw]" />
           </div>
         </div>
       </div>
@@ -127,7 +129,7 @@ export default function ProjectPage() {
             </div>
           </div>
         </div>
-        <div className="px-10 text-[0.95vw] no-scroll rounded-lg  w-[40%] overflow-y-auto text-white relative">
+        <div className="pl-10 text-[0.95vw] no-scroll rounded-lg  w-[40%] overflow-y-auto text-white relative">
           {/* Render the inner HTML content */}
           <div dangerouslySetInnerHTML={{ __html: currentProject.body }}></div>
         </div>

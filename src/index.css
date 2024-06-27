@@ -77,8 +77,8 @@ html {
 }
 
 a {
+  font-size: 1.3vw;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 /* For Webkit browsers (e.g., Chrome, Safari) */
@@ -264,7 +264,8 @@ a {
 
 .gallery-title {
   opacity: 1;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
+  font-weight: bold;
   transition: transform 1.2s ease-in-out, opacity 1s ease-in-out;
 }
 

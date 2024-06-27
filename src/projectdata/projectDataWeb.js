@@ -68,7 +68,7 @@ const projectDataWeb = [
 
     
     <div style="margin-top: 20px; font-style: italic;">
-        Collaborators: 
+        Collaborators: <br/>
         <span>UX Team: Dayanne Vasques, Sarah Cambra, Niklas Lantz and Yunus Celebi.</span></br></br>
         <span>Front-End Team: Milla Lindén, Petra Cuturdic, Angela Naseri and Marcus Rydén.</span></br></br>
 

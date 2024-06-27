@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useContextIndD } from "../context/ContextIndD";
 import { usePageNav } from "../hooks/usePageNavigation";
 import projectDataInd from "../projectdata/projectDataInd";
+import { IoClose } from "react-icons/io5";
 
 export default function IndD({}) {
   const {
@@ -59,7 +60,7 @@ export default function IndD({}) {
            gallery-element
             font-bold text-xl md:text-custom  `}
             >
-              X
+              <IoClose className="size-[2.5vw]" />
             </div>
           </div>
         </div>

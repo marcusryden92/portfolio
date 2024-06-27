@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useContextWebD } from "../context/ContextWebD";
 import { usePageNav } from "../hooks/usePageNavigation";
 import projectDataWeb from "../projectdata/projectDataWeb";
+import { IoClose } from "react-icons/io5";
 
 export default function WebD({}) {
   const {
@@ -59,7 +60,7 @@ export default function WebD({}) {
            gallery-element
             font-bold text-xl md:text-custom`}
             >
-              X
+              <IoClose className="size-[2.5vw]" />
             </div>
           </div>
         </div>

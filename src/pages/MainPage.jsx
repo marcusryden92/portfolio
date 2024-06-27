@@ -55,22 +55,22 @@ export default function MainPage() {
       </div>
       <div className="z-0 absolute  h-full w-full rounded-none bg-[#2B3A67]">
         <div
-          className={`${menuVisible ? " " : "hidden"} ${
+          className={`${menuVisible ? " " : "opacity-10"} ${
             !isFadedAbout ||
             isUnfadedWebD ||
             isUnfadedIndD ||
             !isFadedProjectPage
-              ? "opacity-0"
+              ? "opacity-15"
               : "opacity-100  "
           } transition-opacity bg-[#2B3A67] rounded-none`}
         >
           <div
-            className={`${menuVisible ? " " : "hidden"} ${
+            className={`${menuVisible ? " " : "opacity-10"} ${
               !isFadedAbout ||
               isUnfadedWebD ||
               isUnfadedIndD ||
               !isFadedProjectPage
-                ? "opacity-0"
+                ? "opacity-10"
                 : "opacity-25"
             } transition-opacity`}
           >
