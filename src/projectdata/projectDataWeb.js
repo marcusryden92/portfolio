@@ -185,7 +185,7 @@ const projectDataWeb = [
         Collaborators: 
         <span>Carmela Pippa</span> and <span>Maryana Reznychenko</span>
     </div><br/>     <a href="https://suncards.netlify.app/" target="_blank">Project Link</a>
-`,
+    <a href="https://github.com/marcusryden92/Sun-card" target="_blank">Github Link</a>`,
     images: [
       {
         full: "/images/webdesign/Cards0.png",
@@ -228,7 +228,18 @@ const projectDataWeb = [
   {
     title: "Centipede",
     thumbnail: "/images/webdesign/thumbs/Centipede0.png",
-    body: `<a href="" target="_blank">Project Link</a>`,
+    body: `<div>For this project, the goal was to dip our toes into the world of back-end. Criteria for success
+    were setting up a website complete with user registration, authentication, authorization, server and database.
+    It proved quite a challenge. The website we opted for was a basic todo-list website, where one can add, edit and delete 
+    tasks.</div><br/>
+
+    <div>We used React as a framework, together with Express.js, Passport.js and PostgreSQL. Unfortunately, as the 
+    server is defunct, the website is currently out of order.</div><br/>
+    
+    <div style="margin-top: 20px; font-style: italic;">
+        Collaborators: 
+        <span>Oskar Sollenberg, Maya Jerndahl Bonk and Oliver Redondo.</span></br></br>        
+        <a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a>`,
     images: [
       {
         full: "/images/webdesign/Centipede0.png",
@@ -249,46 +260,6 @@ const projectDataWeb = [
       {
         full: "/images/webdesign/Centipede4.png",
         thumb: "/images/webdesign/thumbs/Centipede4.png",
-      },
-      {
-        full: "/images/webdesign/Centipede5.png",
-        thumb: "/images/webdesign/thumbs/Centipede5.png",
-      },
-      {
-        full: "/images/webdesign/Centipede6.png",
-        thumb: "/images/webdesign/thumbs/Centipede6.png",
-      },
-      {
-        full: "/images/webdesign/Centipede7.png",
-        thumb: "/images/webdesign/thumbs/Centipede7.png",
-      },
-      {
-        full: "/images/webdesign/Centipede8.png",
-        thumb: "/images/webdesign/thumbs/Centipede8.png",
-      },
-      {
-        full: "/images/webdesign/Centipede9.png",
-        thumb: "/images/webdesign/thumbs/Centipede9.png",
-      },
-      {
-        full: "/images/webdesign/Centipede10.png",
-        thumb: "/images/webdesign/thumbs/Centipede10.png",
-      },
-      {
-        full: "/images/webdesign/Centipede11.png",
-        thumb: "/images/webdesign/thumbs/Centipede11.png",
-      },
-      {
-        full: "/images/webdesign/Centipede12.png",
-        thumb: "/images/webdesign/thumbs/Centipede12.png",
-      },
-      {
-        full: "/images/webdesign/Centipede13.png",
-        thumb: "/images/webdesign/thumbs/Centipede13.png",
-      },
-      {
-        full: "/images/webdesign/Centipede14.png",
-        thumb: "/images/webdesign/thumbs/Centipede14.png",
       },
 
       // Repeat for Centipede1 - Centipede14
