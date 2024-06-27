@@ -105,7 +105,7 @@ export default function ProjectPage() {
             </div>
           </div>
           <div className="flex justify-between bg-gray-white py-2">
-            <div className="flex pr-2 w-[5%] items-center">
+            <div className="flex pr-2 w-[5%] items-center text-white">
               <RiArrowLeftWideFill className="size-[3vw]" />
             </div>
             <div
@@ -122,7 +122,7 @@ export default function ProjectPage() {
                 />
               ))}
             </div>
-            <div className="flex pl-2 w-[5%] items-center">
+            <div className="flex pl-2 w-[5%] items-center text-white">
               <RiArrowRightWideFill className="size-[3vw]" />
             </div>
           </div>
