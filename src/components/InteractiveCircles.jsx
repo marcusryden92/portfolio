@@ -7,7 +7,7 @@ const InteractiveCircles = () => {
     const canvas = canvasRef.current;
     const c = canvas.getContext("2d");
 
-    canvas.style.filter = "blur(15px) contrast(30)";
+    canvas.style.filter = "blur(5px) contrast(30)";
 
     let mouse = {
       x: undefined,
@@ -15,9 +15,9 @@ const InteractiveCircles = () => {
     };
 
     const VELOCITY = 2;
-    const MAXRADIUS = 70;
+    const MAXRADIUS = 80;
     const MINRADIUS = 2;
-    const SIZEVARIATION = 8;
+    const SIZEVARIATION = 5;
 
     const GROWTHRATE = 2;
     const SHRINKRATE = 2;
@@ -25,13 +25,13 @@ const InteractiveCircles = () => {
 
     const CIRCLECOUNT =
       window.innerWidth < 768
-        ? Math.floor((window.innerWidth * window.innerHeight) / 5000)
+        ? Math.floor((window.innerWidth * window.innerHeight) / 7000)
         : 300;
 
     // const BACKGROUNDCOLOR = "#dc2626";
-    const BACKGROUNDCOLOR = "hsl(25, 0%, 57%)";
+    const BACKGROUNDCOLOR = "#000000";
 
-    const CIRCLECOLOR = "#000000";
+    const CIRCLECOLOR = "#FFFFFF";
     const CIRLESHINE = "#555555";
     // const CIRLESHINE = "#ffffff";
 
@@ -120,7 +120,7 @@ const InteractiveCircles = () => {
             offsetY,
             this.radius
           );
-          gradient.addColorStop(0, CIRLESHINE);
+          // gradient.addColorStop(0, CIRLESHINE);
           gradient.addColorStop(1, CIRCLECOLOR); // Adjust the white to a dimmer shade, e.g., light gray
 
           c.beginPath();

@@ -71,7 +71,7 @@ export default function MainPage() {
               isUnfadedIndD ||
               !isFadedProjectPage
                 ? "opacity-0"
-                : "opacity-25"
+                : "opacity-90"
             } transition-opacity`}
           >
             <InteractiveCircles className="behind rounded-none" />
