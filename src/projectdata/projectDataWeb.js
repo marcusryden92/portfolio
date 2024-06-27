@@ -133,7 +133,8 @@ const projectDataWeb = [
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
         <span>Oskar Sollenberg, Maria Jareno and Nesrine Hadboun.</span></br></br>
-        <a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a>`,
+        <a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a></br>
+        <a href="https://github.com/marcusryden92/Hinder" target="_blank">Github Link</a> `,
     images: [
       {
         full: "/images/webdesign/Hinder0.png",

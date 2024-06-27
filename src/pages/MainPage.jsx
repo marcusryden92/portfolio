@@ -63,7 +63,7 @@ export default function MainPage() {
               !isFadedProjectPage
                 ? "opacity-0"
                 : "opacity-100  "
-            } transition-opacity bg-neutral-400 rounded-none`}
+            } transition-opacity bg-neutral-200 rounded-none`}
           >
             <div
               className={`${menuVisible ? " " : "hidden"} ${
