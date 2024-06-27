@@ -120,7 +120,7 @@ const InteractiveCircles = () => {
             offsetY,
             this.radius
           );
-          gradient.addColorStop(0, CIRLESHINE);
+          // gradient.addColorStop(0, CIRLESHINE);
           gradient.addColorStop(1, CIRCLECOLOR); // Adjust the white to a dimmer shade, e.g., light gray
 
           c.beginPath();
