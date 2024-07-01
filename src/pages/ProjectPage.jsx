@@ -64,13 +64,13 @@ export default function ProjectPage() {
         <div
           className={`${
             !isFadedProjectPage
-              ? "text-2xl m-1 ml-5 lg:gallery-title"
-              : "gallery-title--faded"
-          } gallery-element font-medium hover:scale-110 ease-in-out duration-1000`}
+              ? "gallery-title text-2xl m-1 ml-3 lg:size-[1.3vw] "
+              : "gallery-title--faded text-2xl m-1 ml-3 lg:size-[1.3vw]"
+          }  gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000`}
         >
           {currentProject.title}
         </div>
-        <div className="flex gap-5">
+        <div className="flex xl:gap-5">
           <div
             className={`gallery-x ${
               !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
@@ -79,7 +79,7 @@ export default function ProjectPage() {
             } gallery-element font-bold`}
             onClick={handleClickGoBack}
           >
-            <FaChevronLeft className="size-[25px] mt-[7px] lg:size-[1.5vw]" />
+            <FaChevronLeft className="size-[25px] mt-[7px] lg:mt-0 lg:size-[1.5vw]" />
           </div>
           <div
             className={`gallery-x ${
@@ -94,13 +94,13 @@ export default function ProjectPage() {
         </div>
       </div>
       <div
-        className={`flex flex-col xl:flex-row mt-6 md:h-[78vh] gap-5 overflow-scroll no-scroll ${
+        className={`flex flex-col xl:flex-row xl:mt-6 xl:h-[78vh] gap-5 overflow-scroll no-scroll ${
           isFadedProjectPage ? "about-container--faded" : "about-container"
         }`}
       >
         <div className="flex flex-col gap-4 overflow-scroll no-scroll  w-full xl:w-[60%]">
           <div className="aspect-16-9 md:overflow-hidden min-w-full">
-            <div className="rounded-lg">
+            <div className="rounded-lg m-[3%] xl:m-0 ">
               <img
                 src={clickedImage.full}
                 alt="Clicked Image"
@@ -110,7 +110,7 @@ export default function ProjectPage() {
           </div>
           <div className="flex justify-between bg-gray-white py-2">
             <div className="flex pr-2 w-[5%] items-center text-white">
-              <RiArrowLeftWideFill className="size-[3vw]" />
+              <RiArrowLeftWideFill className="xl:size-[3vw]" />
             </div>
             <div
               className="flex gap-5 no-scroll overflow-scroll"
@@ -131,7 +131,7 @@ export default function ProjectPage() {
             </div>
           </div>
         </div>
-        <div className="pl-10 lg:text-[0.95vw] no-scroll rounded-lg  xl:w-[40%] overflow-y-auto text-white relative">
+        <div className="px-[3%] xl:px-10 lg:text-[0.95vw] no-scroll rounded-lg  xl:w-[40%] overflow-y-auto text-white relative">
           {/* Render the inner HTML content */}
           <div dangerouslySetInnerHTML={{ __html: currentProject.body }}></div>
         </div>

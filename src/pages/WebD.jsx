@@ -36,7 +36,7 @@ export default function WebD({}) {
         font-medium `}
           >
             <div
-              className={`text-xl md:text-custom gallery-element ${
+              className={`text-[1.7rem] xl:text-custom gallery-element ${
                 hoverIsActiveWebD
                   ? "hover:scale-110 ease-in-out duration-200"
                   : ""
@@ -60,7 +60,7 @@ export default function WebD({}) {
            gallery-element
             font-bold text-xl md:text-custom`}
             >
-              <IoClose className="size-[2.5vw]" />
+              <IoClose className="size-[40px] lg:size-[2.5vw] lg:mt-[-0.5vw]" />
             </div>
           </div>
         </div>

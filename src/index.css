@@ -84,8 +84,19 @@ body {
 }
 
 a {
-  font-size: 1.3vw;
+  font-size: 7vw;
   font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  a {
+    font-size: 1.3vw;
+    font-weight: bold;
+  }
+
+  .box {
+    gap: 1rem;
+  }
 }
 
 /* For Webkit browsers (e.g., Chrome, Safari) */
@@ -175,8 +186,6 @@ a {
   /* padding: 10px; Adjust padding as needed */
   align-items: flex-start; /* Shrink-wrap around flex items */
   flex-wrap: nowrap; /* Ensure items stay in a single row */
-
-  gap: 1rem 0;
 }
 
 .main-container {
@@ -266,19 +275,15 @@ a {
 .gallery-element {
   background-color: none;
   color: white;
-  text-align: center;
 }
 
 .gallery-title {
   opacity: 1;
-  font-size: 1.3vw;
   font-weight: bold;
   transition: transform 1.2s ease-in-out, opacity 1s ease-in-out;
 }
 
 .gallery-title--faded {
-  font-size: 1.2vw;
-
   opacity: 0;
   transform: translateY(-300px);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;

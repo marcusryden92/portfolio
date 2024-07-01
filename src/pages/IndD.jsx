@@ -36,7 +36,7 @@ export default function IndD({}) {
         font-medium `}
           >
             <div
-              className={`text-xl md:text-custom gallery-element ${
+              className={`text-[1.7rem] xl:text-custom gallery-element ${
                 hoverIsActiveIndD
                   ? "hover:scale-110 ease-in-out duration-500 "
                   : ""
@@ -60,7 +60,7 @@ export default function IndD({}) {
            gallery-element
             font-bold text-xl md:text-custom  `}
             >
-              <IoClose className="size-[2.5vw]" />
+              <IoClose className="size-[40px] lg:size-[2.5vw] lg:mt-[-0.5vw]" />
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div className="flex md:flex-row overflow-hidden ">
+    <div className="flex md:flex-row overflow-hidden max-w-[100vw] ">
       {" "}
       <div className="absolute z-10">
         <Cover />
@@ -72,7 +72,7 @@ export default function MainPage() {
               !isFadedProjectPage
                 ? "opacity-10"
                 : "opacity-25"
-            } transition-opacity max-w-full overflow-hidden`}
+            } transition-opacity overflow-hidden max-w-[100vw]`}
           >
             <InteractiveCircles className="behind rounded-none" />
           </div>
