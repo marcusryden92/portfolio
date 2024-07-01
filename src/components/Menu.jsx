@@ -94,7 +94,7 @@ export default function Menu({}) {
         >
           INDUSTRIAL DESIGN
         </li>{" "}
-        <li className="px-[7%] pr-2 py-[5%] md:text-[1vw] text-white font-bold hover:tracking-wider duration-500">
+        <li className="hidden lg:flex px-[7%] pr-2 py-[5%] md:text-[1vw] text-white font-bold hover:tracking-wider duration-500">
           / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
           / / / /{" "}
         </li>
