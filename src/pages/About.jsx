@@ -28,18 +28,18 @@ export default function About({ handleClickClear }) {
 
   return (
     <>
-      <div className="box center-viewport h-full w-full text-left md:max-w-[70%] max-h-[90%] my-10">
+      <div className="box center-viewport h-full w-full text-left xl:max-w-[70%] max-h-[90%] px-[3%] xl:px-0 my-10">
         <div className="flex justify-between w-full max-w-[100%]">
           <div
-            className={`text-custom ${
+            className={`text-[1.7rem] xl:text-custom   ${
               !isFadedAbout ? "gallery-title" : "gallery-title--faded"
             } gallery-element font-medium hover:scale-110 ease-in-out duration-1000`}
           >
             About
           </div>
           <div
-            className={`md:mr-[3%] gallery-x ${
-              !isFadedAbout ? "gallery-x" : "gallery-x--faded"
+            className={`text-[1.7rem] xl:text-custom xl:mr-[3%]  ${
+              !isFadedAbout ? "gallery-title" : "gallery-title--faded"
             } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
             onClick={() => setFlipped(!flipped)}
           >
@@ -51,21 +51,21 @@ export default function About({ handleClickClear }) {
             } ${!isFadedAbout ? "hover-scale" : ""} gallery-element font-bold `}
             onClick={handleClickX}
           >
-            <IoClose className="size-[2.5vw]" />
+            <IoClose className="size-[40px] lg:size-[2.5vw] lg:mt-[-0.5vw]" />
           </div>
         </div>
 
         {/* Flip card */}
         <div
-          className={`flip-card h-full max-h-[90%] w-full my-6 md:w-full ${
+          className={`flip-card h-full xl:max-h-[90%] w-full mt-6 md:w-full ${
             isFadedAbout ? "about-container--faded" : "about-container"
           } ${flipped ? "flipped" : ""}`}
         >
           <div className="flip-card-inner">
             <div className="flip-card-front overflow-hidden bg-white border-2">
-              <div className="flex flex-col p-10 space-y-8">
-                <div className="flex justify-around px-[10%] space-x-10">
-                  <div className="text-black border-r-2 rounded-none px-[5%]">
+              <div className="flex flex-col p-6 xl:p-10 space-y-8">
+                <div className="flex flex-col xl:flex-row justify-around xl:px-[10%] xl:space-x-10">
+                  <div className="text-black xl:border-r-2 rounded-none xl:px-[5%] mb-10 xl:mb-0">
                     <p className="text-xl mb-2 font-bold">Education</p>
                     <p className="font-bold mb-1">
                       FRONT END DEVELOPER PROGRAM
@@ -127,7 +127,10 @@ export default function About({ handleClickClear }) {
                 </div>
               </div>
             </div>
-            <div className="flip-card-back selectable justify-center overflow-scroll no-scroll flex flex-col md:flex-row bg-white border-2">
+            <div
+              className="flip-card-back selectable justify-center overflow-scroll no-scroll flex flex-col 
+            md:flex-row bg-white border-2"
+            >
               <div className="flex flex-col m-10 my-20 gap-5 items-center ">
                 <p className="font-bold text-[2vw] pb-5">Contact</p>{" "}
                 <p className="text-[1.5vw]  font-medium border-b-2 pb-5">

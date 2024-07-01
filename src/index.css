@@ -337,9 +337,16 @@ a {
 .flip-card-front,
 .flip-card-back {
   width: 100%;
-  height: 100%;
+
   position: absolute;
   backface-visibility: hidden;
+}
+
+@media (min-width: 1200px) {
+  .flip-card-front,
+  .flip-card-back {
+    height: 100%;
+  }
 }
 
 .flip-card-front {
