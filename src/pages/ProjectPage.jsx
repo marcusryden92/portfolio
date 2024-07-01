@@ -63,7 +63,9 @@ export default function ProjectPage() {
       <div className="flex justify-between w-full">
         <div
           className={`${
-            !isFadedProjectPage ? "gallery-title" : "gallery-title--faded"
+            !isFadedProjectPage
+              ? "text-2xl m-1 ml-5 lg:gallery-title"
+              : "gallery-title--faded"
           } gallery-element font-medium hover:scale-110 ease-in-out duration-1000`}
         >
           {currentProject.title}
@@ -77,7 +79,7 @@ export default function ProjectPage() {
             } gallery-element font-bold`}
             onClick={handleClickGoBack}
           >
-            <FaChevronLeft className="size-[1.5vw]" />
+            <FaChevronLeft className="size-[25px] mt-[7px] lg:size-[1.5vw]" />
           </div>
           <div
             className={`gallery-x ${
@@ -87,16 +89,16 @@ export default function ProjectPage() {
             } gallery-element font-bold`}
             onClick={handleClickX}
           >
-            <IoClose className="size-[2.5vw] mt-[-0.5vw]" />
+            <IoClose className="size-[40px] lg:size-[2.5vw] lg:mt-[-0.5vw]" />
           </div>
         </div>
       </div>
       <div
-        className={`flex mt-6 md:h-[78vh] flex-col md:flex-row gap-5 overflow-scroll no-scroll ${
+        className={`flex flex-col xl:flex-row mt-6 md:h-[78vh] gap-5 overflow-scroll no-scroll ${
           isFadedProjectPage ? "about-container--faded" : "about-container"
         }`}
       >
-        <div className="flex flex-col gap-4 overflow-scroll no-scroll justify-between w-full md:w-[60%]">
+        <div className="flex flex-col gap-4 overflow-scroll no-scroll  w-full xl:w-[60%]">
           <div className="aspect-16-9 md:overflow-hidden min-w-full">
             <div className="rounded-lg">
               <img
@@ -129,7 +131,7 @@ export default function ProjectPage() {
             </div>
           </div>
         </div>
-        <div className="pl-10 text-[0.95vw] no-scroll rounded-lg  w-[40%] overflow-y-auto text-white relative">
+        <div className="pl-10 lg:text-[0.95vw] no-scroll rounded-lg  xl:w-[40%] overflow-y-auto text-white relative">
           {/* Render the inner HTML content */}
           <div dangerouslySetInnerHTML={{ __html: currentProject.body }}></div>
         </div>

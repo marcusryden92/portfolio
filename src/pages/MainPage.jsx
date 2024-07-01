@@ -41,7 +41,7 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div className="flex md:flex-row">
+    <div className="flex md:flex-row overflow-hidden ">
       {" "}
       <div className="absolute z-10">
         <Cover />
@@ -53,7 +53,7 @@ export default function MainPage() {
         {isClickedIndD ? <IndD /> : ""}
         {isClickedProjectPage ? <ProjectPage /> : ""}
       </div>
-      <div className="z-0 absolute  h-full w-full rounded-none bg-[#2B3A67]">
+      <div className="z-0 absolute rounded-none bg-[#2B3A67]">
         <div
           className={`${menuVisible ? " " : "opacity-10"} ${
             !isFadedAbout ||
@@ -72,7 +72,7 @@ export default function MainPage() {
               !isFadedProjectPage
                 ? "opacity-10"
                 : "opacity-25"
-            } transition-opacity`}
+            } transition-opacity max-w-full overflow-hidden`}
           >
             <InteractiveCircles className="behind rounded-none" />
           </div>
