@@ -63,7 +63,7 @@ export default function About({ handleClickClear }) {
         >
           <div className="flip-card-inner">
             <div className="flip-card-front overflow-hidden bg-white border-2">
-              <div className="flex flex-col p-6 xl:p-10 space-y-8">
+              <div className="flex flex-col p-6 xl:p-10 space-y-8 text-center xl:text-left">
                 <div className="flex flex-col xl:flex-row justify-around xl:px-[10%] xl:space-x-10">
                   <div className="text-black xl:border-r-2 rounded-none xl:px-[5%] mb-10 xl:mb-0">
                     <p className="text-xl mb-2 font-bold">Education</p>
@@ -128,15 +128,18 @@ export default function About({ handleClickClear }) {
               </div>
             </div>
             <div
-              className="flip-card-back selectable justify-center overflow-scroll no-scroll flex flex-col 
+              className="flip-card-back min-h-[1000px] xl:min-h-0 selectable justify-center
+              overflow-scroll no-scroll flex flex-col 
             md:flex-row bg-white border-2"
             >
               <div className="flex flex-col m-10 my-20 gap-5 items-center ">
-                <p className="font-bold text-[2vw] pb-5">Contact</p>{" "}
-                <p className="text-[1.5vw]  font-medium border-b-2 pb-5">
+                <p className="font-bold text-[2rem] xl:text-[2vw] pb-5">
+                  Contact
+                </p>{" "}
+                <p className="text-[1rem] xl:text-[1.5vw]  font-medium border-b-2 pb-5">
                   MARCUS.RYDEN@HYPERISLAND.SE
                 </p>{" "}
-                <p className="text-[1.5vw]  font-medium pb-5">
+                <p className="text-[1.5rem] xl:text-[2vw]  font-medium pb-5">
                   (+46) 720 40 99 96
                 </p>{" "}
                 <div className="flex gap-[1vw]">
@@ -145,14 +148,14 @@ export default function About({ handleClickClear }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaLinkedinIn className="size-[2vw]" />
+                    <FaLinkedinIn className="size-[40px] lg:size-[2.5vw]" />
                   </a>
                   <a
                     href="https://github.com/marcusryden92"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="size-[2vw]" />
+                    <FaGithub className="size-[40px] lg:size-[2.5vw]" />
                   </a>
                 </div>
               </div>
