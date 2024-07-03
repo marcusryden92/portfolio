@@ -6,8 +6,8 @@ const Background = () => {
   return (
     <div>
       {" "}
-      {/* <InteractiveCircles className=" rounded-none" /> */}
-      <GrainOverlay className="z-10 rounded-none" />
+      <InteractiveCircles className=" rounded-none" />
+      {/* <GrainOverlay className="rounded-none" /> */}
     </div>
   );
 };

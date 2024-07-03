@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Cover from "../components/Cover";
-import InteractiveCircles from "../components/InteractiveCircles";
+import Background from "../components/Background";
 
 import Menu from "../components/Menu";
 import About from "./About";
@@ -60,7 +60,7 @@ export default function MainPage() {
             isUnfadedWebD ||
             isUnfadedIndD ||
             !isFadedProjectPage
-              ? "opacity-15"
+              ? "opacity-30"
               : "opacity-100  "
           } transition-opacity bg-[#2B3A67] rounded-none`}
         >
@@ -74,7 +74,7 @@ export default function MainPage() {
                 : "opacity-25"
             } transition-opacity overflow-hidden max-w-[100vw]`}
           >
-            <InteractiveCircles className="behind rounded-none" />
+            <Background className="behind rounded-none" />
           </div>
         </div>
       </div>

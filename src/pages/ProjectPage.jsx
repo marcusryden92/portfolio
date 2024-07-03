@@ -64,8 +64,8 @@ export default function ProjectPage() {
         <div
           className={`${
             !isFadedProjectPage
-              ? "gallery-title text-2xl m-1 ml-3 lg:size-[1.3vw] "
-              : "gallery-title--faded text-2xl m-1 ml-3 lg:size-[1.3vw]"
+              ? "gallery-title text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap "
+              : "gallery-title--faded text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap"
           }  gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000`}
         >
           {currentProject.title}
