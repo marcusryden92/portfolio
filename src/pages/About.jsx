@@ -62,22 +62,24 @@ export default function About({ handleClickClear }) {
           } ${flipped ? "flipped" : ""}`}
         >
           <div className="flip-card-inner">
-            <div className="flip-card-front overflow-hidden bg-white border-2">
+            <div className="flip-card-back overflow-hidden bg-white border-2">
               <div className="flex flex-col p-6 xl:p-10 space-y-8 text-center xl:text-left">
                 <div className="flex flex-col xl:flex-row justify-around xl:px-[10%] xl:space-x-10">
-                  <div className="text-black xl:border-r-2 rounded-none xl:px-[5%] mb-10 xl:mb-0">
-                    <p className="text-xl mb-2 font-bold">Education</p>
-                    <p className="font-bold mb-1">
+                  <div className="text-black text-sm xl:border-r-2 rounded-none xl:px-[5%] mb-10 xl:mb-0">
+                    <p className="text-lg mb-2 font-bold">Education</p>
+                    <p className=" text-sm font-bold mb-1">
                       FRONT END DEVELOPER PROGRAM
                     </p>
                     <p className="text-sm mb-1">Hyper Island, Stockholm</p>
                     <p className="italic text-sm mb-4">2023 - 2025</p>
-                    <p className="font-bold mb-1">INDUSTRIAL DESIGN PROGRAM</p>
+                    <p className="font-bold text-sm mb-1">
+                      INDUSTRIAL DESIGN PROGRAM
+                    </p>
                     <p className="text-sm mb-1">
                       Lund University School of Industrial Design, Lund
                     </p>
                     <p className="italic text-sm mb-4">2019 - 2022</p>
-                    <p className="font-bold mb-1">
+                    <p className="font-bold text-sm mb-1">
                       GRAPHICAL DESIGN INTRODUCTION COURSE
                     </p>
                     <p className="text-sm mb-1">
@@ -103,7 +105,7 @@ export default function About({ handleClickClear }) {
                     <p className="italic text-sm mb-4">2017/08 - 2019/04</p>
                   </div> */}
                   <div className="text-black pr-[5%] rounded-none">
-                    <p className="text-xl mb-2 font-bold">
+                    <p className="text-lg mb-2 font-bold">
                       Languages/Frameworks
                     </p>
                     <p className="text-sm mb-1">HTML/CSS</p>
@@ -116,7 +118,7 @@ export default function About({ handleClickClear }) {
 
                     <br></br>
 
-                    <p className="text-xl mb-2 font-bold">Skills</p>
+                    <p className="text-lg mb-2 font-bold">Skills</p>
                     <p className="text-sm mb-1">Adobe Photoshop</p>
                     <p className="text-sm mb-1">Adobe Illustrator</p>
                     <p className="text-sm mb-1">Adobe InDesign</p>
@@ -128,18 +130,18 @@ export default function About({ handleClickClear }) {
               </div>
             </div>
             <div
-              className="flip-card-back min-h-[1000px] xl:min-h-0 selectable justify-center
-              overflow-scroll no-scroll flex flex-col 
+              className="flip-card-front min-h-[1000px] xl:min-h-0 selectable justify-center xl:justify-start
+              overflow-scroll xl:overflow-hidden no-scroll flex flex-col 
             md:flex-row bg-white border-2"
             >
-              <div className="flex flex-col m-10 my-20 gap-5 items-center ">
-                <p className="font-bold text-[2rem] xl:text-[2vw] pb-5">
+              <div className="flex flex-col xl:min-w-[50%] xl:border-r-2 rounded-none px-10 my-20 gap-1 items-center justify-center ">
+                <p className="font-bold text-[2rem] xl:text-[1.5vw] pb-5">
                   Contact
                 </p>{" "}
-                <p className="text-[1rem] xl:text-[1.5vw]  font-medium border-b-2 pb-5">
+                <p className="text-[1rem] xl:text-[1.2vw]  font-medium border-b-2 pb-5">
                   MARCUS.RYDEN@HYPERISLAND.SE
                 </p>{" "}
-                <p className="text-[1.5rem] xl:text-[2vw]  font-medium pb-5">
+                <p className="text-[1.5rem] xl:text-[1.5vw]  font-medium pb-5">
                   (+46) 720 40 99 96
                 </p>{" "}
                 <div className="flex gap-[1vw]">
@@ -158,6 +160,29 @@ export default function About({ handleClickClear }) {
                     <FaGithub className="size-[40px] lg:size-[2.5vw]" />
                   </a>
                 </div>
+              </div>
+              <div className="flex flex-col">
+                <div className="flex flex-col gap-1 p-10 xl:text-[0.9vw] flex-grow">
+                  <p>Hello! I'm Marcus.</p>
+                  <p>
+                    I'm passionate about using technical skills to solve design
+                    problems. I have always been drawn to the intersection of
+                    creativity and technology. Thriving in social environments,
+                    I enjoy collaborating with others to bring ideas to life.{" "}
+                  </p>
+                  <p>
+                    {" "}
+                    Currently, I'm deepening my expertise in front-end
+                    development at Hyper Island in Stockholm, where I'm excited
+                    to merge my design background with coding proficiency to
+                    create impactful digital experiences.
+                  </p>
+                </div>
+                <img
+                  className="xl:absolute bottom-0 md:h-[60%] self-end"
+                  src={portrait}
+                  alt="Marcus"
+                />
               </div>
             </div>
           </div>

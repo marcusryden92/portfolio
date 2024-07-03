@@ -79,7 +79,7 @@ export default function Menu({}) {
           : "menu"
       } justify-center menu py-5 px-5 md:py-16 md:px-16 text-xl md:w-[40vw] md:h-screen sm:text-base text-left`}
     >
-      <ul className="flex flex-col gap-y-[5%] justify-between md:h-[25%] ">
+      <ul className="flex josefin-sans flex-col gap-y-[5%] justify-between md:h-[25%] ">
         <li
           className={` px-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800
            text-white md:text-subtitle   hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
@@ -94,16 +94,15 @@ export default function Menu({}) {
         >
           INDUSTRIAL DESIGN
         </li>{" "}
-        <li className="hidden lg:flex px-[7%] pr-2 py-[5%] md:text-[1vw] text-white font-bold hover:tracking-wider duration-500">
-          / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
-          / / / /{" "}
+        <li className="hidden lg:flex px-[7%] pr-2 py-[5%] md:text-[1.5vw] text-white font-bold hover:tracking-wider duration-500">
+          / / / / / / / / / / / / / / / / / / / / / / /{" "}
         </li>
         <li
           className={`px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 
            text-white md:text-subtitle  hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
           onClick={onClickAbout}
         >
-          CV/CONTACT
+          CV / ABOUT
         </li>
       </ul>
     </div>

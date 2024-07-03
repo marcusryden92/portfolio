@@ -41,7 +41,7 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div className="flex md:flex-row overflow-hidden max-w-[100vw] ">
+    <div className="flex md:flex-row overflow-hidden max-h-[100vh] max-w-[100vw] ">
       {" "}
       <div className="absolute z-10">
         <Cover />

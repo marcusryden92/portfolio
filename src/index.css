@@ -30,6 +30,12 @@ body {
   /* cursor: none; */
 }
 
+@media (min-width: 1200px) {
+  :root {
+    overflow: hidden;
+  }
+}
+
 .selectable {
   user-select: text;
 }
