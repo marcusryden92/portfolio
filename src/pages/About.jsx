@@ -163,7 +163,7 @@ export default function About({ handleClickClear }) {
               </div>
               <div className="flex flex-col text-secondary">
                 <div className="flex flex-col gap-1 p-10 xl:text-[0.9vw] flex-grow">
-                  <p className="xl:text-[1.2vw] font-bold">
+                  <p className="xl:text-[3vw] font-bold playfair">
                     Hello! I'm Marcus.
                   </p>
                   <p>

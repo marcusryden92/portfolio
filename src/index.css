@@ -35,6 +35,60 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/public/fonts/PlayfairDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: bold;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Playfair Display Italic";
+  src: url("/public/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: bold;
+  font-display: block;
+}
+
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.playwrite {
+  font-family: "Playwrite Moderne", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-optical-sizing: auto;
+  font-style: bold;
+}
+
+.playfair {
+  font-family: "Playfair Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.playfair-italic {
+  font-family: "Playfair Display Italic", sans-serif;
+  font-optical-sizing: auto;
+  font-style: bold;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -127,30 +181,6 @@ a {
   display: none;
 }
 
-.josefin-sans {
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.playwrite {
-  font-family: "Playwrite Moderne", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.montserrat-bold {
-  font-family: "Montserrat-Bold", sans-serif;
-  font-optical-sizing: auto;
-  font-style: bold;
-}
-
 .cover-container {
   height: 100%;
   width: 100%;
@@ -174,13 +204,13 @@ a {
 .front-page {
   width: 100vw;
   height: 100vh;
-  transition: height 1s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transition: height 0.7s cubic-bezier(0.5, 1.6, 0.4, 0.7);
   z-index: 10;
 }
 
 .front-page--faded {
   height: 0;
-  transition: height 1s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transition: height 0.7s cubic-bezier(0.5, 1.6, 0.4, 0.7);
   z-index: 10;
 }
 
@@ -496,12 +526,12 @@ a {
 
 .image-load-faded {
   opacity: 0;
-  transition: opacity 2s linear; /* Adjust timing as needed */
+  transition: opacity 1s linear; /* Adjust timing as needed */
 }
 
 .image-load-complete {
   opacity: 100%;
-  transition: opacity 2s linear; /* Adjust timing as needed */
+  transition: opacity 1s linear; /* Adjust timing as needed */
 }
 
 .project-libraries-button {

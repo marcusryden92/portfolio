@@ -53,14 +53,14 @@ export default function MainPage() {
         {isClickedIndD ? <IndD /> : ""}
         {isClickedProjectPage ? <ProjectPage /> : ""}
       </div>
-      <div className="z-0 absolute rounded-none bg-neutral-300">
+      <div className="z-0 absolute rounded-none bg-neutral-200">
         <div
           className={`${menuVisible ? " " : "opacity-10"} ${
             !isFadedAbout ||
             isUnfadedWebD ||
             isUnfadedIndD ||
             !isFadedProjectPage
-              ? "opacity-80"
+              ? "opacity-70"
               : "opacity-100  "
           } transition-opacity bg-primary rounded-none`}
         >
