@@ -4,7 +4,7 @@ const projectDataWeb = [
     thumbnail: "/images/webdesign/thumbs/Duck7.png",
     body: `<div>This project was made for our "Exploring Code" course, where the goal was to develop skills 
     in storytelling and interactive and graphical webdesign. The basis for the idea was the programming technique known as
-    "rubber ducking", where one essentially describes ones' code to an inanimate object (usually a rubber duck). When explaining the code
+    "rubber ducking", where one essentially describes one's code to an inanimate object (usually a rubber duck). When explaining the code
     to the duck, you will walk through the problems in your head, which will help you solve them.
     </div><br/>
 
