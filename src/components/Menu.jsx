@@ -83,8 +83,8 @@ export default function Menu({}) {
     >
       <ul className="flex flex-col gap-y-[5%] justify-between mt-[5%] ">
         <li
-          className={`rounded-none playfair-italic mx-[7%] mb-[7%]  pr-2 pb-[7%] pt-[10%] font-bold  bg-opacity-75 border-secondary border-t-4 
-           text-secondary md:text-[7vw] 
+          className={`rounded-none playfair-italic mx-[7%] mb-[3%]  pr-2 pb-[7%] pt-[10%] font-bold  bg-opacity-75 border-secondary border-t-4 
+           text-secondary md:text-[5vw] 
            ${
              !isFadedAbout ||
              isUnfadedWebD ||

@@ -60,7 +60,7 @@ export default function MainPage() {
             isUnfadedWebD ||
             isUnfadedIndD ||
             !isFadedProjectPage
-              ? "opacity-70"
+              ? "opacity-60"
               : "opacity-100  "
           } transition-opacity bg-primary rounded-none`}
         >
