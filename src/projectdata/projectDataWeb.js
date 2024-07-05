@@ -14,11 +14,11 @@ const projectDataWeb = [
     <div>At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!</div>
 
     </br><div style="display: flex; gap: 0.5rem;">
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     React</span>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     Three.js</span>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     Cannon.js</span></div>
 
     
@@ -76,13 +76,13 @@ const projectDataWeb = [
     database is defunct, the website is currently out of order.</div>
 
     </br><div style="display: flex;gap: 0.5rem;">
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     React</span>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     Node.js</span>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     Express.js</span><br/>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     Passport.js</span></div>
 
     </br>
@@ -127,7 +127,7 @@ const projectDataWeb = [
     <div>The application uses the React framework.</div>
 
 </br>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     React</span>
     
 
@@ -197,7 +197,7 @@ const projectDataWeb = [
     </div>
 
     </br>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     React</span>
    
     </br>
@@ -253,7 +253,7 @@ const projectDataWeb = [
     </div>
 
     </br>
-    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
     Javascript</span>
    
 

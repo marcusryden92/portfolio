@@ -7,7 +7,8 @@ const InteractiveCircles = () => {
     const canvas = canvasRef.current;
     const c = canvas.getContext("2d");
 
-    canvas.style.filter = "blur(15px) contrast(70) invert(100%)";
+    canvas.style.filter = "blur(15px) contrast(70) invert(0%) brightness(0.5)";
+    canvas.style.mixBlendMode = "screen";
 
     let mouse = {
       x: undefined,

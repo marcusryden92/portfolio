@@ -12,7 +12,7 @@ export default function Cover() {
   }
 
   useEffect(() => {
-    handleFade();
+    setTimeout(() => handleFade(), 700);
   }, []);
 
   return (

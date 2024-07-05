@@ -11,10 +11,27 @@
 }
 
 @font-face {
+  font-family: "Playwrite Moderne";
+  src: url("/public/fonts/PlaywriteFRModerne-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
   font-family: "Montserrat";
   src: url("/public/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("/public/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 800;
+  font-style: bold;
   font-display: block;
 }
 
@@ -116,10 +133,22 @@ a {
   font-style: normal;
 }
 
+.playwrite {
+  font-family: "Playwrite Moderne", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-optical-sizing: auto;
+  font-style: bold;
 }
 
 .cover-container {
@@ -267,7 +296,7 @@ a {
 }
 
 .hover-effect-menu:hover {
-  color: #fe5f55;
+  @apply text-accent;
   letter-spacing: 0.05em; /* Adjust tracking as per your design */
 }
 
@@ -319,7 +348,7 @@ a {
 
 .gallery-element {
   background-color: none;
-  color: white;
+  @apply text-secondary;
 }
 
 .gallery-title {
@@ -473,4 +502,8 @@ a {
 .image-load-complete {
   opacity: 100%;
   transition: opacity 2s linear; /* Adjust timing as needed */
+}
+
+.project-libraries-button {
+  @apply bg-secondary text-primary;
 }
