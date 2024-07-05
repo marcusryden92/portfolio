@@ -108,7 +108,7 @@ export default function Menu({}) {
                : "menu"
            }  `}
         >
-          - PORTFOLIO{" "}
+          // PORTFOLIO{" "}
         </span>
         <li
           className={`

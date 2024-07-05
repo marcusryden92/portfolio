@@ -95,15 +95,7 @@ export default function About({ handleClickClear }) {
                     <p className="text-sm mb-1">Malmö University</p>
                     <p className="italic text-sm">2011 - 2012</p>
                   </div>
-                  {/* <div className="text-black w-1/3">
-                    <p className="text-xl mb-2">Work Experience</p>
-                    <p className="font-bold mb-1">DHL COURIER</p>
-                    <p className="text-sm mb-1">DHL, Malmö</p>
-                    <p className="italic text-sm mb-4">2021/06 - 2021/08</p>
-                    <p className="font-bold mb-1">PEST CONTROL</p>
-                    <p className="text-sm mb-1">Nomor, Malmö</p>
-                    <p className="italic text-sm mb-4">2017/08 - 2019/04</p>
-                  </div> */}
+
                   <div className="text-secondary pr-[5%] rounded-none">
                     <p className="text-lg mb-2 font-bold">
                       Languages/Frameworks
@@ -134,7 +126,33 @@ export default function About({ handleClickClear }) {
               overflow-scroll xl:overflow-hidden no-scroll flex flex-col 
             md:flex-row bg-white border-2"
             >
-              <div className="flex flex-col text-secondary xl:min-w-[50%] xl:border-r-2 rounded-none px-10 my-20 gap-1 items-center justify-center ">
+              <div className="flex flex-col text-secondary ">
+                <div className="flex flex-col gap-1 p-10 xl:text-[0.9vw] flex-grow">
+                  <p className="xl:text-[3vw] font-bold playfair">
+                    Hello! I'm Marcus.
+                  </p>
+                  <p>
+                    I'm passionate about using technical skills to solve design
+                    problems. I have always been drawn to the intersection of
+                    creativity and technology. Thriving in social environments,
+                    I enjoy collaborating with others to bring ideas to life.{" "}
+                  </p>
+                  <p>
+                    {" "}
+                    Currently, I'm deepening my expertise in front-end
+                    development at Hyper Island in Stockholm, where I'm excited
+                    to merge my design background with coding proficiency to
+                    create impactful digital experiences.
+                  </p>
+                </div>
+                <img
+                  className="xl:absolute bottom-0 md:h-[55%] self-end"
+                  src={portrait}
+                  alt="Marcus"
+                />
+              </div>
+
+              <div className="flex flex-col text-secondary xl:min-w-[50%] xl:border-l-2 rounded-none px-10 my-20 gap-1 items-center justify-center ">
                 <p className="font-bold text-[2rem] xl:text-[1.5vw] pb-5">
                   Contact
                 </p>{" "}
@@ -160,31 +178,6 @@ export default function About({ handleClickClear }) {
                     <FaGithub className="size-[40px] lg:size-[2.5vw]" />
                   </a>
                 </div>
-              </div>
-              <div className="flex flex-col text-secondary">
-                <div className="flex flex-col gap-1 p-10 xl:text-[0.9vw] flex-grow">
-                  <p className="xl:text-[3vw] font-bold playfair">
-                    Hello! I'm Marcus.
-                  </p>
-                  <p>
-                    I'm passionate about using technical skills to solve design
-                    problems. I have always been drawn to the intersection of
-                    creativity and technology. Thriving in social environments,
-                    I enjoy collaborating with others to bring ideas to life.{" "}
-                  </p>
-                  <p>
-                    {" "}
-                    Currently, I'm deepening my expertise in front-end
-                    development at Hyper Island in Stockholm, where I'm excited
-                    to merge my design background with coding proficiency to
-                    create impactful digital experiences.
-                  </p>
-                </div>
-                <img
-                  className="xl:absolute bottom-0 md:h-[60%] self-end"
-                  src={portrait}
-                  alt="Marcus"
-                />
               </div>
             </div>
           </div>
