@@ -34,17 +34,17 @@ export const PageNavProvider = ({ children }) => {
 
       setTimeout(() => {
         setStatesWhenClickingProjectPage();
-      }, 1500);
+      }, 700);
     } else if (isClickedIndD) {
       setHoverIsActiveIndD(false);
       setIsUnfadedIndD(false);
 
       setTimeout(() => {
         setStatesWhenClickingProjectPage();
-      }, 1500);
+      }, 700);
     } else if (isClickedAbout) {
       setIsFadedAbout(true);
-      setTimeout(setStatesWhenClickingProjectPage, 1000);
+      setTimeout(setStatesWhenClickingProjectPage, 700);
     } else {
       setStatesWhenClickingProjectPage();
     }

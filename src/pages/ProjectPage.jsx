@@ -65,7 +65,7 @@ export default function ProjectPage() {
           className={`${
             !isFadedProjectPage
               ? "gallery-title text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap "
-              : "gallery-title--faded text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap"
+              : "gallery-title--faded--left text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap"
           }  gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000 text-secondary`}
         >
           {currentProject.title}
@@ -73,7 +73,7 @@ export default function ProjectPage() {
         <div className="flex xl:gap-5">
           <div
             className={`gallery-x ${
-              !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
+              !isFadedProjectPage ? "gallery-x" : "gallery-x--faded--left"
             } ${
               !isFadedProjectPage ? "hover-scale" : ""
             } gallery-element font-bold`}
@@ -83,7 +83,7 @@ export default function ProjectPage() {
           </div>
           <div
             className={`gallery-x ${
-              !isFadedProjectPage ? "gallery-x" : "gallery-x--faded"
+              !isFadedProjectPage ? "gallery-x" : "gallery-x--faded--left"
             } ${
               !isFadedProjectPage ? "hover-scale" : ""
             } gallery-element font-bold`}
@@ -95,7 +95,7 @@ export default function ProjectPage() {
       </div>
       <div
         className={`flex flex-col xl:flex-row xl:mt-6 xl:h-[78vh] gap-5 overflow-scroll no-scroll ${
-          isFadedProjectPage ? "about-container--faded" : "about-container"
+          isFadedProjectPage ? "project-container--faded" : "project-container"
         }`}
       >
         <div className="flex flex-col gap-4 overflow-scroll no-scroll  w-full xl:w-[60%]">
