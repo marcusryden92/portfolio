@@ -228,8 +228,46 @@ a {
 
 .menu--faded {
   opacity: 0;
+  /* transform: translatex(-500px); */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.menu-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.menu--item--faded--1 {
   transform: translatex(-500px);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.menu--item--faded--2 {
+  transform: translatex(-300px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.menu--item--faded--3 {
+  transform: translatex(-400px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.menu--item--faded--4 {
+  transform: translatex(-450px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.menu--item--faded--5 {
+  transform: translatex(-550px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.hover-effect-menu {
+  transition-duration: 500ms;
+}
+
+.hover-effect-menu:hover {
+  color: #fe5f55;
+  letter-spacing: 0.05em; /* Adjust tracking as per your design */
 }
 
 .project-block {

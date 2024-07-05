@@ -81,39 +81,91 @@ export default function Menu({}) {
           : "menu"
       } justify-center menu px-5  md:px-16 text-xl md:w-[40vw] md:h-screen sm:text-base text-left`}
     >
-      <ul className="flex josefin-sans flex-col gap-y-[5%] justify-between  ">
+      <ul className="flex josefin-sans flex-col gap-y-[5%] justify-between mt-[5%] ">
         <li
           className={`rounded-none mx-[7%] pr-2 pb-[7%] pt-[8%] font-bold  bg-opacity-75 border-white border-t-2 
-           text-white md:text-[3vw]   `}
+           text-white md:text-[3vw] 
+           ${
+             !isFadedAbout ||
+             isUnfadedWebD ||
+             isUnfadedIndD ||
+             !isFadedProjectPage
+               ? "menu--item--faded--1"
+               : "menu"
+           }   `}
         >
           MARCUS RYDÉN{" "}
         </li>
         <span
           className={` mx-[7%] pr-2 pb-[5%] mb-[5%]  bg-opacity-75 border-white border-b-2
-           text-white md:text-[2vw]    `}
+           text-white md:text-[2vw]  
+           ${
+             !isFadedAbout ||
+             isUnfadedWebD ||
+             isUnfadedIndD ||
+             !isFadedProjectPage
+               ? "menu--item--faded--2"
+               : "menu"
+           }  `}
         >
           PORTFOLIO{" "}
         </span>
         <li
-          className={` mx-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 border-opacity-25 border-slate-800
-           text-white md:text-menu    hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
+          className={`
+           ${
+             !isFadedAbout ||
+             isUnfadedWebD ||
+             isUnfadedIndD ||
+             !isFadedProjectPage
+               ? "menu--item--faded--3"
+               : "menu"
+           }`}
           onClick={onClickWebD}
         >
-          WEBDESIGN
+          <div
+            className=" mx-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 border-opacity-25 border-slate-800
+           text-white md:text-menu hover-effect-menu"
+          >
+            WEBDESIGN
+          </div>
         </li>
         <li
-          className={`mx-[7%] pr-2 py-[5%] font-bold bg-opacity-75 border-opacity-25 border-slate-800 
-          text-white md:text-menu whitespace-nowrap   hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
+          className={`
+          ${
+            !isFadedAbout ||
+            isUnfadedWebD ||
+            isUnfadedIndD ||
+            !isFadedProjectPage
+              ? "menu--item--faded--4"
+              : "menu"
+          }`}
           onClick={onClickIndD}
         >
-          INDUSTRIAL DESIGN
+          <div
+            className="mx-[7%] pr-2 py-[5%] font-bold bg-opacity-75 border-opacity-25 border-slate-800 
+          text-white md:text-menu whitespace-nowrap hover-effect-menu"
+          >
+            INDUSTRIAL DESIGN
+          </div>
         </li>{" "}
         <li
-          className={`mx-[7%] pr-2 py-[5%] font-bold bg-opacity-75 border-opacity-25 border-slate-800 
-           text-white md:text-menu  hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
+          className={`
+           ${
+             !isFadedAbout ||
+             isUnfadedWebD ||
+             isUnfadedIndD ||
+             !isFadedProjectPage
+               ? "menu--item--faded--5"
+               : "menu"
+           }`}
           onClick={onClickAbout}
         >
-          CV / ABOUT
+          <div
+            className="mx-[7%] pr-2 py-[5%] font-bold bg-opacity-75 border-opacity-25 border-slate-800 
+           text-white md:text-menu  hover-effect-menu"
+          >
+            CV / ABOUT
+          </div>
         </li>
       </ul>
     </div>
