@@ -54,7 +54,7 @@ export default function ProjectBlock({
     <div
       className={`project-block ${
         parentIsUnfaded ? "" : classArrayFaded[currentClass]
-      } ${currentColor} `}
+      }`}
     >
       <img
         src={thumbnail}
@@ -64,6 +64,9 @@ export default function ProjectBlock({
         className={`h-full w-full object-cover object-center ${
           hoverIsActive ? "hover-scale" : ""
         } transition-transform duration-500 ease-in-out`}
+        onLoad={(e) => {
+          e.target.classList.add("image-load-complete");
+        }}
       />
     </div>
   );

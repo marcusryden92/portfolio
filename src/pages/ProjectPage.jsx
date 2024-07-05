@@ -104,7 +104,10 @@ export default function ProjectPage() {
               <img
                 src={clickedImage.full}
                 alt="Clicked Image"
-                className="object-contain min-w-full h-full"
+                className="object-contain min-w-full h-full image-load-faded"
+                onLoad={(e) => {
+                  e.target.classList.add("image-load-complete");
+                }}
               />
             </div>
           </div>
@@ -120,8 +123,11 @@ export default function ProjectPage() {
                 <img
                   key={index}
                   src={image.thumb}
-                  className="aspect-square rounded-lg object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw]"
+                  className="aspect-square rounded-lg object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw] image-load-faded"
                   alt={`Image ${index}`}
+                  onLoad={(e) => {
+                    e.target.classList.add("image-load-complete");
+                  }}
                   onClick={() => handleImageClick(image)}
                 />
               ))}
