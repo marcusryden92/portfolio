@@ -146,9 +146,12 @@ export default function About({ handleClickClear }) {
                   </p>
                 </div>
                 <img
-                  className="xl:absolute bottom-0 md:h-[55%] self-end"
+                  className="xl:absolute bottom-0 md:h-[55%] self-end image-load-faded"
                   src={portrait}
                   alt="Marcus"
+                  onLoad={(e) => {
+                    e.target.classList.add("image-load-complete");
+                  }}
                 />
               </div>
 
