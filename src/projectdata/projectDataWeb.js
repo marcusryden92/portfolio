@@ -234,7 +234,7 @@ const projectDataWeb = [
     tasks.</div><br/>
 
     <div>We used React as a framework, together with Express.js, Passport.js and PostgreSQL. Unfortunately, as the 
-    server is defunct, the website is currently out of order.</div><br/>
+    database is defunct, the website is currently out of order.</div><br/>
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 

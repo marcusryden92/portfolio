@@ -73,33 +73,44 @@ export default function Menu({}) {
 
   return (
     <div
-      className={`flex flex-col ${menuVisible ? "" : "hidden"} ${
+      className={`flex flex-col whitespace-nowrap ${
+        menuVisible ? "" : "hidden"
+      } ${
         !isFadedAbout || isUnfadedWebD || isUnfadedIndD || !isFadedProjectPage
           ? "menu--faded"
           : "menu"
-      } justify-center menu py-5 px-5 md:py-16 md:px-16 text-xl md:w-[40vw] md:h-screen sm:text-base text-left`}
+      } justify-center menu px-5  md:px-16 text-xl md:w-[40vw] md:h-screen sm:text-base text-left`}
     >
-      <ul className="flex josefin-sans flex-col gap-y-[5%] justify-between md:h-[25%] ">
+      <ul className="flex josefin-sans flex-col gap-y-[5%] justify-between  ">
         <li
-          className={` px-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800
-           text-white md:text-subtitle   hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
+          className={`rounded-none mx-[7%] pr-2 pb-[7%] pt-[8%] font-bold  bg-opacity-75 border-white border-t-2 
+           text-white md:text-[3vw]   `}
+        >
+          MARCUS RYDÉN{" "}
+        </li>
+        <span
+          className={` mx-[7%] pr-2 pb-[5%] mb-[5%]  bg-opacity-75 border-white border-b-2
+           text-white md:text-[2vw]    `}
+        >
+          PORTFOLIO{" "}
+        </span>
+        <li
+          className={` mx-[7%] pr-2 py-[5%] font-bold  bg-opacity-75 border-opacity-25 border-slate-800
+           text-white md:text-menu    hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
           onClick={onClickWebD}
         >
           WEBDESIGN
         </li>
         <li
-          className={`px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 
-          text-white md:text-subtitle whitespace-nowrap   hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
+          className={`mx-[7%] pr-2 py-[5%] font-bold bg-opacity-75 border-opacity-25 border-slate-800 
+          text-white md:text-menu whitespace-nowrap   hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
           onClick={onClickIndD}
         >
           INDUSTRIAL DESIGN
         </li>{" "}
-        <li className="hidden lg:flex px-[7%] pr-2 py-[5%] md:text-[1.5vw] text-white font-bold hover:tracking-wider duration-500">
-          / / / / / / / / / / / / / / / / / / / / / / /{" "}
-        </li>
         <li
-          className={`px-[7%] pr-2 py-[5%] font-bold bg-opacity-75 rounded-[0.5vw] border-opacity-25 border-slate-800 
-           text-white md:text-subtitle  hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
+          className={`mx-[7%] pr-2 py-[5%] font-bold bg-opacity-75 border-opacity-25 border-slate-800 
+           text-white md:text-menu  hover:text-[#fe5f55] duration-500 hover:tracking-wider`}
           onClick={onClickAbout}
         >
           CV / ABOUT

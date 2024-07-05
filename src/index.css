@@ -151,7 +151,7 @@ a {
 
 .fade-out {
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 4s ease;
 }
 
 .hidden {
@@ -378,7 +378,7 @@ a {
 }
 
 /* For screen sizes below md */
-@media (max-width: 768px) {
+@media (max-width: 3000px) {
   .project-block--faded--1 {
     opacity: 0;
     transform: translateX(100vw); /* Slide in from the right */
