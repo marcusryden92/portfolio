@@ -10,7 +10,16 @@ const projectDataWeb = [
 
     <div>The application uses the React framework, GSAP for interactive elements, Three.js for 3d rendering and Cannon.js for physics simulation.</div></br>
 
+    
     <div>At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!</div>
+
+    </br><div style="display: flex; gap: 0.5rem;">
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    React</span>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    Three.js</span>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    Cannon.js</span></div>
 
     
     <div style="margin-top: 20px; font-style: italic;">
@@ -56,6 +65,58 @@ const projectDataWeb = [
     ],
   },
   {
+    title: "Centipede",
+    thumbnail: "/images/webdesign/thumbs/Centipede0.png",
+    body: `<div>For this project, the goal was to dip our toes into the world of back-end. Criteria for success
+    were setting up a website complete with user registration, authentication, authorization, server and database.
+    It proved quite a challenge. The website we opted for was a basic todo-list website, where one can add, edit and delete 
+    tasks.</div><br/>
+
+    <div>We used React as a framework, together with Express.js, Passport.js and PostgreSQL. Unfortunately, as the 
+    database is defunct, the website is currently out of order.</div>
+
+    </br><div style="display: flex;gap: 0.5rem;">
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    React</span>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    Node.js</span>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    Express.js</span><br/>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    Passport.js</span></div>
+
+    </br>
+    
+    <div style="margin-top: 20px; font-style: italic;">
+        Collaborators: 
+        <span>Oskar Sollenberg, Maya Jerndahl Bonk and Oliver Redondo.</span></br></br></div>        
+        <a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a>`,
+    images: [
+      {
+        full: "/images/webdesign/Centipede0.png",
+        thumb: "/images/webdesign/thumbs/Centipede0.png",
+      },
+      {
+        full: "/images/webdesign/Centipede1.png",
+        thumb: "/images/webdesign/thumbs/Centipede1.png",
+      },
+      {
+        full: "/images/webdesign/Centipede2.png",
+        thumb: "/images/webdesign/thumbs/Centipede2.png",
+      },
+      {
+        full: "/images/webdesign/Centipede3.png",
+        thumb: "/images/webdesign/thumbs/Centipede3.png",
+      },
+      {
+        full: "/images/webdesign/Centipede4.png",
+        thumb: "/images/webdesign/thumbs/Centipede4.png",
+      },
+
+      // Repeat for Centipede1 - Centipede14
+    ],
+  },
+  {
     title: "Pondeo",
     thumbnail: "/images/webdesign/thumbs/Pondeo0.png",
     body: `<div>This project was part of a class in collaboration. We worked together with a Hyper Island UX team from Karlskrona,
@@ -63,9 +124,14 @@ const projectDataWeb = [
     in Karlskrona did market research, user-testing and visual design in Figma, which was subsequently implemented by the Front-end team in Stockholm, 
     of which I was part. </div><br/>
 
-    <div>The application uses the React framework.</div></br>
+    <div>The application uses the React framework.</div>
 
+</br>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    React</span>
+    
 
+    </br>
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: <br/>
@@ -128,7 +194,13 @@ const projectDataWeb = [
     body: `<div>This was the first React project we made! We decided to try our hand at making a dating app. Hyper Island + Tinder = Hinder.
     As we had not yet had any experience working with back-end, we spoofed a back-end using the local storage of the computer.
     The website allows you to take a picture, sign up, and match with other "members".
-    </div><br/>
+    </div>
+
+    </br>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    React</span>
+   
+    </br>
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
@@ -178,8 +250,14 @@ const projectDataWeb = [
     </div><br/>
     <div>
         When the player is done, the current angle of the sun is displayed using an API call. This feature was added to fulfill the course criteria.
-    </div><br/>
+    </div>
 
+    </br>
+    <span style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; background-color: white; color: navy;" >
+    Javascript</span>
+   
+
+    </br>
     
     <div style="margin-top: 20px; font-style: italic;">
         Collaborators: 
@@ -223,46 +301,6 @@ const projectDataWeb = [
         full: "/images/webdesign/Cards8.png",
         thumb: "/images/webdesign/thumbs/Cards8.png",
       },
-    ],
-  },
-  {
-    title: "Centipede",
-    thumbnail: "/images/webdesign/thumbs/Centipede0.png",
-    body: `<div>For this project, the goal was to dip our toes into the world of back-end. Criteria for success
-    were setting up a website complete with user registration, authentication, authorization, server and database.
-    It proved quite a challenge. The website we opted for was a basic todo-list website, where one can add, edit and delete 
-    tasks.</div><br/>
-
-    <div>We used React as a framework, together with Express.js, Passport.js and PostgreSQL. Unfortunately, as the 
-    database is defunct, the website is currently out of order.</div><br/>
-    
-    <div style="margin-top: 20px; font-style: italic;">
-        Collaborators: 
-        <span>Oskar Sollenberg, Maya Jerndahl Bonk and Oliver Redondo.</span></br></br></div>        
-        <a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a>`,
-    images: [
-      {
-        full: "/images/webdesign/Centipede0.png",
-        thumb: "/images/webdesign/thumbs/Centipede0.png",
-      },
-      {
-        full: "/images/webdesign/Centipede1.png",
-        thumb: "/images/webdesign/thumbs/Centipede1.png",
-      },
-      {
-        full: "/images/webdesign/Centipede2.png",
-        thumb: "/images/webdesign/thumbs/Centipede2.png",
-      },
-      {
-        full: "/images/webdesign/Centipede3.png",
-        thumb: "/images/webdesign/thumbs/Centipede3.png",
-      },
-      {
-        full: "/images/webdesign/Centipede4.png",
-        thumb: "/images/webdesign/thumbs/Centipede4.png",
-      },
-
-      // Repeat for Centipede1 - Centipede14
     ],
   },
 ];

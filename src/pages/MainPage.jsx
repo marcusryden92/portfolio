@@ -43,7 +43,7 @@ export default function MainPage() {
   return (
     <div className="flex md:flex-row overflow-hidden max-h-[100vh] max-w-[100vw] ">
       {" "}
-      <div className="absolute z-10">
+      <div className="absolute z-10 bottom-0">
         <Cover />
       </div>
       <div className="flex overflow-scroll md:overflow-hidden flex-col md:flex-row main-container z-5">

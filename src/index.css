@@ -143,15 +143,16 @@ a {
 }
 
 .front-page {
-  opacity: 1;
-  transition: opacity 1s ease;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transition: height 1s cubic-bezier(0.5, 1.6, 0.4, 0.7);
   z-index: 10;
 }
 
 .front-page--faded {
-  opacity: 0;
-  transition: opacity 4s ease;
+  height: 0;
+  transition: height 1s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  z-index: 10;
 }
 
 .hidden {
