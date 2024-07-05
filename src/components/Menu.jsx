@@ -83,7 +83,7 @@ export default function Menu({}) {
     >
       <ul className="flex josefin-sans flex-col gap-y-[5%] justify-between mt-[5%] ">
         <li
-          className={`rounded-none mx-[7%] pr-2 pb-[7%] pt-[8%] font-bold  bg-opacity-75 border-white border-t-2 
+          className={`rounded-none italic mx-[7%] pr-2 pb-[7%] pt-[8%] font-bold  bg-opacity-75 border-white border-t-2 
            text-white md:text-[3vw] 
            ${
              !isFadedAbout ||
@@ -97,7 +97,7 @@ export default function Menu({}) {
           MARCUS RYDÉN{" "}
         </li>
         <span
-          className={` mx-[7%] pr-2 pb-[5%] mb-[5%]  bg-opacity-75 border-white border-b-2
+          className={`italic mx-[7%] pr-2 pb-[5%] mb-[5%]  bg-opacity-75 border-white border-b-2
            text-white md:text-[2vw]  
            ${
              !isFadedAbout ||

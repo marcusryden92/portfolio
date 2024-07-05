@@ -149,7 +149,7 @@ a {
   z-index: 10;
 }
 
-.fade-out {
+.front-page--faded {
   opacity: 0;
   transition: opacity 4s ease;
 }

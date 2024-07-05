@@ -18,7 +18,7 @@ export default function Cover() {
   return (
     <div
       className={`flex flex-col pointer-events-none cover-viewport cover-container flex-center bg-[#13192d] rounded-none text-white
-    ${isFade ? "fade-out " : "front-page"} 
+    ${isFade ? "front-page--faded " : "front-page"} 
     ${isHidden ? "hidden" : ""}`}
     >
       <div className="flex flex-col items-center justify-center md:flex-row h-full ">
