@@ -169,10 +169,6 @@ a {
     font-size: 1.3vw;
     font-weight: bold;
   }
-
-  .box {
-    gap: 1rem;
-  }
 }
 
 /* For Webkit browsers (e.g., Chrome, Safari) */

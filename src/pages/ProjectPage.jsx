@@ -64,45 +64,45 @@ export default function ProjectPage() {
 
   return (
     <div className="box center-viewport py-10 px-[5%] md:max-w-[80%] text-left w-full overflow-scroll xl:overflow-visible max-h-screen">
-      <div className="flex justify-between w-full">
+      {/*Top bar*/}
+
+      <div className="flex xl:gap-5 justify-between w-[100%]">
         {/* Back button */}
 
-        <div className="flex xl:gap-5 justify-between w-[100%]">
-          <div
-            className={`gallery-x ${
-              !isFadedProjectPage
-                ? "gallery-x"
-                : `${
-                    !shouldSlideRight
-                      ? "gallery-x--faded--left"
-                      : "gallery-x--faded"
-                  }`
-            } ${
-              !isFadedProjectPage ? "hover-scale" : ""
-            } gallery-element font-bold`}
-            onClick={handleClickGoBack}
-          >
-            <FaChevronLeft className="size-[25px] mt-[7px] lg:mt-0 lg:size-[1.5vw] text-secondary" />
-          </div>
+        <div
+          className={`gallery-x ${
+            !isFadedProjectPage
+              ? "gallery-x"
+              : `${
+                  !shouldSlideRight
+                    ? "gallery-x--faded--left"
+                    : "gallery-x--faded"
+                }`
+          } ${
+            !isFadedProjectPage ? "hover-scale" : ""
+          } gallery-element font-bold`}
+          onClick={handleClickGoBack}
+        >
+          <FaChevronLeft className="size-[25px] mt-[7px] lg:mt-0 lg:size-[1.5vw] text-secondary" />
+        </div>
 
-          {/* Close button */}
+        {/* Close button */}
 
-          <div
-            className={`gallery-x ${
-              !isFadedProjectPage
-                ? "gallery-x"
-                : `${
-                    !shouldSlideRight
-                      ? "gallery-x--faded--left"
-                      : "gallery-x--faded"
-                  }`
-            }${
-              !isFadedProjectPage ? "hover-scale" : ""
-            } gallery-element font-bold`}
-            onClick={handleClickX}
-          >
-            <IoClose className="size-[40px] lg:size-[2.5vw] lg:mt-[-0.5vw] text-secondary" />
-          </div>
+        <div
+          className={`gallery-x ${
+            !isFadedProjectPage
+              ? "gallery-x"
+              : `${
+                  !shouldSlideRight
+                    ? "gallery-x--faded--left"
+                    : "gallery-x--faded"
+                }`
+          }${
+            !isFadedProjectPage ? "hover-scale" : ""
+          } gallery-element font-bold`}
+          onClick={handleClickX}
+        >
+          <IoClose className="size-[40px] lg:size-[2.5vw] lg:mt-[-0.5vw] text-secondary" />
         </div>
       </div>
       <div
@@ -146,7 +146,7 @@ export default function ProjectPage() {
             ></div>
           </div>
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 border-t-2 border-opacity-30 border-secondary rounded-none mr-5 pt-5">
             <div
               className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8"
               dangerouslySetInnerHTML={{ __html: currentProject.links }}
@@ -161,7 +161,7 @@ export default function ProjectPage() {
 
         {/* Right Column */}
 
-        <div className="flex flex-col gap-4  no-scroll  w-full xl:w-[60%]">
+        <div className="flex flex-col  no-scroll  w-full xl:w-[60%]">
           <div className="aspect-16-9 md:overflow-hidden min-w-full">
             <div className="rounded-[1vw] my-[3%] xl:m-0 ">
               <img
@@ -174,7 +174,7 @@ export default function ProjectPage() {
               />
             </div>
           </div>
-          <div className="flex xl:mx-[-5%] justify-between bg-gray-white py-2">
+          <div className="flex xl:mx-[-5%] justify-between bg-gray-white py-5 ">
             <div className="flex pr-2 w-[15%] xl:w-[5%] items-center text-secondary">
               <RiArrowLeftWideFill className="xl:size-[3vw]" />
             </div>
@@ -200,7 +200,7 @@ export default function ProjectPage() {
             </div>
           </div>
           <div
-            className="scrollable-content opacity-80 overflow-y-scroll no-scroll rounded-none pr-8 xl:max-h-[10%]"
+            className="scrollable-content opacity-90 overflow-y-scroll no-scroll rounded-none border-t-2 border-opacity-30 border-secondary pt-5 mt-3 pr-8 xl:max-h-[10%]"
             dangerouslySetInnerHTML={{ __html: currentProject.frameworks }}
           ></div>
         </div>

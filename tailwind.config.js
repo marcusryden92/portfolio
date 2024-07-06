@@ -13,8 +13,8 @@ export default {
 
         // primary: "#f5b990",
         secondary: "#ffffff",
-        // accent: "#13192d", // Custom accent color
-        accent: "#ffffff", // Custom accent color
+        accent: "#ff1654", // Custom accent color
+        // accent: "#ffffff", // Custom accent color
         neutral: "#374151", // Custom neutral color
         about: "#13192d", // Custom secondary color
       },
