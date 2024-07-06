@@ -20,11 +20,15 @@ export default function ProjectPage() {
   } = useContextProjectPage();
 
   const [active, setActive] = useState(false);
+
+  const [shouldSlideRight, setShouldSlideRight] = useState(false);
+
   const [clickedImage, setClickedImage] = useState(currentProject.images[0]);
 
   const { resetClickedStates } = usePageNav();
 
   function handleClickX() {
+    setShouldSlideRight(true);
     setIsFadedProjectPage(true);
     setTimeout(resetClickedStates, 1000);
   }
@@ -61,19 +65,34 @@ export default function ProjectPage() {
   return (
     <div className="box center-viewport md:my-10 md:max-w-[80%] text-left w-full">
       <div className="flex justify-between w-full">
+        {/* Title */}
+
         <div
           className={`${
             !isFadedProjectPage
-              ? "gallery-title text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap "
-              : "gallery-title--faded--left text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap"
-          }  gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000 text-secondary`}
+              ? "gallery-title"
+              : `${
+                  !shouldSlideRight
+                    ? "gallery-title--faded--left"
+                    : "gallery-title--faded"
+                }`
+          } text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000 text-secondary`}
         >
           {currentProject.title}
         </div>
+
+        {/* Back button */}
+
         <div className="flex xl:gap-5">
           <div
             className={`gallery-x ${
-              !isFadedProjectPage ? "gallery-x" : "gallery-x--faded--left"
+              !isFadedProjectPage
+                ? "gallery-x"
+                : `${
+                    !shouldSlideRight
+                      ? "gallery-x--faded--left"
+                      : "gallery-x--faded"
+                  }`
             } ${
               !isFadedProjectPage ? "hover-scale" : ""
             } gallery-element font-bold`}
@@ -81,10 +100,19 @@ export default function ProjectPage() {
           >
             <FaChevronLeft className="size-[25px] mt-[7px] lg:mt-0 lg:size-[1.5vw] text-secondary" />
           </div>
+
+          {/* Close button */}
+
           <div
             className={`gallery-x ${
-              !isFadedProjectPage ? "gallery-x" : "gallery-x--faded--left"
-            } ${
+              !isFadedProjectPage
+                ? "gallery-x"
+                : `${
+                    !shouldSlideRight
+                      ? "gallery-x--faded--left"
+                      : "gallery-x--faded"
+                  }`
+            }${
               !isFadedProjectPage ? "hover-scale" : ""
             } gallery-element font-bold`}
             onClick={handleClickX}
@@ -95,7 +123,13 @@ export default function ProjectPage() {
       </div>
       <div
         className={`flex flex-col xl:flex-row xl:mt-6 xl:h-[78vh] gap-5 overflow-scroll no-scroll ${
-          isFadedProjectPage ? "project-container--faded" : "project-container"
+          !isFadedProjectPage
+            ? "project-container"
+            : `${
+                !shouldSlideRight
+                  ? "project-container--faded--left"
+                  : "project-container--faded"
+              }`
         }`}
       >
         <div className="flex flex-col gap-4 overflow-scroll no-scroll  w-full xl:w-[60%]">

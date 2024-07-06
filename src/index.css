@@ -437,6 +437,12 @@ a {
 
 .project-container--faded {
   opacity: 0;
+  transform: translateX(100vw);
+  transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+.project-container--faded--left {
+  opacity: 0;
   transform: translateX(-100vw);
   transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
 }
