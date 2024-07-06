@@ -160,11 +160,11 @@ body {
 }
 
 a {
-  font-size: 7vw;
+  font-size: 5vw;
   font-weight: bold;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   a {
     font-size: 1.3vw;
     font-weight: bold;

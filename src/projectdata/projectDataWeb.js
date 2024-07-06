@@ -17,7 +17,7 @@ const projectDataWeb = [
       <div>
         At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!
       </div>`,
-    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+    frameworks: `
         <span class="project-libraries-button">
           React
         </span>
@@ -27,12 +27,15 @@ const projectDataWeb = [
         <span class="project-libraries-button">
           Cannon.js
         </span>
-      </div>`,
+        <span class="project-libraries-button">
+          Tailwind CSS
+        </span>
+      `,
     links: `<div style="display: flex; gap: 0.5rem;">
-        <span class="project-libraries-button" style="font-size: 1.1rem;">
+        <span class="project-libraries-button">
           <a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a>
         </span>
-        <span class="project-libraries-button" style="font-size: 1.1rem;">
+        <span class="project-libraries-button">
           <a href="https://github.com/exploing-code/rubberduck-debugging" target="_blank">Github Link</a>
         </span>
       </div>`,
@@ -86,7 +89,7 @@ const projectDataWeb = [
 
     <div>We used React as a framework, together with Express.js, Passport.js and PostgreSQL. Unfortunately, as the 
     database is defunct, the website is currently out of order.</div>`,
-    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+    frameworks: `
         <span class="project-libraries-button">
           React
         </span>
@@ -99,7 +102,10 @@ const projectDataWeb = [
         <span class="project-libraries-button">
           Passport.js
         </span>
-      </div>`,
+        <span class="project-libraries-button">
+          Tailwind CSS
+        </span>
+      `,
     links: `<div style="display: flex; gap: 0.5rem;">
         <span class="project-libraries-button" style="font-size: 1.1rem;">
 <a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a></span>
@@ -146,11 +152,14 @@ const projectDataWeb = [
     
     <div style="margin-top: 20px; font-style: italic;">
         </div>`,
-    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+    frameworks: `
         <span class="project-libraries-button">
           React
         </span>
-      </div>`,
+        <span class="project-libraries-button">
+          Tailwind CSS
+        </span>
+      `,
     links: `<div style="display: flex; gap: 0.5rem;">
         <span class="project-libraries-button" style="font-size: 1.1rem;">
 <a href="https://pondeo.netlify.app/" target="_blank">Project Link</a></span>
@@ -218,11 +227,14 @@ const projectDataWeb = [
     As we had not yet had any experience working with back-end, we spoofed a back-end using the local storage of the computer.
     The website allows you to take a picture, sign up, and match with other "members".
     </div>`,
-    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+    frameworks: ` 
         <span class="project-libraries-button">
           React
         </span>
-      </div>`,
+        <span class="project-libraries-button">
+          Tailwind CSS
+        </span>
+     `,
     links: `<div style="display: flex; gap: 0.5rem;">
         <span class="project-libraries-button" style="font-size: 1.1rem;">
 <a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a></span>
@@ -279,11 +291,11 @@ const projectDataWeb = [
         When the player is done, the current angle of the sun is displayed using an API call. This feature was added to fulfill the course criteria.
     </div>`,
 
-    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+    frameworks: `
         <span class="project-libraries-button">
           Javascript
         </span>
-      </div>`,
+      `,
     links: `<div style="display: flex; gap: 0.5rem;">
         <span class="project-libraries-button" style="font-size: 1.1rem;">
 <a href="https://suncards.netlify.app/" target="_blank">Project Link</a></span>

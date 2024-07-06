@@ -66,7 +66,7 @@ export default function ProjectPage() {
     <div className="box center-viewport py-10 px-[5%] md:max-w-[80%] text-left w-full overflow-scroll xl:overflow-visible max-h-screen">
       {/*Top bar*/}
 
-      <div className="flex xl:gap-5 justify-between w-[100%]">
+      <div className="flex mb-5 xl:mb-0 xl:gap-5 justify-between w-[100%]">
         {/* Back button */}
 
         <div
@@ -79,7 +79,9 @@ export default function ProjectPage() {
                     : "gallery-x--faded"
                 }`
           } ${
-            !isFadedProjectPage ? "hover-scale" : ""
+            !isFadedProjectPage
+              ? "hover:scale-110 ease-in-out duration-500"
+              : ""
           } gallery-element font-bold`}
           onClick={handleClickGoBack}
         >
@@ -98,7 +100,9 @@ export default function ProjectPage() {
                     : "gallery-x--faded"
                 }`
           }${
-            !isFadedProjectPage ? "hover-scale" : ""
+            !isFadedProjectPage
+              ? "hover:scale-110 ease-in-out duration-500"
+              : ""
           } gallery-element font-bold`}
           onClick={handleClickX}
         >
@@ -119,8 +123,8 @@ export default function ProjectPage() {
         {/* Left Column */}
 
         <div
-          className="flex flex-col justify-between overflow-x-visible max-h-[90%] mr-5 rounded-none 
-        border-r-2 border-secondary border-opacity-30 text-justify lg:text-[0.95vw] no-scroll xl:w-[55%]  text-secondary relative"
+          className="flex flex-col overflow-x-visible max-h-[90%] xl:mr-5 rounded-none 
+        xl:border-r-2 border-secondary border-opacity-30 text-justify lg:text-[0.95vw] no-scroll xl:w-[55%]  text-secondary relative"
         >
           <div className="flex flex-col gap-8">
             {/* Title */}
@@ -141,12 +145,12 @@ export default function ProjectPage() {
 
             {/* Render the inner HTML content */}
             <div
-              className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8"
+              className="scrollable-content  overflow-y-scroll no-scroll rounded-none xl:pr-8"
               dangerouslySetInnerHTML={{ __html: currentProject.body }}
             ></div>
           </div>
 
-          <div className="flex flex-col gap-5 border-t-2 border-opacity-30 border-secondary rounded-none mr-5 pt-5">
+          <div className="flex flex-col gap-5 border-t-2 border-opacity-30 border-secondary rounded-none mr-8 mt-5 pt-5">
             <div
               className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8"
               dangerouslySetInnerHTML={{ __html: currentProject.links }}
@@ -200,7 +204,8 @@ export default function ProjectPage() {
             </div>
           </div>
           <div
-            className="scrollable-content opacity-90 overflow-y-scroll no-scroll rounded-none border-t-2 border-opacity-30 border-secondary pt-5 mt-3 pr-8 xl:max-h-[10%]"
+            className="flex scrollable-content opacity-90 no-scroll flex-wrap gap-[0.5rem]
+            rounded-none border-t-2 border-opacity-30 border-secondary pt-5 mt-3 xl:pr-8 xl:max-h-[10%]"
             dangerouslySetInnerHTML={{ __html: currentProject.frameworks }}
           ></div>
         </div>
