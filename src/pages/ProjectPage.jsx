@@ -63,7 +63,7 @@ export default function ProjectPage() {
   }, [active, setIsFadedProjectPage, setMenuVisible]);
 
   return (
-    <div className="box center-viewport md:my-10 md:max-w-[80%] text-left w-full">
+    <div className="box center-viewport py-10 px-[5%] md:max-w-[80%] text-left w-full overflow-scroll xl:overflow-visible max-h-[100vh]">
       <div className="flex justify-between w-full">
         {/* Title */}
 
@@ -76,7 +76,7 @@ export default function ProjectPage() {
                     ? "gallery-title--faded--left"
                     : "gallery-title--faded"
                 }`
-          } text-2xl m-1 ml-3 lg:size-[1.3vw] xl:whitespace-nowrap gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000 text-secondary`}
+          } text-2xl lg:size-[1.3vw] xl:whitespace-nowrap gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000 text-secondary`}
         >
           {currentProject.title}
         </div>
@@ -122,7 +122,7 @@ export default function ProjectPage() {
         </div>
       </div>
       <div
-        className={`flex flex-col xl:flex-row xl:mt-6 xl:h-[78vh] gap-5 overflow-scroll no-scroll ${
+        className={`flex flex-col xl:flex-row xl:mt-6 xl:h-[78vh] gap-5 no-scroll ${
           !isFadedProjectPage
             ? "project-container"
             : `${
@@ -132,9 +132,9 @@ export default function ProjectPage() {
               }`
         }`}
       >
-        <div className="flex flex-col gap-4 overflow-scroll no-scroll  w-full xl:w-[60%]">
+        <div className="flex flex-col gap-4  no-scroll  w-full xl:w-[60%]">
           <div className="aspect-16-9 md:overflow-hidden min-w-full">
-            <div className="rounded-lg m-[3%] xl:m-0 ">
+            <div className="rounded-lg my-[3%] xl:m-0 ">
               <img
                 src={clickedImage.full}
                 alt="Clicked Image"
@@ -146,7 +146,7 @@ export default function ProjectPage() {
             </div>
           </div>
           <div className="flex justify-between bg-gray-white py-2">
-            <div className="flex pr-2 w-[5%] items-center text-secondary">
+            <div className="flex pr-2 w-[15%] xl:w-[5%] items-center text-secondary">
               <RiArrowLeftWideFill className="xl:size-[3vw]" />
             </div>
             <div
@@ -166,12 +166,12 @@ export default function ProjectPage() {
                 />
               ))}
             </div>
-            <div className="flex pl-2 w-[5%] items-center text-secondary">
-              <RiArrowRightWideFill className="size-[3vw]" />
+            <div className="flex pl-2 w-[15%] xl:w-[5%] items-center text-secondary">
+              <RiArrowRightWideFill className="xl:size-[3vw]" />
             </div>
           </div>
         </div>
-        <div className="px-[3%] xl:px-10 lg:text-[0.95vw] no-scroll rounded-lg  xl:w-[40%] overflow-y-auto text-secondary relative">
+        <div className=" text-justify lg:text-[0.95vw] no-scroll rounded-lg  xl:w-[40%]  text-secondary relative">
           {/* Render the inner HTML content */}
           <div dangerouslySetInnerHTML={{ __html: currentProject.body }}></div>
         </div>

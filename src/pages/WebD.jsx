@@ -27,7 +27,7 @@ export default function WebD({}) {
 
   return (
     <>
-      <div className="box min-w-[90%] xl:min-w-0 center-viewport my-10 xl:w-full md:max-w-[57%] text-left">
+      <div className="box min-w-[100%] px-5 xl:min-w-0 center-viewport py-10 xl:w-full md:max-w-[57%] text-left overflow-scroll xl:overflow-visible max-h-[100vh]">
         <div className="flex justify-between w-full">
           <div
             className={`${

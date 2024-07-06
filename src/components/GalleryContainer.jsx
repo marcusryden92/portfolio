@@ -36,7 +36,7 @@ export default function GalleryContainer({
   }
 
   return (
-    <div className="grid my-6 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    <div className="grid my-6 sm:grid-cols-2 md:grid-cols-3 gap-5 no-scroll">
       {projectData
         ? projectData.map((project, index) => (
             <ProjectBlock
