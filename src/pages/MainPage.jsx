@@ -60,7 +60,7 @@ export default function MainPage() {
             isUnfadedWebD ||
             isUnfadedIndD ||
             !isFadedProjectPage
-              ? "opacity-60"
+              ? "opacity-100"
               : "opacity-100  "
           } transition-opacity bg-primary rounded-none`}
         >
@@ -70,7 +70,7 @@ export default function MainPage() {
               isUnfadedWebD ||
               isUnfadedIndD ||
               !isFadedProjectPage
-                ? "opacity-10"
+                ? "opacity-5"
                 : "opacity-25"
             } transition-opacity overflow-hidden max-w-[100vw]`}
           >

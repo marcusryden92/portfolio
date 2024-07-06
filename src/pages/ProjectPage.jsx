@@ -200,7 +200,7 @@ export default function ProjectPage() {
             </div>
           </div>
           <div
-            className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8 xl:max-h-[10%]"
+            className="scrollable-content opacity-80 overflow-y-scroll no-scroll rounded-none pr-8 xl:max-h-[10%]"
             dangerouslySetInnerHTML={{ __html: currentProject.frameworks }}
           ></div>
         </div>

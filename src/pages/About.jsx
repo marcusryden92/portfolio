@@ -65,7 +65,7 @@ export default function About({ handleClickClear }) {
             <div className="flip-card-back overflow-hidden bg-white border-2">
               <div className="flex flex-col p-6 xl:p-10 space-y-8 text-center xl:text-left">
                 <div className="flex flex-col xl:flex-row justify-around xl:px-[10%] xl:space-x-10">
-                  <div className="text-secondary text-sm xl:border-r-2 rounded-none xl:px-[5%] mb-10 xl:mb-0">
+                  <div className="text-about text-sm xl:border-r-2 rounded-none xl:px-[5%] mb-10 xl:mb-0">
                     <p className="text-lg mb-2 font-bold">Education</p>
                     <p className=" text-sm font-bold mb-1">
                       FRONT END DEVELOPER PROGRAM
@@ -96,7 +96,7 @@ export default function About({ handleClickClear }) {
                     <p className="italic text-sm">2011 - 2012</p>
                   </div>
 
-                  <div className="text-secondary pr-[5%] rounded-none">
+                  <div className="text-about pr-[5%] rounded-none">
                     <p className="text-lg mb-2 font-bold">
                       Languages/Frameworks
                     </p>
@@ -126,7 +126,7 @@ export default function About({ handleClickClear }) {
               overflow-scroll xl:overflow-hidden no-scroll flex flex-col 
             md:flex-row bg-white border-2"
             >
-              <div className="flex flex-col text-secondary ">
+              <div className="flex flex-col text-about ">
                 <div className="flex flex-col gap-1 p-10 xl:text-[0.9vw] flex-grow">
                   <p className="xl:text-[3vw] font-bold playfair">
                     Hello! I'm Marcus.
@@ -155,7 +155,7 @@ export default function About({ handleClickClear }) {
                 />
               </div>
 
-              <div className="flex flex-col text-secondary xl:min-w-[50%] xl:border-l-2 rounded-none px-10 my-20 gap-1 items-center justify-center ">
+              <div className="flex flex-col text-about xl:min-w-[50%] xl:border-l-2 rounded-none px-10 my-20 gap-1 items-center justify-center ">
                 <p className="font-bold text-[2rem] xl:text-[1.5vw] pb-5">
                   Contact
                 </p>{" "}
