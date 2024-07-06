@@ -122,7 +122,7 @@ export default function ProjectPage() {
           className="flex flex-col justify-between overflow-x-visible max-h-[90%] mr-5 rounded-none 
         border-r-2 border-secondary border-opacity-30 text-justify lg:text-[0.95vw] no-scroll xl:w-[55%]  text-secondary relative"
         >
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-8">
             {/* Title */}
 
             <div
