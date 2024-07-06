@@ -163,7 +163,7 @@ export default function ProjectPage() {
 
         <div className="flex flex-col gap-4  no-scroll  w-full xl:w-[60%]">
           <div className="aspect-16-9 md:overflow-hidden min-w-full">
-            <div className="rounded-lg my-[3%] xl:m-0 ">
+            <div className="rounded-[1vw] my-[3%] xl:m-0 ">
               <img
                 src={clickedImage.full}
                 alt="Clicked Image"
@@ -179,14 +179,14 @@ export default function ProjectPage() {
               <RiArrowLeftWideFill className="xl:size-[3vw]" />
             </div>
             <div
-              className="flex gap-5 no-scroll overflow-scroll"
+              className="flex gap-5 no-scroll overflow-scroll rounded-[1vw]"
               style={{ flexGrow: 1, flexShrink: 1 }}
             >
               {currentProject.images.map((image, index) => (
                 <img
                   key={index}
                   src={image.thumb}
-                  className="aspect-square rounded-lg object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw] image-load-faded"
+                  className="aspect-square rounded-[1vw] object-cover object-center h-[33vw] w-[33vw] md:h-[10vw] md:w-[10vw] image-load-faded"
                   alt={`Image ${index}`}
                   onLoad={(e) => {
                     e.target.classList.add("image-load-complete");
