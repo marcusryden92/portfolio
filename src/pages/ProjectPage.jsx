@@ -63,27 +63,11 @@ export default function ProjectPage() {
   }, [active, setIsFadedProjectPage, setMenuVisible]);
 
   return (
-    <div className="box center-viewport py-10 px-[5%] md:max-w-[80%] text-left w-full overflow-scroll xl:overflow-visible max-h-[100vh]">
+    <div className="box center-viewport py-10 px-[5%] md:max-w-[80%] text-left w-full overflow-scroll xl:overflow-visible max-h-screen">
       <div className="flex justify-between w-full">
-        {/* Title */}
-
-        <div
-          className={`${
-            !isFadedProjectPage
-              ? "gallery-title"
-              : `${
-                  !shouldSlideRight
-                    ? "gallery-title--faded--left"
-                    : "gallery-title--faded"
-                }`
-          } text-2xl lg:size-[1.3vw] xl:whitespace-nowrap gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000 text-secondary`}
-        >
-          {currentProject.title}
-        </div>
-
         {/* Back button */}
 
-        <div className="flex xl:gap-5">
+        <div className="flex xl:gap-5 justify-between w-[100%]">
           <div
             className={`gallery-x ${
               !isFadedProjectPage
@@ -122,7 +106,7 @@ export default function ProjectPage() {
         </div>
       </div>
       <div
-        className={`flex flex-col xl:flex-row xl:mt-6 xl:h-[78vh] gap-5 no-scroll ${
+        className={`flex flex-col xl:flex-row xl:mt-6 xl:max-h-[100%] gap-5 no-scroll ${
           !isFadedProjectPage
             ? "project-container"
             : `${
@@ -132,6 +116,51 @@ export default function ProjectPage() {
               }`
         }`}
       >
+        {/* Left Column */}
+
+        <div
+          className="flex flex-col justify-between overflow-x-visible max-h-[90%] mr-5 rounded-none 
+        border-r-2 border-secondary border-opacity-30 text-justify lg:text-[0.95vw] no-scroll xl:w-[55%]  text-secondary relative"
+        >
+          <div className="flex flex-col gap-5">
+            {/* Title */}
+
+            <div
+              className={` ${
+                !isFadedProjectPage
+                  ? "gallery-title"
+                  : `${
+                      !shouldSlideRight
+                        ? "gallery-title--faded--left"
+                        : "gallery-title--faded"
+                    }`
+              } text-2xl lg:size-[1.3vw] xl:whitespace-nowrap gallery-element text-left font-medium hover:scale-110 ease-in-out duration-1000 text-secondary`}
+            >
+              {currentProject.title}
+            </div>
+
+            {/* Render the inner HTML content */}
+            <div
+              className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8"
+              dangerouslySetInnerHTML={{ __html: currentProject.body }}
+            ></div>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <div
+              className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8"
+              dangerouslySetInnerHTML={{ __html: currentProject.links }}
+            ></div>
+
+            <div
+              className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8"
+              dangerouslySetInnerHTML={{ __html: currentProject.collaborators }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Right Column */}
+
         <div className="flex flex-col gap-4  no-scroll  w-full xl:w-[60%]">
           <div className="aspect-16-9 md:overflow-hidden min-w-full">
             <div className="rounded-lg my-[3%] xl:m-0 ">
@@ -145,7 +174,7 @@ export default function ProjectPage() {
               />
             </div>
           </div>
-          <div className="flex justify-between bg-gray-white py-2">
+          <div className="flex xl:mx-[-5%] justify-between bg-gray-white py-2">
             <div className="flex pr-2 w-[15%] xl:w-[5%] items-center text-secondary">
               <RiArrowLeftWideFill className="xl:size-[3vw]" />
             </div>
@@ -170,10 +199,10 @@ export default function ProjectPage() {
               <RiArrowRightWideFill className="xl:size-[3vw]" />
             </div>
           </div>
-        </div>
-        <div className=" text-justify lg:text-[0.95vw] no-scroll rounded-lg  xl:w-[40%]  text-secondary relative">
-          {/* Render the inner HTML content */}
-          <div dangerouslySetInnerHTML={{ __html: currentProject.body }}></div>
+          <div
+            className="scrollable-content  overflow-y-scroll no-scroll rounded-none pr-8 xl:max-h-[10%]"
+            dangerouslySetInnerHTML={{ __html: currentProject.frameworks }}
+          ></div>
         </div>
       </div>
     </div>

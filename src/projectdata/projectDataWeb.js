@@ -2,31 +2,43 @@ const projectDataWeb = [
   {
     title: "Rubberduck Debugging",
     thumbnail: "/images/webdesign/thumbs/Duck7.png",
-    body: `<div>This project was made for our "Exploring Code" course, where the goal was to develop skills 
-    in storytelling and interactive and graphical webdesign. The basis for the idea was the programming technique known as
-    "rubber ducking", where one essentially describes one's code to an inanimate object (usually a rubber duck). When explaining the code
-    to the duck, you will walk through the problems in your head, which will help you solve them.
-    </div><br/>
-
-    <div>The application uses the React framework, GSAP for interactive elements, Three.js for 3d rendering and Cannon.js for physics simulation.</div></br>
-
-    
-    <div>At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!</div>
-
-    </br><div style="display: flex; gap: 0.5rem;">
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    React</span>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    Three.js</span>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    Cannon.js</span></div>
-
-    
-    <div style="margin-top: 20px; font-style: italic;">
-        Collaborators: 
-        <span>Oskar Sollenberg, Maya Jerndahl Bonk, Alexander Heras and Jaemin Shim.</span></br></br></div>
-        <a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a></br>
-        <a href="https://github.com/exploing-code/rubberduck-debugging" target="_blank">Github Link</a>`,
+    body: `
+      <div>
+        This project was made for our "Exploring Code" course, where the goal was to develop skills 
+        in storytelling and interactive and graphical web design. The basis for the idea was the programming technique known as
+        "rubber ducking", where one essentially describes one's code to an inanimate object (usually a rubber duck). When explaining the code
+        to the duck, you will walk through the problems in your head, which will help you solve them.
+      </div>
+      <br/>
+      <div>
+        The application uses the React framework, GSAP for interactive elements, Three.js for 3D rendering, and Cannon.js for physics simulation.
+      </div>
+      <br/>
+      <div>
+        At presentation day, we held a small competition within the class to see whose project was best, and I'm happy to say we won!
+      </div>`,
+    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+        <span class="project-libraries-button">
+          React
+        </span>
+        <span class="project-libraries-button">
+          Three.js
+        </span>
+        <span class="project-libraries-button">
+          Cannon.js
+        </span>
+      </div>`,
+    links: `<div style="display: flex; gap: 0.5rem;">
+        <span class="project-libraries-button" style="font-size: 1.1rem;">
+          <a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a>
+        </span>
+        <span class="project-libraries-button" style="font-size: 1.1rem;">
+          <a href="https://github.com/exploing-code/rubberduck-debugging" target="_blank">Github Link</a>
+        </span>
+      </div>`,
+    collaborators: `<div style="font-style: italic;">
+<span style="font-weight: bold; text-decoration: underline;">Collaborators:</span>        <span>Oskar Sollenberg, Maya Jerndahl Bonk, Alexander Heras, and Jaemin Shim.</span>
+      </div>`,
     images: [
       {
         full: "/images/webdesign/Duck0.png",
@@ -73,24 +85,30 @@ const projectDataWeb = [
     tasks.</div><br/>
 
     <div>We used React as a framework, together with Express.js, Passport.js and PostgreSQL. Unfortunately, as the 
-    database is defunct, the website is currently out of order.</div>
-
-    </br><div style="display: flex;gap: 0.5rem;">
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    React</span>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    Node.js</span>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    Express.js</span><br/>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    Passport.js</span></div>
-
-    </br>
-    
-    <div style="margin-top: 20px; font-style: italic;">
-        Collaborators: 
-        <span>Oskar Sollenberg, Maya Jerndahl Bonk and Oliver Redondo.</span></br></br></div>        
-        <a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a>`,
+    database is defunct, the website is currently out of order.</div>`,
+    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+        <span class="project-libraries-button">
+          React
+        </span>
+        <span class="project-libraries-button">
+          Node.js
+        </span>
+        <span class="project-libraries-button">
+          Expess.js
+        </span>
+        <span class="project-libraries-button">
+          Passport.js
+        </span>
+      </div>`,
+    links: `<div style="display: flex; gap: 0.5rem;">
+        <span class="project-libraries-button" style="font-size: 1.1rem;">
+<a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a></span>
+        
+      </div>`,
+    collaborators: `<div style="font-style: italic;">
+        <span style="font-weight: bold; text-decoration: underline;">Collaborators:</span>
+        <span>Oskar Sollenberg, Maya Jerndahl Bonk and Oliver Redondo.</span>
+      </div>`,
     images: [
       {
         full: "/images/webdesign/Centipede0.png",
@@ -125,21 +143,26 @@ const projectDataWeb = [
     of which I was part. </div><br/>
 
     <div>The application uses the React framework.</div>
-
-</br>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    React</span>
-    
-
-    </br>
     
     <div style="margin-top: 20px; font-style: italic;">
-        Collaborators: <br/>
-        <span>UX Team: Dayanne Vasques, Sarah Cambra, Niklas Lantz and Yunus Celebi.</span></br></br>
-        <span>Front-End Team: Milla Lindén, Petra Cuturdic, Angela Naseri and Marcus Rydén.</span></br></br></div>
-
-        <a href="https://pondeo.netlify.app/" target="_blank">Project Link</a></br>
-        <a href="https://github.com/marcusryden92/pondeo" target="_blank">Github Link</a>`,
+        </div>`,
+    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+        <span class="project-libraries-button">
+          React
+        </span>
+      </div>`,
+    links: `<div style="display: flex; gap: 0.5rem;">
+        <span class="project-libraries-button" style="font-size: 1.1rem;">
+<a href="https://pondeo.netlify.app/" target="_blank">Project Link</a></span>
+<span class="project-libraries-button" style="font-size: 1.1rem;">
+<a href="https://github.com/marcusryden92/pondeo" target="_blank">Github Link</a></span>
+        
+      </div>`,
+    collaborators: `<div style="font-style: italic;">
+        <span style="font-weight: bold; text-decoration: underline;">Collaborators:</span>
+<br/>
+        <span><span style="font-weight: bold;">UX Team:</span> Dayanne Vasques, Sarah Cambra, Niklas Lantz and Yunus Celebi.</span></br>
+        <span><span style="font-weight: bold;">Front-End Team:</span> Milla Lindén, Petra Cuturdic, Angela Naseri and Marcus Rydén.</span>      </div>`,
 
     images: [
       {
@@ -194,19 +217,23 @@ const projectDataWeb = [
     body: `<div>This was the first React project we made! We decided to try our hand at making a dating app. Hyper Island + Tinder = Hinder.
     As we had not yet had any experience working with back-end, we spoofed a back-end using the local storage of the computer.
     The website allows you to take a picture, sign up, and match with other "members".
-    </div>
-
-    </br>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    React</span>
-   
-    </br>
-    
-    <div style="margin-top: 20px; font-style: italic;">
-        Collaborators: 
-        <span>Oskar Sollenberg, Maria Jareno and Nesrine Hadboun.</span></br></br></div>
-        <a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a></br>
-        <a href="https://github.com/marcusryden92/Hinder" target="_blank">Github Link</a> `,
+    </div>`,
+    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+        <span class="project-libraries-button">
+          React
+        </span>
+      </div>`,
+    links: `<div style="display: flex; gap: 0.5rem;">
+        <span class="project-libraries-button" style="font-size: 1.1rem;">
+<a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a></span>
+<span class="project-libraries-button" style="font-size: 1.1rem;">
+<a href="https://github.com/marcusryden92/Hinder" target="_blank">Github Link</a></span>
+        
+      </div>`,
+    collaborators: `<div style="font-style: italic;">
+        <span style="font-weight: bold; text-decoration: underline;">Collaborators:</span> 
+        <span>Oskar Sollenberg, Maria Jareno and Nesrine Hadboun.</span>
+      </div>`,
     images: [
       {
         full: "/images/webdesign/Hinder0.png",
@@ -250,20 +277,23 @@ const projectDataWeb = [
     </div><br/>
     <div>
         When the player is done, the current angle of the sun is displayed using an API call. This feature was added to fulfill the course criteria.
-    </div>
+    </div>`,
 
-    </br>
-    <span class="project-libraries-button" style="font-size: 1.1rem; font-weight: bold; border-radius: 0.5rem;  padding-top: 0.25rem; padding-bottom: 0.25rem; padding-left: 0.5rem; padding-right: 0.55rem; " >
-    Javascript</span>
-   
-
-    </br>
-    
-    <div style="margin-top: 20px; font-style: italic;">
-        Collaborators: 
-        <span>Carmela Pippa</span> and <span>Maryana Reznychenko</span>
-    </div><br/>     <a href="https://suncards.netlify.app/" target="_blank">Project Link</a><br/>
-    <a href="https://github.com/marcusryden92/Sun-card" target="_blank">Github Link</a>`,
+    frameworks: `<div style="display: flex; gap: 0.5rem;"> 
+        <span class="project-libraries-button">
+          Javascript
+        </span>
+      </div>`,
+    links: `<div style="display: flex; gap: 0.5rem;">
+        <span class="project-libraries-button" style="font-size: 1.1rem;">
+<a href="https://suncards.netlify.app/" target="_blank">Project Link</a></span>
+<span class="project-libraries-button" style="font-size: 1.1rem;">
+<a href="https://github.com/marcusryden92/Sun-card" target="_blank">Github Link</a></span>
+        
+      </div>`,
+    collaborators: `<div style="font-style: italic;">
+        <span style="font-weight: bold; text-decoration: underline;">Collaborators:</span> 
+<span>Carmela Pippa</span> and <span>Maryana Reznychenko</span></div>`,
     images: [
       {
         full: "/images/webdesign/Cards0.png",

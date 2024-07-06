@@ -562,5 +562,5 @@ a {
 }
 
 .project-libraries-button {
-  @apply bg-secondary text-primary;
+  @apply bg-secondary text-primary font-bold rounded-md py-1 px-2;
 }
