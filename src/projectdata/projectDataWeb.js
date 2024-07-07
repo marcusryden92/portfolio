@@ -32,10 +32,10 @@ const projectDataWeb = [
         </span>
       `,
     links: `<div style="display: flex; gap: 0.5rem;">
-        <span class="project-libraries-button">
+        <span class="project-link-button">
           <a href="https://rubberduck-debugging.vercel.app/" target="_blank">Project Link</a>
         </span>
-        <span class="project-libraries-button">
+        <span class="project-link-button">
           <a href="https://github.com/exploing-code/rubberduck-debugging" target="_blank">Github Link</a>
         </span>
       </div>`,
@@ -103,11 +103,14 @@ const projectDataWeb = [
           Passport.js
         </span>
         <span class="project-libraries-button">
+          PostgreSQL
+        </span>
+        <span class="project-libraries-button">
           Tailwind CSS
         </span>
       `,
     links: `<div style="display: flex; gap: 0.5rem;">
-        <span class="project-libraries-button" style="font-size: 1.1rem;">
+        <span class="project-link-button" style="font-size: 1.1rem;">
 <a href="https://github.com/marcusryden92/beyond-todo" target="_blank">Github Link</a></span>
         
       </div>`,
@@ -161,9 +164,9 @@ const projectDataWeb = [
         </span>
       `,
     links: `<div style="display: flex; gap: 0.5rem;">
-        <span class="project-libraries-button" style="font-size: 1.1rem;">
+        <span class="project-link-button" style="font-size: 1.1rem;">
 <a href="https://pondeo.netlify.app/" target="_blank">Project Link</a></span>
-<span class="project-libraries-button" style="font-size: 1.1rem;">
+<span class="project-link-button" style="font-size: 1.1rem;">
 <a href="https://github.com/marcusryden92/pondeo" target="_blank">Github Link</a></span>
         
       </div>`,
@@ -236,9 +239,9 @@ const projectDataWeb = [
         </span>
      `,
     links: `<div style="display: flex; gap: 0.5rem;">
-        <span class="project-libraries-button" style="font-size: 1.1rem;">
+        <span class="project-link-button" style="font-size: 1.1rem;">
 <a href="https://portfoliohinder.netlify.app/" target="_blank">Project Link</a></span>
-<span class="project-libraries-button" style="font-size: 1.1rem;">
+<span class="project-link-button" style="font-size: 1.1rem;">
 <a href="https://github.com/marcusryden92/Hinder" target="_blank">Github Link</a></span>
         
       </div>`,
@@ -297,9 +300,9 @@ const projectDataWeb = [
         </span>
       `,
     links: `<div style="display: flex; gap: 0.5rem;">
-        <span class="project-libraries-button" style="font-size: 1.1rem;">
+        <span class="project-link-button" style="font-size: 1.1rem;">
 <a href="https://suncards.netlify.app/" target="_blank">Project Link</a></span>
-<span class="project-libraries-button" style="font-size: 1.1rem;">
+<span class="project-link-button" style="font-size: 1.1rem;">
 <a href="https://github.com/marcusryden92/Sun-card" target="_blank">Github Link</a></span>
         
       </div>`,

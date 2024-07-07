@@ -557,6 +557,10 @@ a {
   transition: opacity 1s linear; /* Adjust timing as needed */
 }
 
-.project-libraries-button {
+.project-link-button {
   @apply bg-secondary text-primary font-bold rounded-md py-1 px-2;
+}
+
+.project-libraries-button {
+  @apply border-secondary border text-secondary rounded-full py-1 px-2;
 }
