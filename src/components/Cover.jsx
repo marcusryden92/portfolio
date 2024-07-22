@@ -12,7 +12,10 @@ export default function Cover() {
   }
 
   useEffect(() => {
-    setTimeout(() => handleFade(), 700);
+    // Wait for fonts to be loaded
+    document.fonts.ready.then(() => {
+      setTimeout(() => handleFade(), 700); // Delay before starting fade
+    });
   }, []);
 
   return (
