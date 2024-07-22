@@ -20,9 +20,17 @@ export default function Cover() {
 
   return (
     <div
-      className={`flex flex-col pointer-events-none cover-viewport cover-container flex-center bg-[#13192d] rounded-none text-white
+      className={`flex flex-col justify-center items-center pointer-events-none cover-viewport cover-container flex-center bg-[#13192d] rounded-none text-white
     ${isFade ? "front-page--faded " : "front-page"} 
     ${isHidden ? "hidden" : ""}`}
-    ></div>
+    >
+      <div
+        className={`text-2xl text-white font-serif italic ${
+          isFade ? "hidden" : ""
+        }`}
+      >
+        Loading...
+      </div>
+    </div>
   );
 }
