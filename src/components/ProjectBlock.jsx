@@ -63,7 +63,7 @@ export default function ProjectBlock({
         }}
         className={`h-full w-full object-cover object-center ${
           hoverIsActive ? "hover-scale" : ""
-        } transition-transform duration-200 ease-in-out`}
+        } transition-transform duration-200 ease-in-out image-load-faded`}
         onLoad={(e) => {
           e.target.classList.add("image-load-complete");
         }}
