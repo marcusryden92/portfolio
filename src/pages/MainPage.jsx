@@ -72,7 +72,7 @@ export default function MainPage() {
               !isFadedProjectPage
                 ? "opacity-5"
                 : "opacity-25"
-            } transition-opacity overflow-hidden max-w-[100vw]`}
+            } transition-opacity overflow-hidden max-w-[100vw] rounded-none`}
           >
             <Background className="behind rounded-none" />
           </div>
