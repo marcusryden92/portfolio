@@ -43,10 +43,9 @@ export default function MainPage() {
   return (
     <div className="flex md:flex-row overflow-scroll xl:overflow-hidden max-h-[100vh] max-w-[100vw] ">
       {" "}
-      <div className="absolute z-10 bottom-0">
-        <Cover />
-      </div>
-      <div className="flex overflow-scroll md:overflow-hidden flex-col md:flex-row main-container z-5">
+      <div className="absolute z-10 bottom-0">{/* <Cover /> */}</div>
+      <Background className="behind rounded-none z-50" />
+      {/* <div className="flex overflow-scroll md:overflow-hidden flex-col md:flex-row main-container z-5">
         <Menu />
         {isClickedAbout ? <About /> : ""}
         {isClickedWebD ? <WebD /> : ""}
@@ -73,11 +72,9 @@ export default function MainPage() {
                 ? "opacity-5"
                 : "opacity-25"
             } transition-opacity overflow-hidden max-w-[100vw] rounded-none`}
-          >
-            <Background className="behind rounded-none" />
-          </div>
+          ></div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

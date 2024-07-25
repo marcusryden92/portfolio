@@ -1,13 +1,13 @@
 import React from "react";
-import InteractiveCircles from "./InteractiveCircles";
-import GrainOverlay from "./GrainOverlay";
+import { Canvas } from "@react-three/fiber";
+import Experience from "../graphics/Experience";
 
 const Background = () => {
   return (
-    <div>
-      {" "}
-      <InteractiveCircles className=" rounded-none" />
-      {/* <GrainOverlay className="rounded-none" /> */}
+    <div className="absolute top-0 left-0 w-full h-full">
+      <Canvas className="w-full h-full">
+        <Experience />
+      </Canvas>
     </div>
   );
 };
