@@ -122,7 +122,7 @@ export default function About({ handleClickClear }) {
               </div>
             </div>
             <div
-              className="flip-card-front min-h-[1000px] xl:min-h-0 selectable justify-center xl:justify-start
+              className="flip-card-front min-h-[1000px] xl:min-h-0 selectable md:justify-center xl:justify-start
               overflow-scroll xl:overflow-hidden no-scroll flex flex-col 
             md:flex-row bg-white border-2"
             >
@@ -145,17 +145,22 @@ export default function About({ handleClickClear }) {
                     create impactful digital experiences.
                   </p>
                 </div>
-                <img
-                  className="xl:absolute bottom-0 md:h-[55%] self-end image-load-faded"
-                  src={portrait}
-                  alt="Marcus"
-                  onLoad={(e) => {
-                    e.target.classList.add("image-load-complete");
-                  }}
-                />
+
+                {window.innerWidth < 950 ? (
+                  ""
+                ) : (
+                  <img
+                    className="xl:absolute bottom-0 md:h-[55%] self-end image-load-faded"
+                    src={portrait}
+                    alt="Marcus"
+                    onLoad={(e) => {
+                      e.target.classList.add("image-load-complete");
+                    }}
+                  />
+                )}
               </div>
 
-              <div className="flex flex-col text-about xl:min-w-[50%] xl:border-l-2 rounded-none px-10 my-20 gap-1 items-center justify-center ">
+              <div className="flex flex-col text-about xl:min-w-[50%] xl:border-l-2 rounded-none px-10 md:my-20 gap-1 items-center justify-center ">
                 <p className="font-bold text-[2rem] xl:text-[1.5vw] pb-5">
                   Contact
                 </p>{" "}
